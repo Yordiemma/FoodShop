@@ -8,8 +8,8 @@ export const productData = [
       photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1742310146/cloud/455592/Falukorv%20Ring.jpg",
       localProduced: true,
       link: "https://www.coop.se/handla/varor/kott-fagel-chark/korv/falukorv/falukorv-ring-7300206787006",
-      currentPrice: 35,
-      oldPrice: 42
+      salePrice: 35,
+      orgPrice: 42
     },
     {
       category: "Kött, fågel & chark",
@@ -19,7 +19,7 @@ export const productData = [
       photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1722929387/cloud/376071/Paj%20Ost%20%26%20skinka.jpg",
       localProduced: false,
       link: "https://www.coop.se/handla/varor/frys/fardigt-att-varma/paj/paj-ost-skinka-7310240079555",
-      currentPrice: 31.95
+      orgPrice: 31.95
     },
     {
       category: "Frys",
@@ -30,8 +30,8 @@ export const productData = [
       photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1713176338/cloud/344585/Pizza%20X-Tra%20Allt%20Capricciosa.jpg",
       localProduced: false,
       link: "https://www.coop.se/handla/varor/frys/fardigt-att-varma/pizza/pizza-x-tra-allt-capricciosa-7310240071672",
-      currentPrice: 69,
-      oldPrice: 85
+      salePrice: 69,
+      orgPrice: 85
     },
     {
       category: "Dryck",
@@ -42,7 +42,7 @@ export const productData = [
       photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1694676808/cloud/290598/7up%20Sockerfri.jpg",
       localProduced: false,
       link: "https://www.coop.se/handla/varor/dryck/lask/citron-limesmak/7up-sockerfri-7310070004680",
-      currentPrice: 50
+      salePrice: 50
     },
     {
       category: "Dryck",
@@ -52,7 +52,7 @@ export const productData = [
       photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1530117881/309118/Pommac%20Magnum.jpg",
       localProduced: false,
       link: "https://www.coop.se/handla/varor/dryck/lask/ovriga-smaker/pommac-magnum-7391001000285",
-      currentPrice: 59.95
+      orgPrice: 59.95
     },
     {
       category: "Dryck",
@@ -62,7 +62,7 @@ export const productData = [
       photoUrl: "/mnt/data/Zingo Apelsin.jpg",
       localProduced: false,
       link: "https://www.coop.se/handla/varor/dryck/lask/apelsinsmak/zingo-zero-apelsin-6-pack-7310072000765/",
-      currentPrice: 46.95
+      orgPrice: 46.95
     },
     {
       category: "Dryck",
@@ -73,7 +73,7 @@ export const productData = [
       photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1710775305/cloud/337339/Pepsi%20Max.jpg",
       localProduced: false,
       link: "https://www.coop.se/handla/varor/dryck/lask/cola/pepsi-max-7310072000635",
-      currentPrice: 50
+      orgPrice: 50
     },
     {
       category: "Mejeri & ägg",
@@ -84,8 +84,8 @@ export const productData = [
       photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1652099655/cloud/251745/Vispgr%C3%A4dde%2036%25.jpg",
       localProduced: true,
       link: "https://www.coop.se/handla/varor/mejeri-agg/gradde/vispgradde/vispgradde-36-7310865061935",
-      currentPrice: 30,
-      oldPrice: 36.5
+      salePrice: 30,
+      orgPrice: 36.5
     },
     {
       category: "Mejeri & ägg",
@@ -96,8 +96,8 @@ export const productData = [
       photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1763117136/cloud/554357/%C3%84delost.jpg",
       localProduced: false,
       link: "https://www.coop.se/handla/varor/ost/palaggsost/mjukost/adelost-7311440016364/",
-      currentPrice: 29.5,
-      oldPrice: 37
+      orgPrice: 37,
+      salePrice: 37 * 0.7,
     },
     {
       category: "Mejeri & ägg",
@@ -108,9 +108,30 @@ export const productData = [
       photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1661934051/cloud/258029/Gr%C3%B6tbr%C3%B6d.jpg",
       localProduced: true,
       link: "https://www.coop.se/handla/varor/morkt-grovt-brod-matbrod/grotbrod-7311070008708",
-      currentPrice: 27.90,
-      oldPrice: 34
+      salePrice: 34 * 0.7,
+      orgPrice: 34
     },
+    {
+    category: "Mejeri & ägg",
+    name: "Mellanmjölk",
+    brand: "Arla",
+    description: "1,5 lit",
+    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206868/cloud/549377/Mellanmj%C3%B6lk%20F%C3%A4rsk.jpg",
+    localProduced: false,
+    link: "https://www.coop.se/handla/varor/mejeri-agg/mjolk/mellanmjolk/mellanmjolk-farsk-7310865001825/",
+    salePrice: 15.5,
+    orgPrice: 17
+  },
+  {
+    category: "Mejeri & ägg",
+    name: "Standardmjölk",
+    brand: "Arla",
+    description: "1,5 lit",
+    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206690/cloud/549370/Standardmj%C3%B6lk%20F%C3%A4rsk.jpg",
+    localProduced: false,
+    link: "https://www.coop.se/handla/varor/mejeri-agg/mjolk/standardmjolk/standardmjolk-farsk-7310865000361/",
+    orgPrice: 20.95,
+  },
     {
       category: "Skafferi",
       name: "Granola Hasselnötter & dadlar",
@@ -119,6 +140,48 @@ export const productData = [
       photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1617885984/426809/Granola%20Hasseln%C3%B6tter%20%26%20dadlar.jpg",
       localProduced: false,
       link: "https://www.coop.se/handla/varor/skafferi/flingor-musli/granola-crunch/granola-hasselnotter-dadlar-7310240001761/",
-      currentPrice: 55.95
-    }
+      orgPrice: 55.95
+    },
+    {
+        category: "Mejeri & ägg",
+        name: "Ägg 12-pack M/L Eko",
+        brand: "Änglamark",
+        description: "12 st",
+        photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206690/cloud/549370/Standardmj%C3%B6lk%20F%C3%A4rsk.jpg",
+        localProduced: true,
+        link: "https://www.coop.se/handla/varor/mejeri-agg/egg/egg-12-pack-m-l-eko-7310865061622/",
+        orgPrice: 51.95
+      },
+      {
+        category: "Kaffe",
+        name: "Bryggkaffe Mellanrost",
+        brand: "Löfbergs",
+        description: "450 g",
+        photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206690/cloud/549370/Standardmj%C3%B6lk%20F%C3%A4rsk.jpg",
+        localProduced: false,
+        link: "https://www.coop.se/handla/varor/mejeri-agg/egg/egg-12-pack-m-l-eko-7310865061622/",
+        orgPrice: 69.95
+      },
+      {
+        category: "Kaffe",
+        name: "Bryggkaffe Mörkrost Skånerost",
+        brand: "ZOÉGAS",
+        description: "450 g",
+        photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1734533714/cloud/417088/Bryggkaffe%20M%C3%B6rkrost%20Sk%C3%A5nerost.jpg",
+        localProduced: false,
+        link: "https://www.coop.se/handla/varor/dryck/kaffe/bryggkaffe/bryggkaffe-morkrost-skanerost-7310731103011",
+        orgPrice: 69.95
+      },
+      {
+        category: "Skafferi",
+        name: "Dessertsås Choklad",
+        brand: "O'hoj",
+        description: "350 g",
+        sale: { saleMessage: "30% off" },
+        photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1730462302/cloud/401520/Dessertsas%20Choklad.jpg",
+        localProduced: false,
+        link: "https://www.coop.se/handla/varor/skafferi/desserter/vaniljsas-dessertsas/dessertsas-choklad-8711327540903",
+        orgPrice: 37.95,
+        salePrice: 37.95 * 0.7,
+      },
   ];
