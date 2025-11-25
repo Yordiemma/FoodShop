@@ -1,0 +1,15 @@
+.top-nav img {
+    padding: .5em;
+    margin-top: 1em;
+}
+
+.left {
+  float: left;
+  margin-left: 1em;
+}
+
+.right {
+  float: right;
+  margin-right: 1em;
+}
+
