@@ -1,4 +1,6 @@
 @import './header.css';
+@import './global-variables.css';
+@import './product-card.css';
 
 * {
   margin: 0;
