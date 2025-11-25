@@ -1,0 +1,18 @@
+
+:root {
+    /* Colors */
+    --foreground-default: #333;
+    --foreground-subtle: #585858;
+    --foreground-brand: #9437BC;
+    --foreground-inverted: #FFFFFF;
+  
+    --surface-default: #FFFFFF;
+    --surface-default-subtle: #CFCFCF;
+    --surface-brand: #9437BC;
+    --surface-brand-subtle: #F3D7FF;
+    --surface-pop: #D95353;
+
+    --border-default: #CFCFCF;
+    --border-brand: #9437BC;
+    --border-inverted: #FFFFFF;
+  }
