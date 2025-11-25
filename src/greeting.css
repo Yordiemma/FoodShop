@@ -1,0 +1,67 @@
+/* Greeting section */
+.greeting {
+    padding: 24px 16px;
+}
+
+/* Title */
+.greeting h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+/* Subtitle */
+.greeting p {
+    font-size: 15px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+}
+
+/* Order box */
+.order-box {
+    background: var(--surface-brand-subtle);
+    padding: 16px;
+    border-radius: 12px;
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+/* Icon box */
+.order-icon {
+    background: #e6d9ff;
+    padding: 12px;
+    border-radius: 12px;
+}
+
+.order-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Order text */
+.order-info p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Search box */
+.search-box {
+    margin-top: 16px;
+    position: relative;
+}
+
+.search-box input {
+    width: 100%;
+    padding: 14px 48px 14px 16px;
+    border: 1px solid var(--border-default);
+    border-radius: 12px;
+    font-size: 15px;
+}
+
+.search-box img {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+}

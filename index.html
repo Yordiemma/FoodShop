@@ -1,28 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="" href="#" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="src/global-variables.css" />
 
-<head>
-  <meta charset="UTF-8" />
-  <link rel="icon" type="" href="#" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="src/style.css">
-  <title>foodshop</title>
-</head>
+    <title>foodshop</title>
+  </head>
 
-<body>
-  <header>
-    <div class="top-nav left">
-      <img src="/src/images/menu.svg" alt="">
-      <img src="/src/images/logo.svg" alt="logo">
-    </div>
-    <div class="top-nav right">
-      <img src="/src/images/search.svg" alt="">
-      <img src="/src/images/profile.svg" alt="">
-      <img src="/src/images/cart.svg" alt="">
-    </div>
-  </header>
-  <div id="app"></div>
-  <script type="module" src="/src/main.js"></script>
-</body>
+  <body>
+    <header>
+      <div class="top-nav left">
+        <img src="/src/images/menu.svg" alt="" />
+        <img src="/src/images/logo.svg" alt="logo" />
+      </div>
+      <div class="top-nav right">
+        <img src="/src/images/search.svg" alt="" />
+        <img src="/src/images/profile.svg" alt="" />
+        <img src="/src/images/cart.svg" alt="" />
+      </div>
+    </header>
 
+    <main>
+      <section class="greeting">
+        <h1>Welcome back Stig,</h1>
+        <p>We got some tasty goods in store for you!</p>
+
+        <div class="order-box">
+          <div class="order-icon">
+            <img src="/src/images/truck-icon.svg" alt="delivery truck" />
+          </div>
+
+          <div class="order-info">
+            <p class="order-number">#282389 - Delivery November 29</p>
+            <p class="order-update">
+              Update your order <span>(until 26/11)</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="search-box">
+          <input type="text" placeholder="Search for a product or category" />
+          <img src="/src/images/search.svg" alt="search icon" />
+        </div>
+      </section>
+    </main>
+
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>
