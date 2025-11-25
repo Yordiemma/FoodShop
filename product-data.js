@@ -1,4 +1,4 @@
-const productData = [
+export const productData = [
     {
       category: "Kött, fågel & chark",
       name: "Falukorv Ring",
@@ -32,16 +32,6 @@ const productData = [
       link: "https://www.coop.se/handla/varor/frys/fardigt-att-varma/pizza/pizza-x-tra-allt-capricciosa-7310240071672",
       currentPrice: 69,
       oldPrice: 85
-    },
-    {
-      category: "Frys",
-      name: "Broccoli",
-      brand: "Coop",
-      description: "500 g.",
-      photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1706524341/cloud/323177/Broccoli.jpg",
-      localProduced: false,
-      link: "https://www.coop.se/handla/varor/frys/gronsaker/gronsaker/broccoli-7340191152670",
-      currentPrice: 17.5
     },
     {
       category: "Dryck",
@@ -120,42 +110,6 @@ const productData = [
       link: "https://www.coop.se/handla/varor/morkt-grovt-brod-matbrod/grotbrod-7311070008708",
       currentPrice: 27.90,
       oldPrice: 34
-    },
-  
-    {
-      category: "Skafferi",
-      name: "Bakchoklad Mörk",
-      brand: "Coop",
-      description: "200 g",
-      sale: { saleMessage: "Sale!" },
-      photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1729504903/cloud/395487/Bakchoklad%20M%C3%B6rk.jpg",
-      localProduced: false,
-      link: "https://www.coop.se/handla/varor/skafferi/bakprodukter/choklad/bakchoklad-mork",
-      currentPrice: 36.95,
-      oldPrice: 45
-    },
-    {
-      category: "Skafferi",
-      name: "Bakchoklad Ljus",
-      brand: "Coop",
-      description: "200 g",
-      sale: { saleMessage: "Sale!" },
-      photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1728970566/cloud/393961/Bakchoklad%20Ljus.jpg",
-      localProduced: false,
-      link: "https://www.coop.se/handla/varor/skafferi/bakning/kakao-blockchoklad/bakchoklad-ljus-7340191149755/",
-      currentPrice: 36.95,
-      oldPrice: 45
-    },
-    {
-      category: "Skafferi",
-      name: "Hasselnötter",
-      brand: "Coop",
-      description: "200 g",
-      photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1707736570/cloud/326634/Hasseln%C3%B6tter.jpg",
-      localProduced: false,
-      link: "https://www.coop.se/handla/varor/fardigmat-mellanmal/mellanmal/notter/hasselnotter-7340191148468/",
-      currentPrice: 34.5,
-      oldPrice: 42
     },
     {
       category: "Skafferi",
