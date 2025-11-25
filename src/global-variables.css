@@ -1,25 +1,30 @@
 
 :root {
     /* Colors */
-    --color-foreground-default: #333;
-    --color-foreground-subtle: #585858;
-    --color-foreground-brand: #9437BC;
+
+    /* Text/icon colors */
+    --color-foreground-default: #333; 
+    --color-foreground-subtle: #585858; 
+    --color-foreground-brand: #9437BC; 
     --color-foreground-inverted: #FFFFFF;
-  
+    
+    /* Surface/background colors */
     --color-surface-default: #FFFFFF;
     --color-surface-default-subtle: #CFCFCF;
     --color-surface-brand: #9437BC;
     --color-surface-brand-subtle: #F3D7FF;
     --color-surface-pop: #D95353;
 
+    /* Border colors */
     --color-border-default: #CFCFCF;
     --color-border-brand: #9437BC;
     --color-border-inverted: #FFFFFF;
 
-    /* Fonts */
+    /* Font families */
     --font-family-serif: "Domine", serif;
     --font-family-sans: "Instrument Sans", sans-serif;
 
+    /* Font sizes */
     --font-size-heading-large: 1.625rem;
     --font-size-heading-medium: 1.125rem;
 
