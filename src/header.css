@@ -3,13 +3,17 @@
     margin-top: 1em;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
 .left {
-  float: left;
   margin-left: 1em;
 }
 
 .right {
-  float: right;
   margin-right: 1em;
 }
-
