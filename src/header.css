@@ -7,11 +7,3 @@ header {
     display: flex;
     justify-content: space-between;
 }
-
-.left {
-  margin-left: 1em;
-}
-
-.right {
-  margin-right: 1em;
-}
