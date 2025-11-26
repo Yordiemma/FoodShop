@@ -1,5 +1,6 @@
-@import "./header.css";
+@import "./styles/header.css";
 @import "./greeting.css";
+@import './styles/global-variables.css';
 
 * {
   margin: 0;
