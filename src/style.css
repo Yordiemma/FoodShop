@@ -14,11 +14,15 @@
 body {
   display: flex;
   flex-direction: column;
+  font-family: var(--font-family-sans);
+  font-weight: 500;
   max-width: 1400px;
   padding: 0em 1em;
   margin: 0 auto;
-  font-family: var(--font-family-sans);
-  font-weight: 500;
+}
+
+.container-full {
+  margin: 0 auto;
 }
 
 footer {
