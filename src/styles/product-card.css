@@ -28,7 +28,7 @@
         background-color: var(--color-surface-pop);
         color: var(--color-foreground-inverted);
         font-size: var(--font-size-paragraph-xsmall);
-        font-weight: 700;
+        font-weight: 500;
         border-radius: 2px;
         padding-block: 2px;
         padding-inline: 4px;
@@ -36,7 +36,7 @@
 
     & .meta-tag {
         font-size: var(--font-size-paragraph-xsmall);
-        font-weight: 700;
+        font-weight: 500;
         color: var(--color-foreground-accent);
         background: var(--color-surface-accent-subtle);
         border-radius: 50px;

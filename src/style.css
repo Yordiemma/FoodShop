@@ -18,6 +18,7 @@ body {
   padding: 0em 1em;
   margin: 0 auto;
   font-family: var(--font-family-sans);
+  font-weight: 500;
 }
 
 footer {
@@ -50,7 +51,7 @@ h2 {
 
 h3, h4 {
   font-size: var(--font-size-paragraph-medium);
-  font-weight: 400;
+  font-weight: 500;
 }
 
 body,
