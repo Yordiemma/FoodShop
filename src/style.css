@@ -1,5 +1,5 @@
 @import "./styles/header.css";
-@import "./greeting.css";
+@import "./styles/greeting.css";
 @import './styles/global-variables.css';
 
 * {
