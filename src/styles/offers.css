@@ -1,0 +1,14 @@
+.offers {
+    display: flex;
+    gap: 10px;
+}
+
+.offer-card {
+    background-image: url('/src/images/offer.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 1em;
+    padding-bottom: 7em;
+    width: 100%;
+    border-radius: 1.5em;
+}
