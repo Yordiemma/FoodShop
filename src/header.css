@@ -1,10 +1,18 @@
 header {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .top-nav img {
-    padding: .5em;
-    margin-top: 1em;
+  padding: .5em;
+  margin-top: 1em;
 }
 
+.top-nav span {
+  border-radius: 5rem;
+  border: 3px solid #FFF;
+  color: #FFF;
+  background: #D95353;
+  padding: 0rem 0.3rem;
+  font-size: smaller;
+}
