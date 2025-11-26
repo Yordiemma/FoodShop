@@ -11,13 +11,10 @@
 body {
   width: 100%;
   min-height: 100vh;
-  font-family: var(--font-family-sans "Domine", serif);
-  background-color: #f6f6f6;
-
+  font-family: var(--font-family-sans);
 }
 
-
-.page {
+/* .page {
   width: 100%;
   max-width: 390px;
   margin: 1.5rem auto;
@@ -27,4 +24,4 @@ body {
   border-radius: 28px;
   overflow: hidden;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
-}
+} */
