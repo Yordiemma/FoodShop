@@ -1,5 +1,5 @@
 .greeting {
-    padding: 30px 16px 24px;
+    padding: 30px 5px 24px;
     display: flex;
     flex-direction: column;
     row-gap: 0;
@@ -45,7 +45,7 @@
 }
 
 .order-icon img {
-    width: 24px;
+    width: 35px;
     height: 24px;
     padding-left: 0;
 }
@@ -86,14 +86,14 @@
 
     border-radius: 999px;
 
-    /* soft light background based on your variable color */
-    background-color: rgba(207, 207, 207, 0.25);
-    /* <-- your var with transparency */
 
-    /* subtle border using your default border color */
+    background-color: rgba(207, 207, 207, 0.25);
+
+
+
     border: 1px solid var(--color-border-default);
 
-    /* optional tiny shadow like Apple/Food UI */
+
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
 }
 
@@ -116,3 +116,38 @@
     flex-shrink: 0;
 }
 
+@media (min-width: 900px) {
+
+    .greeting {
+        padding: 60px 0 50px;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .greeting h1 {
+        font-size: var(--font-size-heading-large);
+    }
+
+    .greeting-subtitle {
+        font-size: var(--font-size-paragraph-medium);
+    }
+
+    .order-box {
+        padding: 24px 8px;
+        column-gap: 20px;
+        flex-wrap: nowrap;
+    }
+
+    .order-number,
+    .order-update {
+        font-size: var(--font-size-paragraph-medium);
+    }
+
+    .search-box {
+        padding: 14px 18px;
+    }
+
+    .search-box input {
+        font-size: var(--font-size-paragraph-medium);
+    }
+}
