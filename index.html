@@ -29,10 +29,13 @@
   <div id="app">
     <div class="product-list">
       <div class="product-item slim">
-        <img id="product-image" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dg" alt="">
+        <div class="product-image-container">
+          <img id="product-image" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dg" alt="">
+        </div>
         <div class="product-info">
           <div class="product-heading">
             <h3>Milk Standard</h3>
+            <span class="meta">Local</span>
             <p class="description">3%, 1,5 liter</p>
           </div>
           <div class="product-footer">
@@ -60,7 +63,10 @@
     <!-- Davids example product cards -->
     <div class="product-list">
       <div class="product-item large">
-        <img id="product-image" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dg" alt="">
+        <div class="product-image-container">
+          <span class="sale-tag">Sale!</span>
+          <img id="product-image" src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dg" alt="">
+        </div>
         <div class="product-info">
           <div class="product-heading">
             <h3>Milk Standard</h3>
@@ -68,8 +74,8 @@
           </div>
           <div class="product-footer">
             <div class="product-price">
-              <p class="price active sale">100 kr</p>
-              <p class="price old">120 kr</p>
+              <p class="price active sale-price">100 kr</p>
+              <p class="price old-price">120 kr</p>
             </div>
             <button>Add</button>
           </div>
