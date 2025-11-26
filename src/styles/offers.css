@@ -1,14 +1,13 @@
 .offers {
     display: flex;
-    gap: 10px;
+    gap: 16px;
 }
 
 .offer-card {
     background-image: url('/src/images/offer.png');
     background-size: cover;
-    background-repeat: no-repeat;
-    padding: 1em;
-    padding-bottom: 7em;
+    background-position: center;
     width: 100%;
-    border-radius: 1.5em;
+    border-radius: .5em;
+    height: 12.9375rem;
 }
