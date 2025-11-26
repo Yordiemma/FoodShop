@@ -71,6 +71,7 @@ html {
 
 .product-list {
   display: flex;
+  gap: 16px;
 }
 
 .vertical .product-list {
@@ -79,7 +80,7 @@ html {
 
 .horizontal .product-list {
   flex-direction: row;
-  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .example-components {
