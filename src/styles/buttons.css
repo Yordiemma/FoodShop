@@ -2,12 +2,16 @@
     background-color: var(--color-surface-brand);
     height: 2.5rem;
     width: 2.5rem;
-    border-radius: 50%;
+    border-radius: 100px;
     border: none;
     display: flex;
     align-items: center;
     justify-content: center;
     color: var(--color-foreground-inverted);
+
+    &.full-width{
+        width: 100%;
+    } 
 }
 
 .stepper {
