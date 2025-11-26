@@ -11,7 +11,7 @@
 body {
   width: 100%;
   min-height: 100vh;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-family-sans "Domine", serif);
   background-color: #f6f6f6;
 
 }
