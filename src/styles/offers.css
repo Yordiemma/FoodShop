@@ -5,13 +5,20 @@
 }
 
 .offer-card {
-    background-image: url('/src/images/offer.png');
     background-size: cover;
     background-position: center;
     width: 100%;
     border-radius: .5em;
     height: 12.9375rem;
     position: relative;
+}
+
+.offer-card:first-child {
+    background-image: url('/src/images/offer.png');
+}
+
+.offer-card:last-child {
+    background-image: url('/src/images/offer.png');
 }
 
 .offer-card h3 {
