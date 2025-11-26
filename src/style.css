@@ -63,6 +63,25 @@ html {
   flex: 1;
 }
 
+.product-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.product-list {
+  display: flex;
+}
+
+.vertical .product-list {
+  flex-direction: column;
+}
+
+.horizontal .product-list {
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
 .example-components {
   margin-top: 56px;
 }
