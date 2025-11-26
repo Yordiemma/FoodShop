@@ -7,7 +7,7 @@
 
 
 .greeting h1 {
-
+    margin-bottom: 2px;
     font-weight: 700;
     line-height: 1.2;
     color: var(--color-foreground-default);
@@ -16,6 +16,8 @@
 
 
 .greeting-subtitle {
+    margin-bottom: 8px;
+    margin-top: 0;
     font-size: var(--font-size-paragraph-small);
     color: var(--color-foreground-subtle);
     margin: 0;
