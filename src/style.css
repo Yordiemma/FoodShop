@@ -57,8 +57,13 @@ body,
 html {
   height: 100%;
 }
+
 #app {
   flex: 1;
+}
+
+.example-components {
+  margin-top: 56px;
 }
 
 /* .page {
