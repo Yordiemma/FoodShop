@@ -3,16 +3,23 @@ header {
   justify-content: space-between;
 }
 
+.top-nav {
+  display: flex;
+  align-items: center;
+}
+
 .top-nav img {
   padding: .5em;
   margin-top: 1em;
 }
 
 .top-nav span {
+  color: #FFF;
+  background: var(--color-surface-pop);
+  font-size: smaller;
   border-radius: 5rem;
   border: 3px solid #FFF;
-  color: #FFF;
-  background: #D95353;
   padding: 0rem 0.3rem;
-  font-size: smaller;
+  position: absolute;
+  right: 1em;
 }
