@@ -7,6 +7,10 @@
         font-size: var(--font-size-paragraph-small);
     }
 
+    & .stepper {
+        display: none;
+    }
+
     & .product-info {
         display: flex;
         flex-direction: column;
