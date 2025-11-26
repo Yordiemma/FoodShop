@@ -4,14 +4,13 @@
     padding: 24px 16px 24px;
     display: flex;
     flex-direction: column;
-    row-gap: 20px;
+    row-gap: 0;
 }
 
 
 .greeting h1 {
     font-family: var(--font-family-serif);
-    font-size: var(--font-size-heading-large);
-   
+    font-size: var(--font-size-heading-large);  
     font-weight: 700;
     line-height: 1.2;
     color: var(--color-foreground-default);
@@ -20,7 +19,7 @@
 
 
 .greeting-subtitle {
-    font-size: var(--font-size-paragraph-medium);
+    font-size: var(--font-size-paragraph-small);
     color: var(--color-foreground-subtle);
     margin: 0;
 }
@@ -31,10 +30,9 @@
     display: flex;
     align-items: center;
     column-gap: 16px;
-    padding: 16px;
+    padding: 20px 0px;
     border-radius: 20px;
-    background-color: var(--color-surface-default);
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+
 }
 
 
@@ -52,6 +50,7 @@
 .order-icon img {
     width: 24px;
     height: 24px;
+    padding-left: 0;
 }
 
 /* Order card text */
