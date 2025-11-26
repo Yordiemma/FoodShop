@@ -3,6 +3,7 @@
 @import "./styles/greeting.css";
 @import "./styles/global-variables.css";
 @import "./styles/product-card.css";
+@import "./styles/buttons.css";
 
 * {
   margin: 0;
