@@ -1,6 +1,4 @@
-@import "./header.css";
-
-@import "./global-variables.css";
+@import "./styles/global-variables.css";
 @import "./styles/header.css";
 @import "./styles/greeting.css";
 @import "./styles/global-variables.css";
@@ -17,6 +15,7 @@ body {
   max-width: 1400px;
   padding: 0em 1em;
   margin: 0 auto;
+  font-family: var(--font-family-sans);
 }
 
 footer {
@@ -47,7 +46,7 @@ html {
   flex: 1;
 }
 
-.page {
+/* .page {
   width: 100%;
   max-width: 390px;
   margin: 1.5rem auto;
@@ -57,4 +56,4 @@ html {
   border-radius: 28px;
   overflow: hidden;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
-}
+} */
