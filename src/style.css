@@ -1,6 +1,7 @@
-@import './styles/global-variables.css';
-@import './styles/header.css';
-@import './styles/product-card.css';
+@import "./styles/global-variables.css";
+@import "./styles/header.css";
+@import "./styles/greeting.css";
+@import "./styles/global-variables.css";
 
 * {
   margin: 0;
@@ -9,16 +10,62 @@
 }
 
 body {
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   max-width: 1400px;
   padding: 0em 1em;
+  margin: 0 auto;
   font-family: var(--font-family-sans);
-  font-size: var(--font-size-paragraph-medium);
-  color: var(--color-foreground-default);
-  background-color: var(--color-surface-default);
 }
 
-h3 {
-  font-size: var(--font-size-heading-medium);
-  font-weight: 400;
+footer {
+  position: relative;
+  margin-top: 3em;
+  padding: 1em 0;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  width: 100vw;
+  margin: 0;
+  gap: 2rem;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+
+  background-color: var(--color-surface-brand-subtle);
 }
+
+h1, h2 {
+  font-family: var(--font-family-serif);
+}
+h1 {
+  font-size: var(--font-size-heading-large)
+}
+
+h2 {
+  font-size: var(--font-size-heading-medium)
+}
+
+h3, h4 {
+  font-size: var(--font-size-paragraph-medium)
+}
+
+body,
+html {
+  height: 100%;
+}
+#app {
+  flex: 1;
+}
+
+/* .page {
+  width: 100%;
+  max-width: 390px;
+  margin: 1.5rem auto;
+
+  background-color: var(--color-surface-default);
+
+  border-radius: 28px;
+  overflow: hidden;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+} */
