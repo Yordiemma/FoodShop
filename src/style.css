@@ -1,5 +1,6 @@
 @import './styles/header.css';
 @import './styles/global-variables.css';
+@import './styles/buttons.css';
 
 * {
   margin: 0;
@@ -13,46 +14,3 @@ body {
   padding: 0em 1em;
 }
 
-/* BUTTON STYLING */
-
-.compact-button { 
- background-color: var(--color-surface-brand);
-height: 40px;
-width: 40px;
-border-radius: 45px;
-border: none;
-}
-
-.stepper { 
-  display: flex;
-  align-items: center;
-  height: 40px;
-  width: 125px;
-  gap: 24px;
-}
-
-.stepper-button-minus {
-  background-color: var(--color-surface-default);
-  height: 40px;
-  width: 40px;
-  border-radius: 45px 0 0 45px;
-  border: 1px solid var(--color-border-brand);
-}
-
-.stepper-button-plus {
-  background-color: var(--color-surface-default);
-  height: 40px;
-  width: 40px;
-  border-radius: 0 45px 45px 0;
-  border: 1px solid var(--color-border-brand);
-}
-
-.show-more-button {
-  background-color: var(--color-surface-brand-subtle);
-  height: 40px;
-  width: 125px;
-  border-radius: 45px;
-  border: none;
-}
-
-/* END BUTTON STYLING */
