@@ -1,6 +1,7 @@
 .offers {
     display: flex;
     gap: 16px;
+    margin: 1em 0;
 }
 
 .offer-card {
@@ -10,4 +11,12 @@
     width: 100%;
     border-radius: .5em;
     height: 12.9375rem;
+    position: relative;
+}
+
+.offer-card h3 {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    color: #fff;
 }
