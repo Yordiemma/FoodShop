@@ -1,0 +1,11 @@
+@import "./global-variables.css";
+
+header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.top-nav img {
+  padding: 0.5em;
+  margin-top: 1em;
+}
