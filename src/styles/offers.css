@@ -1,0 +1,31 @@
+.offers {
+    display: flex;
+    gap: 1em;
+    margin: 1em 0;
+}
+
+.offer-card {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    border-radius: 0em;
+    height: 15em;
+    position: relative;
+}
+
+.offer-card:first-child {
+    background-image: url('/src/images/offer.png');
+}
+
+.offer-card:last-child {
+    background-image: url('/src/images/offer.png');
+}
+
+.offer-card h2 {
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    color: #fff;
+    width: 70%;
+    line-height: 1.25em;
+}

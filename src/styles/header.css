@@ -1,6 +1,10 @@
 header {
   display: flex;
   justify-content: space-between;
+  background-color: #FFF;
+  position: sticky;
+  top: 0px;
+  z-index: 1;
 }
 
 .top-nav {
@@ -10,16 +14,23 @@ header {
 
 .top-nav img {
   padding: .5em;
-  margin-top: 1em;
+  margin-top: .25em;
 }
 
-.top-nav span {
+.cart-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.cart-wrap span {
   color: #FFF;
   background: var(--color-surface-pop);
   font-size: x-small;
   border-radius: 5rem;
-  border: 3px solid #FFF;
+  border: 2px solid #FFF;
   padding: .05rem 0.25rem;
+  height: 1.8em;
   position: absolute;
-  right: 1.4em;
+  right: .25em;
+  top: .5em;
 }
