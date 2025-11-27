@@ -81,11 +81,11 @@ html {
   gap: 16px;
 }
 
-.vertical .product-list {
+.vertical {
   flex-direction: column;
 }
 
-.horizontal .product-list {
+.horizontal {
   flex-direction: row;
   overflow-x: auto;
   padding-block-end: 16px;

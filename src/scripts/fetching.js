@@ -4,12 +4,12 @@ const listContainer = document.getElementById('often-bought-products')
 const productList = listContainer.querySelector(".product-list")
 const productItem = productList.querySelector(".product-item")
 
-const createOftenBought = () => {
+const createOftenBought = (cardSize) => {
     const boughtProducts = productData.slice(4, 8)
     
     for (const product of boughtProducts) {
         const productItem = document.createElement("div")
-        productItem.classList.add("product-item", "slim")
+        productItem.classList.add("product-item")
 
         if (product.sale) {
              productItem.classList.add("sale")
