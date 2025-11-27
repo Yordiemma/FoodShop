@@ -7,6 +7,16 @@
         font-size: var(--font-size-paragraph-small);
     }
 
+    &.sale .sale-tag{
+        display: block;
+
+    }
+
+    &.sale .active{
+        color: var(--color-foreground-pop)
+
+    }
+
     & .stepper {
         display: none;
     }
@@ -36,6 +46,7 @@
         border-radius: 2px;
         padding-block: 2px;
         padding-inline: 4px;
+        display: none;
     }
 
     & .meta-tag {
