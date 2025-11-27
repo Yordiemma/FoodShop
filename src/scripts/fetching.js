@@ -4,12 +4,15 @@ const listContainer = document.getElementById('often-bought-products')
 const productList = listContainer.querySelector(".product-list")
 const productItem = productList.querySelector(".product-item")
 
-const createOftenBought = (cardSize) => {
-    const boughtProducts = productData.slice(4, 8)
+const oftenBoughtProducts = productData.slice(4, 8)
+
+const createlistOfProducts = (array, verticalOrHorizontal) => {
     
-    for (const product of boughtProducts) {
+    for (const product of array) {
         const productItem = document.createElement("div")
         productItem.classList.add("product-item")
+
+        productList.classList.add(verticalOrHorizontal)
 
         if (product.sale) {
              productItem.classList.add("sale")
@@ -76,5 +79,4 @@ const createOftenBought = (cardSize) => {
 
     
 }
-createOftenBought()
-console.log(productData)
+createlistOfProducts(oftenBoughtProducts, "vertical")
