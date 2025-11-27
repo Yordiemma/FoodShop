@@ -1,6 +1,7 @@
 export const productData = [
   {
     category: "Meat, poultry & deli",
+    id: Date.now(),
     name: "Falukorv Ring",
     brand: "Scan",
     description: "800 g",
@@ -14,6 +15,7 @@ export const productData = [
   },
   {
     category: "Meat, poultry & deli",
+    id: Date.now(),
     name: "Pie Cheese & Ham",
     brand: "Felix",
     description: "220 g, fryst",
@@ -25,6 +27,7 @@ export const productData = [
   },
   {
     category: "Frozen",
+    id: Date.now(),
     name: "Pizza X-Tra Allt Capricciosa",
     brand: "Grandiosa",
     description: "350 g, fryst",
@@ -38,6 +41,7 @@ export const productData = [
   },
   {
     category: "Beverages",
+    id: Date.now(),
     name: "7up Sugar Free",
     brand: "7up",
     description: "150 cl",
@@ -50,6 +54,7 @@ export const productData = [
   },
   {
     category: "Beverages",
+    id: Date.now(),
     name: "Pommac Magnum",
     brand: "Pommac",
     description: "10 cl",
@@ -61,6 +66,7 @@ export const productData = [
   },
   {
     category: "Beverages",
+    id: Date.now(),
     name: "Zingo Zero Orange 6-pack",
     brand: "Zingo",
     description: "6x33 cl.",
@@ -72,6 +78,7 @@ export const productData = [
   },
   {
     category: "Beverages",
+    id: Date.now(),
     name: "Pepsi Max",
     brand: "Pepsi",
     description: "1,5 liter",
@@ -84,6 +91,7 @@ export const productData = [
   },
   {
     category: "Dairy & eggs",
+    id: Date.now(),
     name: "Whipping Cream 36%",
     brand: "Arla Köket",
     description: "5 dl",
@@ -97,6 +105,7 @@ export const productData = [
   },
   {
     category: "Dairy & eggs",
+    id: Date.now(),
     name: "Blue Cheese Ädel 30%",
     brand: "Kvibille",
     description: "140 g",
@@ -110,6 +119,7 @@ export const productData = [
   },
   {
     category: "Dairy & eggs",
+    id: Date.now(),
     name: "Porridge Bread",
     brand: "Pågen",
     description: "780 g",
@@ -123,6 +133,7 @@ export const productData = [
   },
   {
     category: "Dairy & eggs",
+    id: Date.now(),
     name: "Semi-skimmed Milk",
     brand: "Arla",
     description: "1,5 lit",
@@ -134,6 +145,7 @@ export const productData = [
   },
   {
     category: "Dairy & eggs",
+    id: Date.now(),
     name: "Semi-skimmed Milk",
     brand: "Arla",
     description: "1,5 lit",
@@ -147,6 +159,7 @@ export const productData = [
   },
   {
     category: "Dairy & eggs",
+    id: Date.now(),
     name: "Whole Milk",
     brand: "Arla",
     description: "1,5 lit",
@@ -158,6 +171,7 @@ export const productData = [
   },
   {
     category: "Pantry",
+    id: Date.now(),
     name: "Granola Hazelnuts & Dates",
     brand: "Paulúns",
     description: "450 g",
@@ -169,6 +183,7 @@ export const productData = [
   },
   {
     category: "Dairy & eggs",
+    id: Date.now(),
     name: "Eggs 12-pack M/L Organic",
     brand: "Änglamark",
     description: "12 st",
@@ -180,6 +195,7 @@ export const productData = [
   },
   {
     category: "Dairy & eggs",
+    id: Date.now(),
     name: "Eggs 12-pack M/L Organic",
     brand: "Änglamark",
     description: "12 st",
@@ -193,6 +209,7 @@ export const productData = [
   },
   {
     category: "Coffee",
+    id: Date.now(),
     name: "Brewed Coffee Medium Roast",
     brand: "Löfbergs",
     description: "450 g",
@@ -204,6 +221,7 @@ export const productData = [
   },
   {
     category: "Coffee",
+    id: Date.now(),
     name: "Brewed Coffee Dark Roast Skånerost",
     brand: "ZOÉGAS",
     description: "450 g",
@@ -215,6 +233,7 @@ export const productData = [
   },
   {
     category: "Pantry",
+    id: Date.now(),
     name: "Dessert Sauce Chocolate",
     brand: "O'hoj",
     description: "350 g",
