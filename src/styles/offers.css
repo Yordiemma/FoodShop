@@ -15,7 +15,7 @@
 }
 
 .offer-card:first-child {
-    background-image: url('/src/images/offer.png');
+    border: 1px solid red;
 }
 
 .offer-card:last-child {
