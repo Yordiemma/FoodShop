@@ -17,13 +17,20 @@ header {
   margin-top: .25em;
 }
 
-header span {
+.cart-wrap {
+  position: relative;
+  display: inline-flex;
+}
+
+.cart-wrap span {
   color: #FFF;
   background: var(--color-surface-pop);
   font-size: x-small;
   border-radius: 5rem;
   border: 2px solid #FFF;
   padding: .05rem 0.25rem;
-  position: relative;
-  right: 2em;
+  height: 1.8em;
+  position: absolute;
+  right: .25em;
+  top: .5em;
 }
