@@ -1,1 +1,1 @@
-import './offers'
+import './styles/scripts/offers'
