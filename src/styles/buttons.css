@@ -74,6 +74,13 @@
         color: var(--color-foreground-inverted);
         transition: 0.2s;
     }
+    
+.show-more-button-container {
+    font-size: var(--font-size-paragraph-xsmall);
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
 }
 
 
@@ -99,4 +106,5 @@
 
 button { 
     cursor: pointer;
+    align-self: center;
 }
