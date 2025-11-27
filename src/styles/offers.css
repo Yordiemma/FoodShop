@@ -1,6 +1,6 @@
 .offers {
     display: flex;
-    gap: 16px;
+    gap: 1em;
     margin: 1em 0;
 }
 
@@ -9,7 +9,7 @@
     background-position: center;
     width: 100%;
     border-radius: 0em;
-    height: 12.9375rem;
+    height: 20em;
     position: relative;
 }
 
@@ -18,12 +18,13 @@
 }
 
 .offer-card:last-child {
-    background-image: url('/src/images/offer.png');
+    background-image: url('/src/images/offer1.png');
 }
 
-.offer-card h3 {
+.offer-card h4 {
     position: absolute;
-    bottom: 16px;
-    left: 16px;
+    bottom: 1em;
+    left: 1em;
     color: #fff;
+    width: 50%;
 }
