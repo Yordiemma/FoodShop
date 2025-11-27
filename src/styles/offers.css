@@ -15,11 +15,11 @@
 }
 
 .offer-card:first-child {
-    border: 1px solid red;
+    background-image: url('/src/images/offer.png');
 }
 
 .offer-card:last-child {
-    background-image: url('/src/images/offer1.png');
+    background-image: url('/src/images/offer.png');
 }
 
 .offer-card h2 {

@@ -23,15 +23,4 @@ const generateOffer = () => {
     const offersSectionEl = document.querySelector('.offers')
     const offerCardEl = document.querySelector('.offer-card')
     const cardText = document.querySelector('.offer-text')
-
-    offersSectionEl.firstElementChild.style.backgroundImage = '/images/offer.png';
-    offerCardEl.firstElementChild.p = 'bla'
-    // cardText.lastChild.textContent = offer[0].text
-    console.log(offersSectionEl.firstElementChild)
-    // console.log(offerCardEl.style.backgroundImage)
-
-    // offerCardEl.appendChild(cardText.lastChild)
-    
 }
-
-generateOffer()
