@@ -19,6 +19,7 @@ body {
   max-width: 1400px;
   padding: 0em 1em;
   margin: 0 auto;
+  color: var(--color-foreground-default)
 }
 
 .container-full {
@@ -71,6 +72,7 @@ html {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin-block-end: 3.5rem;
 }
 
 .product-list {

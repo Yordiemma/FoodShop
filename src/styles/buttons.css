@@ -59,6 +59,13 @@
     color: var(--color-foreground-default);
 }
 
+.show-more-button-container {
+    font-size: var(--font-size-paragraph-xsmall);
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+}
 
 
 .show-more-button {
@@ -73,4 +80,5 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    align-self: center;
 }
