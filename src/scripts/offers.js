@@ -13,7 +13,7 @@ const offer = [{
 }]
 
 const randomID = (max) => {
-    return Math.floor(Math.random () * max)
+    return Math.floor(Math.random() * max)
 }
 
 console.log(randomID(3))
@@ -23,4 +23,16 @@ const generateOffer = () => {
     const offersSectionEl = document.querySelector('.offers')
     const offerCardEl = document.querySelector('.offer-card')
     const cardText = document.querySelector('.offer-text')
+
+
+    console.log(offersSectionEl.firstElementChild)
+    console.log(offersSectionEl.lastElementChild)
+
+    offersSectionEl.firstElementChild.style.backgroundImage = offer[2].img_url
+
+    offersSectionEl.firstElementChild.firstElementChild.textContent = offer[2].text
+    offersSectionEl.lastElementChild.lastElementChild.textContent = 'testi'
+    console.log(offersSectionEl.firstElementChild.firstElementChild.textContent)
 }
+
+generateOffer()
