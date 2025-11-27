@@ -56,6 +56,9 @@
     }
 
     & .product-price-container {
+        display:flex;
+        flex-direction: column;
+        justify-content: flex-end;
         & .active {
             font-weight: 700;
         }

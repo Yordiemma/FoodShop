@@ -10,7 +10,7 @@ export const productData = [
     localProduced: true,
     link: "https://www.coop.se/handla/varor/kott-fagel-chark/korv/falukorv/falukorv-ring-7300206787006",
     salePrice: 35,
-    orgPrice: 42,
+    price: 42,
     shortExpiryDate: false
   },
   {
@@ -22,7 +22,7 @@ export const productData = [
     photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1722929387/cloud/376071/Paj%20Ost%20%26%20skinka.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/frys/fardigt-att-varma/paj/paj-ost-skinka-7310240079555",
-    orgPrice: 31.95,
+    price: 31.95,
     shortExpiryDate: false
   },
   {
@@ -36,7 +36,7 @@ export const productData = [
     localProduced: false,
     link: "https://www.coop.se/handla/varor/frys/fardigt-att-varma/pizza/pizza-x-tra-allt-capricciosa-7310240071672",
     salePrice: 69,
-    orgPrice: 85,
+    price: 85,
     shortExpiryDate: false
   },
   {
@@ -61,7 +61,7 @@ export const productData = [
     photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1530117881/309118/Pommac%20Magnum.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/dryck/lask/ovriga-smaker/pommac-magnum-7391001000285",
-    orgPrice: 59.95,
+    price: 59.95,
     shortExpiryDate: false
   },
   {
@@ -70,10 +70,10 @@ export const productData = [
     name: "Zingo Zero Orange 6-pack",
     brand: "Zingo",
     description: "6x33 cl.",
-    photoUrl: "/mnt/data/Zingo Apelsin.jpg",
+    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1724328533/cloud/380145/Zingo%20Zero%20Apelsin%206-pack.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/dryck/lask/apelsinsmak/zingo-zero-apelsin-6-pack-7310072000765/",
-    orgPrice: 46.95,
+    price: 46.95,
     shortExpiryDate: false
   },
   {
@@ -86,7 +86,7 @@ export const productData = [
     photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1710775305/cloud/337339/Pepsi%20Max.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/dryck/lask/cola/pepsi-max-7310072000635",
-    orgPrice: 50,
+    price: 50,
     shortExpiryDate: false
   },
   {
@@ -100,7 +100,7 @@ export const productData = [
     localProduced: true,
     link: "https://www.coop.se/handla/varor/mejeri-agg/gradde/vispgradde/vispgradde-36-7310865061935",
     salePrice: 30,
-    orgPrice: 36.5,
+    price: 36.5,
     shortExpiryDate: false
   },
   {
@@ -113,7 +113,7 @@ export const productData = [
     photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1763117136/cloud/554357/%C3%84delost.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/ost/palaggsost/mjukost/adelost-7311440016364/",
-    orgPrice: 37,
+    price: 37,
     salePrice: 37 * 0.7,
     shortExpiryDate: false
   },
@@ -128,7 +128,7 @@ export const productData = [
     localProduced: true,
     link: "https://www.coop.se/handla/varor/morkt-grovt-brod-matbrod/grotbrod-7311070008708",
     salePrice: 34 * 0.7,
-    orgPrice: 34,
+    price: 34,
     shortExpiryDate: false
   },
   {
@@ -140,7 +140,7 @@ export const productData = [
     photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206868/cloud/549377/Mellanmj%C3%B6lk%20F%C3%A4rsk.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/mejeri-agg/mjolk/mellanmjolk/mellanmjolk-farsk-7310865001825/",
-    orgPrice: 17,
+    price: 17,
     shortExpiryDate: false
   },
   {
@@ -154,7 +154,7 @@ export const productData = [
     localProduced: false,
     link: "https://www.coop.se/handla/varor/mejeri-agg/mjolk/mellanmjolk/mellanmjolk-farsk-7310865001825/",
     salePrice: 17 * 0.7,
-    orgPrice: 17,
+    price: 17,
     shortExpiryDate: true
   },
   {
@@ -166,7 +166,7 @@ export const productData = [
     photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206690/cloud/549370/Standardmj%C3%B6lk%20F%C3%A4rsk.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/mejeri-agg/mjolk/standardmjolk/standardmjolk-farsk-7310865000361/",
-    orgPrice: 20.95,
+    price: 20.95,
     shortExpiryDate: false
   },
   {
@@ -178,7 +178,7 @@ export const productData = [
     photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1617885984/426809/Granola%20Hasseln%C3%B6tter%20%26%20dadlar.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/skafferi/flingor-musli/granola-crunch/granola-hasselnotter-dadlar-7310240001761/",
-    orgPrice: 55.95,
+    price: 55.95,
     shortExpiryDate: false
   },
   {
@@ -190,7 +190,7 @@ export const productData = [
     photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206690/cloud/549370/Standardmj%C3%B6lk%20F%C3%A4rsk.jpg",
     localProduced: true,
     link: "https://www.coop.se/handla/varor/mejeri-agg/egg/egg-12-pack-m-l-eko-7310865061622/",
-    orgPrice: 51.95,
+    price: 51.95,
     shortExpiryDate: false
   },
   {
@@ -204,7 +204,7 @@ export const productData = [
     localProduced: true,
     link: "https://www.coop.se/handla/varor/mejeri-agg/egg/egg-12-pack-m-l-eko-7310865061622/",
     salePrice: 51.95 * 0.7,
-    orgPrice: 51.95,
+    price: 51.95,
     shortExpiryDate: true
   },
   {
@@ -216,7 +216,7 @@ export const productData = [
     photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206690/cloud/549370/Standardmj%C3%B6lk%20F%C3%A4rsk.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/mejeri-agg/egg/egg-12-pack-m-l-eko-7310865061622/",
-    orgPrice: 69.95,
+    price: 69.95,
     shortExpiryDate: false
   },
   {
@@ -228,7 +228,7 @@ export const productData = [
     photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1734533714/cloud/417088/Bryggkaffe%20M%C3%B6rkrost%20Sk%C3%A5nerost.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/dryck/kaffe/bryggkaffe/bryggkaffe-morkrost-skanerost-7310731103011",
-    orgPrice: 69.95,
+    price: 69.95,
     shortExpiryDate: false
   },
   {
@@ -241,7 +241,7 @@ export const productData = [
     photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1730462302/cloud/401520/Dessertsas%20Choklad.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/skafferi/desserter/vaniljsas-dessertsas/dessertsas-choklad-8711327540903",
-    orgPrice: 37.95,
+    price: 37.95,
     salePrice: 37.95 * 0.7,
     shortExpiryDate: false
   },
