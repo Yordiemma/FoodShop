@@ -42,7 +42,8 @@ footer {
   background-color: var(--color-surface-brand-subtle);
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: var(--font-family-serif);
 }
 h1 {
@@ -53,7 +54,8 @@ h2 {
   font-size: var(--font-size-heading-medium);
 }
 
-h3, h4 {
+h3,
+h4 {
   font-size: var(--font-size-paragraph-medium);
   font-weight: 500;
 }
@@ -92,3 +94,7 @@ html {
   margin-top: 56px;
 }
 
+.product-list-sales {
+  display: flex;
+  justify-content: space-between;
+}
