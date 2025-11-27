@@ -9,7 +9,8 @@
     background-position: center;
     width: 100%;
     border-radius: 0em;
-    height: 20em;
+    height: 15em;
+    border-radius: .5em;
     position: relative;
 }
 
@@ -21,10 +22,11 @@
     background-image: url('/src/images/offer1.png');
 }
 
-.offer-card h4 {
+.offer-card h2 {
     position: absolute;
     bottom: 1em;
     left: 1em;
     color: #fff;
-    width: 50%;
+    width: 70%;
+    line-height: 1.25em;
 }
