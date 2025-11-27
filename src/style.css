@@ -85,6 +85,7 @@ html {
 .horizontal .product-list {
   flex-direction: row;
   overflow-x: auto;
+  padding-block-end: 16px;
 }
 
 .example-components {
