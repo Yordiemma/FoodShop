@@ -1,335 +1,197 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="" href="#" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
-    <title>foodshop</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="" href="#" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/style.css" />
+  <title>foodshop</title>
 
-  <body>
-    <header>
-      <div class="top-nav">
-        <img src="/src/images/menu.svg" alt="" />
-        <img src="/src/images/logo.svg" alt="logo" />
-      </div>
-      <div class="top-nav">
-        <img src="/src/images/search.svg" alt="" />
-        <img src="/src/images/profile.svg" alt="" />
-        <img src="/src/images/cart.svg" alt="" />
-      </div>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <header>
+    <div class="top-nav">
+      <img src="/src/images/menu.svg" alt="" />
+      <img src="/src/images/logo.svg" alt="logo" />
+    </div>
+    <div class="top-nav">
+      <img src="/src/images/search.svg" alt="" />
+      <img src="/src/images/profile.svg" alt="" />
+      <img src="/src/images/cart.svg" alt="" />
       <span>0</span>
-    </header>
+    </div>
+  </header>
 
-    <main>
-      <section class="greeting">
-        <h1>Welcome back Stig,</h1>
-        <p class="greeting-subtitle">
-          We got some tasty goods in store for you!
-        </p>
+  <main>
+    <section class="greeting">
+      <h1>Welcome back Stig,</h1>
+      <p class="greeting-subtitle">
+        We got some tasty goods in store for you!
+      </p>
 
-        <div class="order-box">
-          <div class="order-icon">
-            <img src="/src/images/truck.svg" alt="delivery truck" />
-          </div>
-
-          <div class="order-info">
-            <p class="order-number">#282389 - Delivery November 29</p>
-            <p class="order-update">
-              Update your order <span>(until 26/11)</span>
-            </p>
-          </div>
+      <div class="order-box">
+        <div class="order-icon">
+          <img src="/src/images/truck.svg" alt="delivery truck" />
         </div>
 
-        <div class="search-box">
-          <input type="text" placeholder="Search for a product or category" />
-          <img src="/src/images/search.svg" alt="search icon" />
+        <div class="order-info">
+          <p class="order-number">#282389 - Delivery November 29</p>
+          <p class="order-update">
+            Update your order <span>(until 26/11)</span>
+          </p>
         </div>
-      </section>
-    </main>
+      </div>
 
-    <!-- Button components -->
-    <section class="example-components">
-      <button class="compact-button">
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <path
-            d="M12 5V19"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-          <path
-            d="M5 12H19"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
+      <div class="search-box">
+        <input type="text" placeholder="Search for a product or category" />
+        <img src="/src/images/search.svg" alt="search icon" />
+      </div>
+    </section>
+  </main>
+
+  <!-- Button components -->
+  <section class="example-components">
+    <button class="compact-button">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <div class="stepper">
+      <button class="stepper-button-minus">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true">
+          <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
         </svg>
       </button>
+      <div class="stepper-value">1</div>
+      <button class="stepper-button-plus">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </button>
+    </div>
+    <button class="show-more-button">Show more</button>
+  </section>
 
-      <div class="stepper">
-        <button class="stepper-button-minus">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
-          >
-            <path
-              d="M5 12H19"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-        <div class="stepper-value">1</div>
-        <button class="stepper-button-plus">
-          <svg
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M12 5V19"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-            <path
-              d="M5 12H19"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
-          </svg>
-        </button>
-      </div>
-      <button class="show-more-button">Show more</button>
-    </section>
+  <section class="example-components">
+    <!-- Davids example product cards -->
 
-    <section class="example-components">
-      <!-- Davids example product cards -->
-
-      <div class="product-list-vertical">
-        <div class="product-item slim">
-          <div class="product-image-container">
-            <span class="sale-tag">Sale!</span>
-            <img
-              id="product-image"
-              src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dg"
-              alt=""
-            />
-          </div>
-          <div class="product-info">
-            <div class="product-heading">
-              <h3>Milk Standard</h3>
-              <div class="description">
-                <span class="meta-tag">Local</span>
-                <p class="description">3%, 1,5 liter</p>
-              </div>
-            </div>
-            <div class="product-footer">
-              <div class="product-price-container">
-                <p class="price active">100 kr</p>
-                <p class="price old-price">120 kr</p>
-              </div>
-              <button class="compact-button">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 5V19"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M5 12H19"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
-              <div class="stepper">
-                <button class="stepper-button-minus">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M5 12H19"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-                <div class="stepper-value">1</div>
-                <button class="stepper-button-plus">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 5V19"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M5 12H19"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
-            </div>
-          </div>
+    <div class="product-list-vertical">
+      <div class="product-item slim">
+        <div class="product-image-container">
+          <span class="sale-tag">Sale!</span>
+          <img id="product-image"
+            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dg"
+            alt="" />
         </div>
-      </div>
-
-
-      <div class="product-list-horizontal">
-        <div class="product-item large">
-          <div class="product-image-container">
-            <span class="sale-tag">Sale!</span>
-            <img
-              id="product-image"
-              src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dg"
-              alt=""
-            />
-          </div>
-          <div class="product-info">
-            <div class="product-heading">
-              <h3>Milk Standard</h3>
+        <div class="product-info">
+          <div class="product-heading">
+            <h3>Milk Standard</h3>
+            <div class="description">
+              <span class="meta-tag">Local</span>
               <p class="description">3%, 1,5 liter</p>
             </div>
-            <div class="product-footer">
-              <div class="product-price-container">
-                <p class="price active sale-price">100 kr</p>
-                <p class="price old-price">120 kr</p>
-              </div>
-              <button class="compact-button full-width">
-                <svg
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M12 5V19"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M5 12H19"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
+          </div>
+          <div class="product-footer">
+            <div class="product-price-container">
+              <p class="price active">100 kr</p>
+              <p class="price old-price">120 kr</p>
+            </div>
+            <button class="compact-button">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="stepper">
+              <button class="stepper-button-minus">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
+                  <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
                 </svg>
               </button>
-              <div class="stepper">
-                <button class="stepper-button-minus">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true"
-                  >
-                    <path
-                      d="M5 12H19"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-                <div class="stepper-value">1</div>
-                <button class="stepper-button-plus">
-                  <svg
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M12 5V19"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                    <path
-                      d="M5 12H19"
-                      stroke="currentColor"
-                      stroke-width="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    />
-                  </svg>
-                </button>
-              </div>
+              <div class="stepper-value">1</div>
+              <button class="stepper-button-plus">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <div id="app"></div>
 
-        <section class="offers">
+    <div class="product-list-horizontal">
+      <div class="product-item large">
+        <div class="product-image-container">
+          <span class="sale-tag">Sale!</span>
+          <img id="product-image"
+            src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?q=80&w=1760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dg"
+            alt="" />
+        </div>
+        <div class="product-info">
+          <div class="product-heading">
+            <h3>Milk Standard</h3>
+            <p class="description">3%, 1,5 liter</p>
+          </div>
+          <div class="product-footer">
+            <div class="product-price-container">
+              <p class="price active sale-price">100 kr</p>
+              <p class="price old-price">120 kr</p>
+            </div>
+            <button class="compact-button full-width">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="stepper">
+              <button class="stepper-button-minus">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
+                  <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+              <div class="stepper-value">1</div>
+              <button class="stepper-button-plus">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="app"></div>
+
+  <section class="offers">
     <div class="offer-card">
       <h3>lorem</h3>
     </div>
@@ -338,12 +200,13 @@
     </div>
   </section>
 
-    <footer>
-      <h3>Contact info</h3>
-      <h3>Customer support</h3>
-      <h3>FAQ</h3>
-    </footer>
+  <footer>
+    <h3>Contact info</h3>
+    <h3>Customer support</h3>
+    <h3>FAQ</h3>
+  </footer>
 
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
