@@ -1,24 +1,28 @@
 import { productData } from './product-data'
 
-const listContainer = document.getElementById('often-bought-products')
-const productList = listContainer.querySelector(".product-list")
-const productItem = productList.querySelector(".product-item")
+const listContainerOftenBought = document.getElementById('often-bought-products')
+const oftenBoughtArray = productData.slice(4, 8)
 
-const oftenBoughtProducts = productData.slice(4, 8)
+const createlistOfProducts = (listContainer, productArray, verticalOrHorizontal) => {
 
-const createlistOfProducts = (array, verticalOrHorizontal) => {
-    
-    for (const product of array) {
+    const productList = listContainer.querySelector(".product-list")
+
+    for (const product of productArray) {
         const productItem = document.createElement("div")
         productItem.classList.add("product-item")
 
+        //Add class for vertical or horizontal layout
         productList.classList.add(verticalOrHorizontal)
 
+        //Add class sale if the item is on sale
         if (product.sale) {
              productItem.classList.add("sale")
         }
 
+        //Add product to product list
         productList.appendChild(productItem)
+
+        //Add HTML for each product
         productItem.innerHTML += `
           <div class="product-image-container">
             <span class="sale-tag">${product.sale ? product.sale.saleMessage : ""}</span>
@@ -69,14 +73,7 @@ const createlistOfProducts = (array, verticalOrHorizontal) => {
           </div>
         
         `
-
-        // if (product.name) {
-        //     productItem.classList.add("sale")
-        // }
-        console.log(productItem)
-
     }
-
-    
 }
-createlistOfProducts(oftenBoughtProducts, "vertical")
+
+createlistOfProducts(listContainerOftenBought, oftenBoughtArray, "vertical")
