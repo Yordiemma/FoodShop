@@ -77,3 +77,4 @@ const createOftenBought = (cardSize) => {
     
 }
 createOftenBought()
+console.log(productData)
