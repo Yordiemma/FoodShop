@@ -74,6 +74,7 @@
         color: var(--color-foreground-inverted);
         transition: 0.2s;
     }
+}
     
 .show-more-button-container {
     font-size: var(--font-size-paragraph-xsmall);
