@@ -75,23 +75,18 @@ html {
   gap: 16px;
   margin-block-end: 3.5rem;
 }
-
 .product-list {
   display: flex;
   gap: 16px;
 }
-
 .vertical {
   flex-direction: column;
 }
-
 .horizontal {
   flex-direction: row;
   overflow-x: auto;
   padding-block-end: 16px;
 }
-
 .example-components {
   margin-top: 56px;
 }
-
