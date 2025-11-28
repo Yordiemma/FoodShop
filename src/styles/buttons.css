@@ -12,6 +12,11 @@
     &.full-width{
         width: 100%;
     } 
+
+    &:hover {
+        background-color: var(--color-surface-brand-hover);
+        transition: 0.2s;
+     }
 }
 
 .stepper {
@@ -45,6 +50,12 @@
     border-radius: 50% 0 0 50%;
     border: 1px solid var(--color-border-brand);
     color: var(--color-foreground-default);
+
+ &:hover {
+        background-color: var(--color-surface-brand);
+        color: var(--color-foreground-inverted);
+        transition: 0.2s;
+    }
 }
 
 .stepper-button-plus {
@@ -57,8 +68,21 @@
     align-items: center;
     justify-content: center;
     color: var(--color-foreground-default);
-}
 
+        &:hover {
+        background-color: var(--color-surface-brand);
+        color: var(--color-foreground-inverted);
+        transition: 0.2s;
+    }
+}
+    
+.show-more-button-container {
+    font-size: var(--font-size-paragraph-xsmall);
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+    align-items: center;
+}
 
 
 .show-more-button {
@@ -73,4 +97,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
+
+    &:hover {
+        background-color: var(--color-surface-brand-hover);
+        color: var(--color-foreground-inverted);
+        transition: 0.2s;
+    }
+}
+
+button { 
+    cursor: pointer;
+    align-self: center;
 }

@@ -1,6 +1,7 @@
 @import "./styles/global-variables.css";
 @import "./styles/header.css";
 @import "./styles/greeting.css";
+@import "./styles/offers.css";
 @import "./styles/global-variables.css";
 @import "./styles/product-card.css";
 @import "./styles/buttons.css";
@@ -19,6 +20,7 @@ body {
   max-width: 1400px;
   padding: 0em 1em;
   margin: 0 auto;
+  color: var(--color-foreground-default)
 }
 
 .container-full {
@@ -73,6 +75,7 @@ html {
   display: flex;
   flex-direction: column;
   gap: 16px;
+  margin-block-end: 3.5rem;
 }
 
 .product-list {
