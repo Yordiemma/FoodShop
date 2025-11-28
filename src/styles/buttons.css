@@ -105,6 +105,28 @@
     }
 }
 
+.go-to-button {
+    background-color: var(--color-surface-brand-subtle);
+    height: 2.5rem;
+    width: 100%;
+    border-radius: 9999px;
+    border: none;
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-paragraph-medium);
+    color: var(--color-foreground-brand);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+
+    &:hover {
+        background-color: var(--color-surface-brand-hover);
+        color: var(--color-foreground-inverted);
+        transition: 0.2s;
+    }
+}
+
 button { 
     cursor: pointer;
     align-self: center;

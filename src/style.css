@@ -5,6 +5,7 @@
 @import "./styles/global-variables.css";
 @import "./styles/product-card.css";
 @import "./styles/buttons.css";
+@import "./styles/cart-overlay.css";
 
 * {
   margin: 0;
