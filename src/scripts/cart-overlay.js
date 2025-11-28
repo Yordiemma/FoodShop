@@ -6,6 +6,8 @@ let shown = false;
 const cartShow = () => {
     cartEl.style.display = 'block'
     document.body.style.overflow = 'hidden'
+console.log(cartButtonEl.firstElementChild)
+
     shown = true;
 }
 
