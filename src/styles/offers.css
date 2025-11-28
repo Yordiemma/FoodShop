@@ -1,0 +1,24 @@
+.offers {
+    display: flex;
+    gap: .75em;
+    margin: 1em 0;
+}
+
+.offer-card {
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    border-radius: 0em;
+    height: 13em;
+    position: relative;
+    cursor: pointer;
+}
+
+.offer-card h2 {
+    position: absolute;
+    bottom: 1em;
+    left: 1em;
+    color: #fff;
+    width: 80%;
+    line-height: 1.25em;
+}

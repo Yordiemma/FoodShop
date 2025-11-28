@@ -7,13 +7,19 @@
     --color-foreground-subtle: #585858; 
     --color-foreground-brand: #9437BC; 
     --color-foreground-inverted: #FFFFFF;
+    --color-foreground-pop: #D95353;
+    --color-foreground-accent:#20734B;
+
     
     /* Surface/background colors */
     --color-surface-default: #FFFFFF;
     --color-surface-default-subtle: #CFCFCF;
     --color-surface-brand: #9437BC;
+    --color-surface-brand-hover: #762C96;
     --color-surface-brand-subtle: #F3D7FF;
     --color-surface-pop: #D95353;
+    --color-surface-accent:#20734B;
+    --color-surface-accent-subtle: #D5F3E5;
 
     /* Border colors */
     --color-border-default: #CFCFCF;
@@ -30,4 +36,6 @@
 
     --font-size-paragraph-medium: 1rem;
     --font-size-paragraph-small: 0.875rem;
+    --font-size-paragraph-xsmall: 0.75rem;
+
   }
