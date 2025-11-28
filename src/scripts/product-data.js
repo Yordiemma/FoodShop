@@ -2,7 +2,7 @@
 export const productData = [
   {
     category: "Meat, poultry & deli",
-    id: self.crypto.randomUUID(),
+    id: 1,//self.crypto.randomUUID(),
     name: "Falukorv Ring",
     brand: "Scan",
     description: "800 g",
