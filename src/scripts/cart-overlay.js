@@ -5,11 +5,13 @@ let shown = false;
 
 const cartShow = () => {
     cartEl.style.display = 'block'
+    document.body.style.overflow = 'hidden'
     shown = true;
 }
 
 const cartHide = () => {
     cartEl.style.display = 'none'
+    document.body.style.overflow = 'auto'
     shown = false;
 }
 

@@ -9,14 +9,14 @@
     justify-content: center;
     color: var(--color-foreground-inverted);
 
-    &.full-width{
+    &.full-width {
         width: 100%;
-    } 
+    }
 
     &:hover {
         background-color: var(--color-surface-brand-hover);
         transition: 0.2s;
-     }
+    }
 }
 
 .stepper {
@@ -51,7 +51,7 @@
     border: 1px solid var(--color-border-brand);
     color: var(--color-foreground-default);
 
- &:hover {
+    &:hover {
         background-color: var(--color-surface-brand);
         color: var(--color-foreground-inverted);
         transition: 0.2s;
@@ -69,13 +69,13 @@
     justify-content: center;
     color: var(--color-foreground-default);
 
-        &:hover {
+    &:hover {
         background-color: var(--color-surface-brand);
         color: var(--color-foreground-inverted);
         transition: 0.2s;
     }
 }
-    
+
 .show-more-button-container {
     font-size: var(--font-size-paragraph-xsmall);
     display: flex;
@@ -108,7 +108,7 @@
 .go-to-button {
     background-color: var(--color-surface-brand-subtle);
     height: 2.5rem;
-    width: 100%;
+    width: 90%;
     border-radius: 9999px;
     border: none;
     font-family: var(--font-family-sans);
@@ -119,6 +119,8 @@
     justify-content: center;
     margin-top: 1em;
     margin-bottom: 1em;
+    margin-left: auto;
+    margin-right: auto;
 
     &:hover {
         background-color: var(--color-surface-brand-hover);
@@ -127,7 +129,7 @@
     }
 }
 
-button { 
+button {
     cursor: pointer;
     align-self: center;
 }
