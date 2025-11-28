@@ -6,6 +6,7 @@
 @import "./styles/product-card.css";
 @import "./styles/buttons.css";
 @import "./styles/cart-overlay.css";
+@import "./styles/icon-buttons.css";
 
 * {
   margin: 0;
