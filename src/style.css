@@ -27,14 +27,19 @@ body {
   align-items: center;
 }
 .icon-img {
-  width: 130px;   
-  height: auto;
+ width: 80px;
+height: 80px;
+aspect-ratio: 1/1;
 }
 .button-text {
-  margin-top: 8px;
-  font-size: var(--font-size-paragraph-medium);
-  font-weight: 400;
+  font-family: var(--font-family-sans);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-foreground-default);
 }
+
+
+
 
 
 
