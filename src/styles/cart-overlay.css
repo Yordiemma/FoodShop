@@ -40,4 +40,5 @@
 .detail-box {
     margin: 10px auto 10px;
     text-align: center;
+    font-size: var(--font-size-paragraph-small);
 }
