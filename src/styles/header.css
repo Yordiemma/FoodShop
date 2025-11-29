@@ -20,6 +20,7 @@ header {
 .cart-wrap {
   position: relative;
   display: inline-flex;
+  cursor: pointer;
 }
 
 .cart-wrap span {
