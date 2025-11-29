@@ -275,20 +275,6 @@ export const productData = [
     shortExpiryDate: true
   },
   {
-    category: "Bread & bakery",
-    id: self.crypto.randomUUID(),
-    name: "Skogaholmslimpa",
-    brand: "Skogaholm",
-    description: "775 gram",
-    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1763120004/cloud/554405/Skogaholmslimpa.jpg",
-    sale: { saleMessage: "30% off" },
-    localProduced: false,
-    link: "https://www.coop.se/handla/varor/brod-bageri/matbrod/ljust-brod/skogaholmslimpa-7312200010110",
-    price: 100.08,
-    salePrice: 100 * 0.7,
-    shortExpiryDate: true
-  },
-  {
     category: "Meat, poultry & deli",
     id: self.crypto.randomUUID(),
     name: "Syrliga Isterband Lammhults",
@@ -346,6 +332,18 @@ export const productData = [
     localProduced: true,
     link: "https://www.coop.se/handla/varor/kott-fagel-chark/korv/ovrig-korv/prinskorv-7340063015706",
     price: 61.95,
+    shortExpiryDate: false
+  },
+  {
+    category: "Beverages",
+    id: self.crypto.randomUUID(),
+    name: "New England Pale Ale 3.5%",
+    brand: "Poppels Bryggeri",
+    description: "330 ml",
+    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1647878448/cloud/249792/New%20England%20Pale%20Ale%203.5%25.jpg",
+    localProduced: true,
+    link: "https://www.coop.se/handla/varor/dryck/ol-cider-vin/ol-35/new-england-pale-ale-35-7350068861536",
+    price: 24.95,
     shortExpiryDate: false
   },
 ];
