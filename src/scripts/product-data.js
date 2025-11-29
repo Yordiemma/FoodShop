@@ -312,4 +312,40 @@ export const productData = [
     price: 21.95,
     shortExpiryDate: false
   },
+  {
+    category: "Beverages",
+    id: self.crypto.randomUUID(),
+    name: "Råsaft Spenat Äpple Ananas & Citron",
+    brand: "Råsaft",
+    description: "700 ml",
+    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1743507008/cloud/460862/R%C3%A5saft%20Spenat%20%C3%84pple%20Ananas%20%26%20Citron.jpg",
+    localProduced: true,
+    link: "https://www.coop.se/handla/varor/dryck/juice-fruktdryck/ovrig-juice/rasaft-spenat-apple-ananas-citron-7350068170096",
+    price: 47.95,
+    shortExpiryDate: false
+  },
+  {
+    category: "Beverages",
+    id: self.crypto.randomUUID(),
+    name: "Läsk Ananas Utan Socker",
+    brand: "Hammars Bryggeri",
+    description: "100 cl",
+    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1636721871/cloud/238932/L%C3%A4sk%20Ananas%20Utan%20Socker.jpg",
+    localProduced: true,
+    link: "https://www.coop.se/handla/varor/dryck/lask/ovriga-smaker/lask-ananas-utan-socker-7391589006112",
+    price: 16.5,
+    shortExpiryDate: false
+  },
+  {
+    category: "Meat, poultry & deli",
+    id: self.crypto.randomUUID(),
+    name: "Prinskorv",
+    brand: "Andersson & Tillman",
+    description: "370 gram",
+    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1654002357/cloud/252900/Prinskorv%20.jpg",
+    localProduced: true,
+    link: "https://www.coop.se/handla/varor/kott-fagel-chark/korv/ovrig-korv/prinskorv-7340063015706",
+    price: 61.95,
+    shortExpiryDate: false
+  },
 ];
