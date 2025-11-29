@@ -1,5 +1,6 @@
 import { productData } from './product-data'
-import { addToCart } from './cart'  
+import { addToCart } from './cart'
+import { removeFromCart } from './cart'  
 
 const listContainerOftenBought = document.getElementById('often-bought-products')
 const oftenBoughtArray = productData.slice(4, 8)
@@ -79,6 +80,11 @@ const createlistOfProducts = (listContainer, productArray, verticalOrHorizontal)
         const addButtons = productItem.querySelectorAll(".add-product")
         addButtons.forEach(button => {
             button.addEventListener("click", (event) => addToCart(product.id, event))
+        })
+
+        const removeButtons = productItem.querySelectorAll(".remove-product")
+        removeButtons.forEach(button => {
+            button.addEventListener("click", (event) => removeFromCart(product.id, event))
         })
 
     }
