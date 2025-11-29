@@ -45,6 +45,9 @@ export const addToCart = (id, event) => {
 
             if (stepper){
                 stepper.style.display = "flex"
+                stepper.style.opacity = 1
+
+                compactButton.style.opacity = "0"
                 compactButton.style.display = "none"
             }
         }
@@ -67,8 +70,11 @@ export const removeFromCart = (id, event) => {
                 if (cartItem.amount === 1) {
                     cartItem.amount -= 1;
                     if (stepper){
+                        stepper.style.opacity = 0
                         stepper.style.display = "none"
+
                         compactButton.style.display = "block"
+                        compactButton.style.opacity = 1
                     }
 
                     console.log("remove item")

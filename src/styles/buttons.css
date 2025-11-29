@@ -27,6 +27,7 @@
     font-family: var(--font-family-sans);
     font-size: var(--font-size-paragraph-medium);
     border-radius: 9999px;
+    opacity: 0;
 }
 
 .stepper-value {

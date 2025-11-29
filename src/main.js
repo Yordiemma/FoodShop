@@ -1,5 +1,6 @@
 import './scripts/offers'
 import './scripts/cart-overlay'
+import './scripts/render-often-bought.js'
 import { renderShortExpiryProducts } from "./scripts/renderShortExpiry.js";
 
 // i put the code in main.js because:
