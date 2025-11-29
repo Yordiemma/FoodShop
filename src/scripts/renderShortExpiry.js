@@ -1,6 +1,5 @@
 import { productData } from "./product-data.js";
 
-
 export function renderShortExpiryProducts(container) {
   const shortExpiry = productData.filter(p => p.shortExpiryDate);
 
