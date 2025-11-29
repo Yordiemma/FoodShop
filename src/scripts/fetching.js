@@ -3,7 +3,7 @@ import { addToCart } from './cart'
 import { removeFromCart } from './cart'  
 
 const listContainerOftenBought = document.getElementById('often-bought-products')
-const oftenBoughtArray = productData.slice(4, 8)
+const oftenBoughtArray = productData.slice(4, 16)
 
 const createlistOfProducts = (listContainer, productArray, verticalOrHorizontal) => {
 
