@@ -32,6 +32,22 @@
         </div>
       </header>
 
+      <section class="cart-overlay">
+        <section class="product-list-container vertical">
+          <h3>Your Cart (x items)</h3>
+        </section>
+        <div class="total-wrapper">
+          <div class="total-box">
+            <div class="total-text">
+              <h3><b>Total</b> (x items)</h3>
+              <h3><b>x kr</b></h3>
+            </div>
+            <div class="detail-box">See details</div>
+          </div>
+          <button class="go-to-button">Continue to delivery</button>
+        </div>
+      </section>
+
       <main>
         <section class="greeting">
           <h1>Welcome back Stig,</h1>
@@ -59,13 +75,54 @@
         </section>
       </main>
     </div>
+    <div class="button-row">
+      <button class="icon-button">
+        <img
+          src="src/images/categories.png"
+          alt="Categories"
+          class="icon-img"
+        />
+        <div class="button-text">
+          Categories
+          <img
+            src="src/images/fi_arrow-right.svg"
+            alt="arrow"
+            class="arrow-img"
+          />
+        </div>
+      </button>
+
+      <button class="icon-button">
+        <img src="src/images/recipes.png" alt="Recipes" class="icon-img" />
+        <div class="button-text">
+          Recipes
+          <img
+            src="src/images/fi_arrow-right.svg"
+            alt="arrow"
+            class="arrow-img"
+          />
+        </div>
+      </button>
+
+      <button class="icon-button">
+        <img src="src/images/orders.png" alt="Your orders" class="icon-img" />
+        <div class="button-text">
+          Your orders
+          <img
+            src="src/images/fi_arrow-right.svg"
+            alt="arrow"
+            class="arrow-img"
+          />
+        </div>
+      </button>
+    </div>
 
     <section class="example-components">
       <!-- Davids example product cards -->
 
-      <section class="product-list-container vertical">
+      <section class="product-list-container">
         <h2>Products you often buy</h2>
-        <div class="product-list">
+        <div class="product-list vertical">
           <!-- Slim product card -->
           <div class="product-item slim">
             <div class="product-image-container">
@@ -363,12 +420,20 @@
         </div>
       </section>
     </section>
-    <h2>Items on sale</h2>
-    <section id="sale-items" class="product-list-container horizontal">
+
+    <section id="sale-items" class="product-list-container">
+      <h2>Items on sale</h2>
       <div class="product-list"></div>
     </section>
 
     <div id="app"></div>
+    <!-- Yordanos Add real short-expiry data rendering
+ -->
+    <section class="expiry-products-section">
+      <h2>Products with short expiration date</h2>
+
+      <div class="expiry-products-list" id="expiry-products-list"></div>
+    </section>
 
     <section class="offers">
       <div class="offer-card">
@@ -385,6 +450,6 @@
       <h3>FAQ</h3>
     </footer>
 
-    <script type="module" src="./src/main.js"></script>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>

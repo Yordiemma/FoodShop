@@ -5,6 +5,9 @@
 @import "./styles/global-variables.css";
 @import "./styles/product-card.css";
 @import "./styles/buttons.css";
+@import "./styles/cart-overlay.css";
+@import "./styles/icon-buttons.css";
+@import "./styles/short-expiry.css";
 
 * {
   margin: 0;
@@ -20,7 +23,7 @@ body {
   max-width: 1400px;
   padding: 0em 1em;
   margin: 0 auto;
-  color: var(--color-foreground-default)
+  color: var(--color-foreground-default);
 }
 
 .container-full {
@@ -76,28 +79,27 @@ html {
   flex-direction: column;
   gap: 16px;
   margin-block-end: 3.5rem;
+  margin-top: 20px;
+  height: auto;
+  width: 100%;
 }
-
 .product-list {
   display: flex;
   gap: 16px;
-}
+  flex-direction: row;
 
-.vertical .product-list {
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scroll-snap-type: x mandatory;
+}
+.vertical {
   flex-direction: column;
 }
-
-.horizontal .product-list {
+.horizontal {
   flex-direction: row;
   overflow-x: auto;
   padding-block-end: 16px;
 }
-
 .example-components {
   margin-top: 56px;
-}
-
-.product-list-sales {
-  display: flex;
-  justify-content: space-between;
 }
