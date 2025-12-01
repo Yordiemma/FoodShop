@@ -1,5 +1,6 @@
 import { productData } from "./product-data"
 
+
 let cartItems = []
 
 function containsObject(cartItem) {
@@ -13,8 +14,10 @@ function containsObject(cartItem) {
 }
 
 export const totalInCart = () => {
+    const amountContainer = document.getElementById("total-in-cart")
+
     const totalInCart = cartItems.reduce((total, product) => total + product.amount, 0)
-    return totalInCart
+    amountContainer.textContent = totalInCart;
 }
 
 export const addToCart = (id, event) => {
