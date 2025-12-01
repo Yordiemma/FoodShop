@@ -115,7 +115,7 @@ export const productData = [
     localProduced: false,
     link: "https://www.coop.se/handla/varor/ost/palaggsost/mjukost/adelost-7311440016364/",
     price: 37,
-    salePrice: 37 * 0.7,
+    salePrice: 25.95,
     shortExpiryDate: false
   },
   {
@@ -128,7 +128,7 @@ export const productData = [
     photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1661934051/cloud/258029/Gr%C3%B6tbr%C3%B6d.jpg",
     localProduced: true,
     link: "https://www.coop.se/handla/varor/morkt-grovt-brod-matbrod/grotbrod-7311070008708",
-    salePrice: 34 * 0.7,
+    salePrice: 23.95,
     price: 34,
     shortExpiryDate: false
   },
@@ -154,7 +154,7 @@ export const productData = [
     photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206868/cloud/549377/Mellanmj%C3%B6lk%20F%C3%A4rsk.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/mejeri-agg/mjolk/mellanmjolk/mellanmjolk-farsk-7310865001825/",
-    salePrice: 17 * 0.7,
+    salePrice: 11.95,
     price: 17,
     shortExpiryDate: true
   },
@@ -204,7 +204,7 @@ export const productData = [
     photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206690/cloud/549370/Standardmj%C3%B6lk%20F%C3%A4rsk.jpg",
     localProduced: true,
     link: "https://www.coop.se/handla/varor/mejeri-agg/egg/egg-12-pack-m-l-eko-7310865061622/",
-    salePrice: 51.95 * 0.7,
+    salePrice: 36.4,
     price: 51.95,
     shortExpiryDate: true
   },
@@ -243,7 +243,7 @@ export const productData = [
     localProduced: false,
     link: "https://www.coop.se/handla/varor/skafferi/desserter/vaniljsas-dessertsas/dessertsas-choklad-8711327540903",
     price: 37.95,
-    salePrice: 37.95 * 0.7,
+    salePrice: 26.45,
     shortExpiryDate: false
   },
   {
@@ -257,7 +257,7 @@ export const productData = [
     sale: { saleMessage: "30% off" },
     link: "https://www.coop.se/handla/varor/ost/palaggsost/farskost/philadelphia-original-4000339697908",
     price: 20,
-    salePrice: 20 * 0.7,
+    salePrice: 14,
     shortExpiryDate: true
   },
   {
@@ -271,7 +271,7 @@ export const productData = [
     localProduced: false,
     link: "https://www.coop.se/handla/varor/brod-bageri/matbrod/ljust-brod/skogaholmslimpa-7312200010110",
     price: 100.08,
-    salePrice: 100 * 0.7,
+    salePrice: 70,
     shortExpiryDate: true
   },
   {
