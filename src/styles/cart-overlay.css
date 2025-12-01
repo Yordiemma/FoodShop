@@ -8,10 +8,11 @@
     z-index: 9999;
 }
 
-.cart-overlay h3 {
-    margin-top: 1em;
-}
+.your-cart {
+    display: flex;
+    justify-content: space-between;
 
+}
 .total-wrapper {
     position: fixed;
     bottom: 0;
