@@ -6,6 +6,8 @@
 @import "./styles/product-card.css";
 @import "./styles/buttons.css";
 @import "./styles/cart-overlay.css";
+@import "./styles/icon-buttons.css";
+@import "./styles/short-expiry.css";
 
 * {
   margin: 0;
@@ -20,7 +22,7 @@ body {
   font-weight: 500;
   max-width: 1400px;
   padding: 0em 1em;
-  margin: 0 auto;
+   margin: 0 auto;
   color: var(--color-foreground-default)
 }
 
