@@ -70,6 +70,7 @@ export const removeFromCart = (id, event) => {
                 if (cartItem.amount === 1) {
                     cartItem.amount -= 1;
                     if (stepper){
+                        
                         stepper.style.opacity = 0
                         stepper.style.display = "none"
 
