@@ -12,6 +12,11 @@ function containsObject(cartItem) {
     return false;
 }
 
+export const totalInCart = () => {
+    const totalInCart = cartItems.reduce((total, product) => total + product.amount, 0)
+    return totalInCart
+}
+
 export const addToCart = (id, event) => {
     for (const product of productData) {
         if(id === product.id) {
@@ -50,6 +55,7 @@ export const addToCart = (id, event) => {
                 compactButton.style.opacity = "0"
                 compactButton.style.display = "none"
             }
+            totalInCart()
         }
     }
 
@@ -84,8 +90,7 @@ export const removeFromCart = (id, event) => {
                     cartItem.amount -= 1;
                 }
             }
+            totalInCart()
         }
     }
-
-    console.log(cartItems)
 }
