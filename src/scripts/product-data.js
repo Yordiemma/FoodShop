@@ -257,7 +257,7 @@ export const productData = [
     description: "350 g",
     sale: { saleMessage: "30% off" },
     photoUrl:
-      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1730462302/cloud/401520/Dessertsas%20Choklad.jpg",
+      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1637686903/cloud/239791/Desserts%C3%A5s%20Choklad.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/skafferi/desserter/vaniljsas-dessertsas/dessertsas-choklad-8711327540903",
     price: 37.95,
