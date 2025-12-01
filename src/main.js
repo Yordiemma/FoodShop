@@ -1,7 +1,8 @@
-import './scripts/offers'
-import './scripts/cart-overlay'
+import "/src/scripts/offers.js";
+import "/src/scripts/sales-items.js";
+import "/src/scripts/cart-overlay.js";
 import './scripts/render-often-bought.js'
-import { renderShortExpiryProducts } from "./scripts/renderShortExpiry.js";
+import { renderShortExpiryProducts } from "/src/scripts/renderShortExpiry.js";
 
 // i put the code in main.js because:
 // main.js runs when the page opens

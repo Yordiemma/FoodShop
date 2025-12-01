@@ -22,8 +22,8 @@ body {
   font-weight: 500;
   max-width: 1400px;
   padding: 0em 1em;
-   margin: 0 auto;
-  color: var(--color-foreground-default)
+  margin: 0 auto;
+  color: var(--color-foreground-default);
 }
 
 .container-full {
@@ -47,7 +47,8 @@ footer {
   background-color: var(--color-surface-brand-subtle);
 }
 
-h1, h2 {
+h1,
+h2 {
   font-family: var(--font-family-serif);
 }
 h1 {
@@ -58,7 +59,8 @@ h2 {
   font-size: var(--font-size-heading-medium);
 }
 
-h3, h4 {
+h3,
+h4 {
   font-size: var(--font-size-paragraph-medium);
   font-weight: 500;
 }
@@ -77,10 +79,18 @@ html {
   flex-direction: column;
   gap: 16px;
   margin-block-end: 3.5rem;
+  margin-top: 20px;
+  height: auto;
+  width: 100%;
 }
 .product-list {
   display: flex;
   gap: 16px;
+  flex-direction: row;
+
+  overflow-x: auto;
+  padding-bottom: 16px;
+  scroll-snap-type: x mandatory;
 }
 .vertical {
   flex-direction: column;
