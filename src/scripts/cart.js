@@ -2,7 +2,7 @@ import { productData } from "./product-data"
 
 
 
-let cartItems = []
+export let cartItems = []
 
 function containsObject(cartItem) {
     var i;
@@ -78,6 +78,7 @@ export const removeFromCart = (id, event) => {
     const productItem = button.closest('.product-item')
     const stepper = productItem.querySelector(".stepper")
     const compactButton = productItem.querySelector(".compact-button")
+    let productCount = 1;
 
     for (const product of productData) {
         if(id === product.id) {
@@ -86,7 +87,6 @@ export const removeFromCart = (id, event) => {
                 if (cartItem.amount === 1) {
                     cartItem.amount -= 1;
                     if (stepper){
-                        
                         stepper.style.opacity = 0
                         stepper.style.display = "none"
 
