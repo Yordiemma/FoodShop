@@ -1,6 +1,8 @@
 import { productData } from "./product-data"
 
-let cartItems = []
+
+
+export let cartItems = []
 
 function containsObject(cartItem) {
     var i;
@@ -10,6 +12,18 @@ function containsObject(cartItem) {
         }
     }
     return false;
+}
+
+export const totalInCart = () => {
+    const amountContainer = document.getElementById("total-in-cart")
+
+    const totalInCart = cartItems.reduce((total, product) => total + product.amount, 0)
+    if (totalInCart > 0) {
+        amountContainer.style.opacity = 1;
+        amountContainer.textContent = totalInCart;
+    } else if (totalInCart === 0) {
+        amountContainer.style.opacity = 0;
+    }
 }
 
 export const addToCart = (id, event) => {
@@ -43,6 +57,7 @@ export const addToCart = (id, event) => {
             const stepper = productItem.querySelector(".stepper")
             const compactButton = productItem.querySelector(".compact-button")
 
+            if (totalInCart)
             if (stepper){
                 stepper.style.display = "flex"
                 stepper.style.opacity = 1
@@ -50,6 +65,7 @@ export const addToCart = (id, event) => {
                 compactButton.style.opacity = "0"
                 compactButton.style.display = "none"
             }
+            totalInCart()
         }
     }
 
@@ -62,6 +78,7 @@ export const removeFromCart = (id, event) => {
     const productItem = button.closest('.product-item')
     const stepper = productItem.querySelector(".stepper")
     const compactButton = productItem.querySelector(".compact-button")
+    let productCount = 1;
 
     for (const product of productData) {
         if(id === product.id) {
@@ -70,7 +87,6 @@ export const removeFromCart = (id, event) => {
                 if (cartItem.amount === 1) {
                     cartItem.amount -= 1;
                     if (stepper){
-                        
                         stepper.style.opacity = 0
                         stepper.style.display = "none"
 
@@ -84,8 +100,7 @@ export const removeFromCart = (id, event) => {
                     cartItem.amount -= 1;
                 }
             }
+            totalInCart()
         }
     }
-
-    console.log(cartItems)
 }

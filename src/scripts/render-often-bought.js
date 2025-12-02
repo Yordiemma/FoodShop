@@ -1,6 +1,7 @@
 import { productData } from "./product-data.js";
 import { addToCart } from "./cart.js";
 import { removeFromCart } from "./cart.js";
+import { cartItems } from "./cart.js";
 const oftenBoughtArray = productData.slice(4, 10);
 
 const createlistOfProducts = (
@@ -20,6 +21,7 @@ const createlistOfProducts = (
     }
     //Add product to product list
     productList.appendChild(productItem);
+    let productCount = 1;
     //Add HTML for each product
     productItem.innerHTML += `
           <div class="product-image-container">
@@ -69,7 +71,7 @@ const createlistOfProducts = (
                       stroke-linejoin="round" />
                   </svg>
                 </button>
-                <div class="stepper-value">1</div>
+                <div class="stepper-value">${productCount}</div>
                 <button class="stepper-button-plus add-product">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -82,6 +84,7 @@ const createlistOfProducts = (
             </div>
           </div>
         `;
+
     // Attach event listeners to the add buttons for this specific product
     const addButtons = productItem.querySelectorAll(".add-product");
     addButtons.forEach((button) => {
@@ -95,6 +98,7 @@ const createlistOfProducts = (
     });
   }
 };
+
 document.addEventListener("DOMContentLoaded", () => {
   const listContainerOftenBought = document.getElementById("often-bought-products");
   if (listContainerOftenBought) {
