@@ -63,7 +63,6 @@
     margin: 0;
     font-size: var(--font-size-paragraph-small);
     font-weight: 400;
-    /* normal */
     color: var(--color-foreground-default);
 }
 
@@ -71,15 +70,13 @@
     margin: 0;
     font-size: var(--font-size-paragraph-small);
     font-weight: 600;
-    /* bold like screenshot */
     color: var(--color-foreground-default);
 }
 
 .order-update span {
     font-weight: 400;
-    /* normal */
     color: var(--color-foreground-subtle);
-    /* lighter gray */
+   
 }
 
 
