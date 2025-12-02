@@ -1,11 +1,6 @@
-import { cartItems, totalInCart } from "./cart";
-
 const cartEl = document.querySelector('.cart-overlay')
 const cartButtonEl = document.querySelector('.cart-wrap')
 const closeButtonEl = document.querySelector('.top-wrap').lastElementChild
-
-console.log(cartButtonEl.firstElementChild)
-console.log(cartButtonEl.firstElementChild.src)
 
 let shown = false;
 
