@@ -54,8 +54,6 @@ const generateOffer = () => {
 
     firstOfferText.textContent = offer[firstID].text
     lastOfferText.textContent = offer[secondID].text
-
-    console.log(firstBadgeText)
 }
 
 generateOffer()
