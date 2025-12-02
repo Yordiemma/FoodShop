@@ -21,7 +21,7 @@ const createlistOfProducts = (
     }
     //Add product to product list
     productList.appendChild(productItem);
-    let productCount = 1;
+    let productCount = 0;
     //Add HTML for each product
     productItem.innerHTML += `
           <div class="product-image-container">
