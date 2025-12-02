@@ -44,12 +44,41 @@ header .search-box-header-hidden {
   display: none;
 }
 
+header .order-box-hidden {
+  display: none;
+}
+
 @media (min-width: 1200px) { 
+  header { 
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+  }
   header .search-box-header-hidden {
       display: flex;
       align-items: center;
       margin: 11px 16px;
-  };
+  }
+
+  header .order-box-hidden {
+      display: flex;
+      align-items: center;
+      padding: 0;
+      margin-left: auto;
+      gap: 8px;
+      
+  }
+
+  header .order-update {
+  display: flex;
+  gap: 4px;
+  }
+
+  .arrow-img { 
+  align-items: center;
+  }
+
 }
 
 
