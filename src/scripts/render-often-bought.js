@@ -88,12 +88,30 @@ const createlistOfProducts = (
     // Attach event listeners to the add buttons for this specific product
     const addButtons = productItem.querySelectorAll(".add-product");
     addButtons.forEach((button) => {
-      button.addEventListener("click", (event) => addToCart(product.id, event));
+      button.addEventListener("click", (event) => {
+        productCount += 1;
+
+        // Update the displayed stepper value
+        const stepperValue = productItem.querySelector(".stepper-value");
+        if (stepperValue) {
+          stepperValue.textContent = productCount;
+        }
+        addToCart(product.id, event)
+      });
     });
     const removeButtons = productItem.querySelectorAll(".remove-product");
     removeButtons.forEach((button) => {
-      button.addEventListener("click", (event) =>
+      button.addEventListener("click", (event) => {
+        productCount -= 1;
+
+        // Update the displayed stepper value
+        const stepperValue = productItem.querySelector(".stepper-value");
+        if (stepperValue) {
+          stepperValue.textContent = productCount;
+        }
         removeFromCart(product.id, event)
+      }
+
       );
     });
   }
