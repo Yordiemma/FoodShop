@@ -8,7 +8,6 @@
 
 .greeting h1 {
     margin-bottom: 2px;
-    font-weight: 700;
     line-height: 1.2;
     color: var(--color-foreground-default);
     margin: 0;
