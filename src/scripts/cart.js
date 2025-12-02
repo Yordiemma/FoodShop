@@ -1,6 +1,7 @@
 import { productData } from "./product-data"
 
 
+
 let cartItems = []
 
 function containsObject(cartItem) {
@@ -17,7 +18,12 @@ export const totalInCart = () => {
     const amountContainer = document.getElementById("total-in-cart")
 
     const totalInCart = cartItems.reduce((total, product) => total + product.amount, 0)
-    amountContainer.textContent = totalInCart;
+    if (totalInCart > 0) {
+        amountContainer.style.opacity = 1;
+        amountContainer.textContent = totalInCart;
+    } else if (totalInCart === 0) {
+        amountContainer.style.opacity = 0;
+    }
 }
 
 export const addToCart = (id, event) => {
@@ -51,6 +57,7 @@ export const addToCart = (id, event) => {
             const stepper = productItem.querySelector(".stepper")
             const compactButton = productItem.querySelector(".compact-button")
 
+            if (totalInCart)
             if (stepper){
                 stepper.style.display = "flex"
                 stepper.style.opacity = 1

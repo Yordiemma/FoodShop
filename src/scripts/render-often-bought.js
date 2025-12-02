@@ -82,6 +82,7 @@ const createlistOfProducts = (
             </div>
           </div>
         `;
+        
     // Attach event listeners to the add buttons for this specific product
     const addButtons = productItem.querySelectorAll(".add-product");
     addButtons.forEach((button) => {
@@ -95,6 +96,7 @@ const createlistOfProducts = (
     });
   }
 };
+
 document.addEventListener("DOMContentLoaded", () => {
   const listContainerOftenBought = document.getElementById("often-bought-products");
   if (listContainerOftenBought) {
