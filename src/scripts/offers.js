@@ -1,17 +1,22 @@
 const offer = [{
     img_url: '/src/images/offer.png',
+    badge: 'Sale',
     text: 'Sourdough Super Save!'
 }, {
     img_url: '/src/images/offer1.png',
+    badge: 'Inspiration',
     text: 'Today’s Holiday Dessert Pick!'
 }, {
     img_url: '/src/images/offer2.png',
+    badge: 'Sale',
     text: 'Christmas Deals!'
 }, {
     img_url: '/src/images/offer3.png',
+    badge: 'Inspiration',
     text: 'Breakfast For Everyone!'
 }, {
     img_url: '/src/images/offer4.png',
+    badge: 'Recipe',
     text: 'Bake With Berries!'
 }]
 
@@ -38,11 +43,21 @@ const generateOffer = () => {
     offersSectionEl.firstElementChild.style.backgroundImage = `url('${offer[firstID].img_url}')`;
     offersSectionEl.lastElementChild.style.backgroundImage = `url('${offer[secondID].img_url}')`;
 
-    const firstOfferText = offersSectionEl.firstElementChild.firstElementChild
-    const lastOfferText = offersSectionEl.lastElementChild.firstElementChild
+    const firstBadgeText = offersSectionEl.firstElementChild.firstElementChild
+    const lastBadgeText = offersSectionEl.lastElementChild.firstElementChild
+
+    const firstOfferText = offersSectionEl.firstElementChild.lastElementChild
+    const lastOfferText = offersSectionEl.lastElementChild.lastElementChild
+
+    firstBadgeText.textContent = offer[firstID].badge
+    lastBadgeText.textContent = offer[secondID].badge
 
     firstOfferText.textContent = offer[firstID].text
     lastOfferText.textContent = offer[secondID].text
+
+    console.log(firstBadgeText)
 }
 
 generateOffer()
+
+
