@@ -12,9 +12,26 @@
     height: 13em;
     position: relative;
     cursor: pointer;
+    border-radius: .25em;
+}
+
+.offer-card p {
+    font-size: var(--font-size-paragraph-small);
+    display: inline;
+    position: absolute;
+    padding: 0 .5em;
+    border-radius: .15em;
+    top: 1em;
+    left: 1em;
+    color: var(--color-foreground-brand);
+    background-color: var(--color-surface-brand-subtle);
+    border: 1px solid var(--color-surface-brand-subtle);
+    opacity: .9;
+
 }
 
 .offer-card h2 {
+    font-family: var(--font-family-sans);
     position: absolute;
     bottom: 1em;
     left: 1em;
