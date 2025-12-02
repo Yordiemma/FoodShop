@@ -8,6 +8,7 @@
     align-items: center;
     justify-content: center;
     color: var(--color-foreground-inverted);
+    transition: opacity 0.3 ease-in;
 
     &.full-width {
         width: 100%;
@@ -27,6 +28,8 @@
     font-family: var(--font-family-sans);
     font-size: var(--font-size-paragraph-medium);
     border-radius: 9999px;
+    opacity: 0;
+    transition: opacity 0.3 ease-in;
 }
 
 .stepper-value {

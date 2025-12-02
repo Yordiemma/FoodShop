@@ -1,11 +1,11 @@
 import { productData } from "./product-data.js";
 
 export function renderShortExpiryProducts(container) {
-  const shortExpiry = productData.filter(p => p.shortExpiryDate);
+  const shortExpiry = productData.filter((p) => p.shortExpiryDate);
 
   container.innerHTML = "";
 
-  shortExpiry.forEach(product => {
+  shortExpiry.forEach((product) => {
     const card = document.createElement("div");
     card.classList.add("expiry-card");
 

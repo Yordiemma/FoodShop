@@ -1,4 +1,3 @@
-
 export const productData = [
   {
     category: "Meat, poultry & deli",
@@ -6,13 +5,14 @@ export const productData = [
     name: "Falukorv Ring",
     brand: "Scan",
     description: "800 g",
-    sale: { saleMessage: "Sale!" },
-    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1742310146/cloud/455592/Falukorv%20Ring.jpg",
+    sale: { saleMessage: "sale!" },
+    photoUrl:
+      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1742310146/cloud/455592/Falukorv%20Ring.jpg",
     localProduced: true,
     link: "https://www.coop.se/handla/varor/kott-fagel-chark/korv/falukorv/falukorv-ring-7300206787006",
     salePrice: 35,
     price: 42,
-    shortExpiryDate: false
+    shortExpiryDate: false,
   },
   {
     category: "Meat, poultry & deli",
@@ -20,11 +20,12 @@ export const productData = [
     name: "Pie Cheese & Ham",
     brand: "Felix",
     description: "220 g, fryst",
-    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1722929387/cloud/376071/Paj%20Ost%20%26%20skinka.jpg",
+    photoUrl:
+      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1722929387/cloud/376071/Paj%20Ost%20%26%20skinka.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/frys/fardigt-att-varma/paj/paj-ost-skinka-7310240079555",
     price: 31.95,
-    shortExpiryDate: false
+    shortExpiryDate: false,
   },
   {
     category: "Frozen",
@@ -33,12 +34,13 @@ export const productData = [
     brand: "Grandiosa",
     description: "350 g, fryst",
     sale: { saleMessage: "Sale!" },
-    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1713176338/cloud/344585/Pizza%20X-Tra%20Allt%20Capricciosa.jpg",
+    photoUrl:
+      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1713176338/cloud/344585/Pizza%20X-Tra%20Allt%20Capricciosa.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/frys/fardigt-att-varma/pizza/pizza-x-tra-allt-capricciosa-7310240071672",
     salePrice: 69,
     price: 85,
-    shortExpiryDate: false
+    shortExpiryDate: false,
   },
   {
     category: "Beverages",
@@ -47,11 +49,12 @@ export const productData = [
     brand: "7up",
     description: "150 cl",
     sale: { saleMessage: "3 for 2" },
-    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1694676808/cloud/290598/7up%20Sockerfri.jpg",
+    photoUrl:
+      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1694676808/cloud/290598/7up%20Sockerfri.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/dryck/lask/citron-limesmak/7up-sockerfri-7310070004680",
     salePrice: 50,
-    shortExpiryDate: false
+    shortExpiryDate: false,
   },
   {
     category: "Beverages",
@@ -59,11 +62,12 @@ export const productData = [
     name: "Pommac Magnum",
     brand: "Pommac",
     description: "10 cl",
-    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1530117881/309118/Pommac%20Magnum.jpg",
+    photoUrl:
+      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1530117881/309118/Pommac%20Magnum.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/dryck/lask/ovriga-smaker/pommac-magnum-7391001000285",
     price: 59.95,
-    shortExpiryDate: false
+    shortExpiryDate: false,
   },
   {
     category: "Beverages",
@@ -71,11 +75,12 @@ export const productData = [
     name: "Zingo Zero Orange 6-pack",
     brand: "Zingo",
     description: "6x33 cl.",
-    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1724328533/cloud/380145/Zingo%20Zero%20Apelsin%206-pack.jpg",
+    photoUrl:
+      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1724328533/cloud/380145/Zingo%20Zero%20Apelsin%206-pack.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/dryck/lask/apelsinsmak/zingo-zero-apelsin-6-pack-7310072000765/",
     price: 46.95,
-    shortExpiryDate: false
+    shortExpiryDate: false,
   },
   {
     category: "Beverages",
@@ -84,11 +89,12 @@ export const productData = [
     brand: "Pepsi",
     description: "1,5 liter",
     sale: { saleMessage: "3 for 2" },
-    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1710775305/cloud/337339/Pepsi%20Max.jpg",
+    photoUrl:
+      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1710775305/cloud/337339/Pepsi%20Max.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/dryck/lask/cola/pepsi-max-7310072000635",
     price: 50,
-    shortExpiryDate: false
+    shortExpiryDate: false,
   },
   {
     category: "Dairy & eggs",
@@ -97,12 +103,13 @@ export const productData = [
     brand: "Arla Köket",
     description: "5 dl",
     sale: { saleMessage: "30 kr/st" },
-    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1652099655/cloud/251745/Vispgr%C3%A4dde%2036%25.jpg",
+    photoUrl:
+      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1652099655/cloud/251745/Vispgr%C3%A4dde%2036%25.jpg",
     localProduced: true,
     link: "https://www.coop.se/handla/varor/mejeri-agg/gradde/vispgradde/vispgradde-36-7310865061935",
     salePrice: 30,
     price: 36.5,
-    shortExpiryDate: false
+    shortExpiryDate: false,
   },
   {
     category: "Dairy & eggs",
@@ -111,11 +118,12 @@ export const productData = [
     brand: "Kvibille",
     description: "140 g",
     sale: { saleMessage: "Sale!" },
-    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1763117136/cloud/554357/%C3%84delost.jpg",
+    photoUrl:
+      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1763117136/cloud/554357/%C3%84delost.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/ost/palaggsost/mjukost/adelost-7311440016364/",
     price: 37,
-    salePrice: 37 * 0.7,
+    salePrice: 25.95,
     shortExpiryDate: false
   },
   {
@@ -125,12 +133,13 @@ export const productData = [
     brand: "Pågen",
     description: "780 g",
     sale: { saleMessage: "30% off" },
-    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1661934051/cloud/258029/Gr%C3%B6tbr%C3%B6d.jpg",
+    photoUrl:
+      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1661934051/cloud/258029/Gr%C3%B6tbr%C3%B6d.jpg",
     localProduced: true,
     link: "https://www.coop.se/handla/varor/morkt-grovt-brod-matbrod/grotbrod-7311070008708",
-    salePrice: 34 * 0.7,
+    salePrice: 23.95,
     price: 34,
-    shortExpiryDate: false
+    shortExpiryDate: false,
   },
   {
     category: "Dairy & eggs",
@@ -138,11 +147,12 @@ export const productData = [
     name: "Semi-skimmed Milk",
     brand: "Arla",
     description: "1,5 lit",
-    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206868/cloud/549377/Mellanmj%C3%B6lk%20F%C3%A4rsk.jpg",
+    photoUrl:
+      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206868/cloud/549377/Mellanmj%C3%B6lk%20F%C3%A4rsk.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/mejeri-agg/mjolk/mellanmjolk/mellanmjolk-farsk-7310865001825/",
     price: 17,
-    shortExpiryDate: false
+    shortExpiryDate: false,
   },
   {
     category: "Dairy & eggs",
@@ -151,12 +161,13 @@ export const productData = [
     brand: "Arla",
     description: "1,5 lit",
     sale: { saleMessage: "30% off" },
-    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206868/cloud/549377/Mellanmj%C3%B6lk%20F%C3%A4rsk.jpg",
+    photoUrl:
+      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206868/cloud/549377/Mellanmj%C3%B6lk%20F%C3%A4rsk.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/mejeri-agg/mjolk/mellanmjolk/mellanmjolk-farsk-7310865001825/",
-    salePrice: 17 * 0.7,
+    salePrice: 11.95,
     price: 17,
-    shortExpiryDate: true
+    shortExpiryDate: true,
   },
   {
     category: "Dairy & eggs",
@@ -164,11 +175,12 @@ export const productData = [
     name: "Whole Milk",
     brand: "Arla",
     description: "1,5 lit",
-    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206690/cloud/549370/Standardmj%C3%B6lk%20F%C3%A4rsk.jpg",
+    photoUrl:
+      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206690/cloud/549370/Standardmj%C3%B6lk%20F%C3%A4rsk.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/mejeri-agg/mjolk/standardmjolk/standardmjolk-farsk-7310865000361/",
     price: 20.95,
-    shortExpiryDate: false
+    shortExpiryDate: false,
   },
   {
     category: "Pantry",
@@ -176,11 +188,12 @@ export const productData = [
     name: "Granola Hazelnuts & Dates",
     brand: "Paulúns",
     description: "450 g",
-    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1617885984/426809/Granola%20Hasseln%C3%B6tter%20%26%20dadlar.jpg",
+    photoUrl:
+      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1617885984/426809/Granola%20Hasseln%C3%B6tter%20%26%20dadlar.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/skafferi/flingor-musli/granola-crunch/granola-hasselnotter-dadlar-7310240001761/",
     price: 55.95,
-    shortExpiryDate: false
+    shortExpiryDate: false,
   },
   {
     category: "Dairy & eggs",
@@ -188,11 +201,12 @@ export const productData = [
     name: "Eggs 12-pack M/L Organic",
     brand: "Änglamark",
     description: "12 st",
-    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206690/cloud/549370/Standardmj%C3%B6lk%20F%C3%A4rsk.jpg",
+    photoUrl:
+      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206690/cloud/549370/Standardmj%C3%B6lk%20F%C3%A4rsk.jpg",
     localProduced: true,
     link: "https://www.coop.se/handla/varor/mejeri-agg/egg/egg-12-pack-m-l-eko-7310865061622/",
     price: 51.95,
-    shortExpiryDate: false
+    shortExpiryDate: false,
   },
   {
     category: "Dairy & eggs",
@@ -201,12 +215,13 @@ export const productData = [
     brand: "Änglamark",
     description: "12 st",
     sale: { saleMessage: "30% off" },
-    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206690/cloud/549370/Standardmj%C3%B6lk%20F%C3%A4rsk.jpg",
+    photoUrl:
+      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206690/cloud/549370/Standardmj%C3%B6lk%20F%C3%A4rsk.jpg",
     localProduced: true,
     link: "https://www.coop.se/handla/varor/mejeri-agg/egg/egg-12-pack-m-l-eko-7310865061622/",
-    salePrice: 51.95 * 0.7,
+    salePrice: 36.4,
     price: 51.95,
-    shortExpiryDate: true
+    shortExpiryDate: true,
   },
   {
     category: "Coffee",
@@ -214,11 +229,12 @@ export const productData = [
     name: "Brewed Coffee Medium Roast",
     brand: "Löfbergs",
     description: "450 g",
-    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206690/cloud/549370/Standardmj%C3%B6lk%20F%C3%A4rsk.jpg",
+    photoUrl:
+      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206690/cloud/549370/Standardmj%C3%B6lk%20F%C3%A4rsk.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/mejeri-agg/egg/egg-12-pack-m-l-eko-7310865061622/",
     price: 69.95,
-    shortExpiryDate: false
+    shortExpiryDate: false,
   },
   {
     category: "Coffee",
@@ -226,11 +242,12 @@ export const productData = [
     name: "Brewed Coffee Dark Roast Skånerost",
     brand: "ZOÉGAS",
     description: "450 g",
-    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1734533714/cloud/417088/Bryggkaffe%20M%C3%B6rkrost%20Sk%C3%A5nerost.jpg",
+    photoUrl:
+      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1734533714/cloud/417088/Bryggkaffe%20M%C3%B6rkrost%20Sk%C3%A5nerost.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/dryck/kaffe/bryggkaffe/bryggkaffe-morkrost-skanerost-7310731103011",
     price: 69.95,
-    shortExpiryDate: false
+    shortExpiryDate: false,
   },
   {
     category: "Pantry",
@@ -239,11 +256,12 @@ export const productData = [
     brand: "O'hoj",
     description: "350 g",
     sale: { saleMessage: "30% off" },
-    photoUrl: "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1730462302/cloud/401520/Dessertsas%20Choklad.jpg",
+    photoUrl:
+      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1637686903/cloud/239791/Desserts%C3%A5s%20Choklad.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/skafferi/desserter/vaniljsas-dessertsas/dessertsas-choklad-8711327540903",
     price: 37.95,
-    salePrice: 37.95 * 0.7,
+    salePrice: 26.45,
     shortExpiryDate: false
   },
   {
@@ -257,7 +275,7 @@ export const productData = [
     sale: { saleMessage: "30% off" },
     link: "https://www.coop.se/handla/varor/ost/palaggsost/farskost/philadelphia-original-4000339697908",
     price: 20,
-    salePrice: 20 * 0.7,
+    salePrice: 14,
     shortExpiryDate: true
   },
   {
@@ -271,7 +289,7 @@ export const productData = [
     localProduced: false,
     link: "https://www.coop.se/handla/varor/brod-bageri/matbrod/ljust-brod/skogaholmslimpa-7312200010110",
     price: 100.08,
-    salePrice: 100 * 0.7,
+    salePrice: 70,
     shortExpiryDate: true
   },
   {
