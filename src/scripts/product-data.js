@@ -216,9 +216,9 @@ export const productData = [
     description: "12 st",
     sale: { saleMessage: "30% off" },
     photoUrl:
-      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1762206690/cloud/549370/Standardmj%C3%B6lk%20F%C3%A4rsk.jpg",
+      "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1760705270/cloud/544515/%C3%84gg%2012-pack%20M%2FL%20Eko.jpg",
     localProduced: true,
-    link: "https://www.coop.se/handla/varor/mejeri-agg/egg/egg-12-pack-m-l-eko-7310865061622/",
+    link: "https://www.coop.se/handla/varor/mejeri-agg/agg-jast/agg/agg-12-pack-ml-eko-7300156482679/",
     salePrice: 36.4,
     price: 51.95,
     shortExpiryDate: true,
