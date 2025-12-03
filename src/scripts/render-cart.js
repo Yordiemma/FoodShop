@@ -38,7 +38,6 @@ export const renderCart = () => {
                 ${product.salePrice
                 ? `<p class="price old-price">${product.price} kr/st</p>`
                 : ""
-
             }
               </div>
               <div class="stepper" style="display: flex; opacity: 1;">
@@ -64,6 +63,17 @@ export const renderCart = () => {
         `;
     })
 }
+
+// const addItem = () => {
+
+//     cartItems.forEach((product) => {
+//         const stepperEl = document.querySelector('.stepper')
+//         console.log(stepperEl)
+//     })
+// }
+
+// addItem();
+
 
 
 
