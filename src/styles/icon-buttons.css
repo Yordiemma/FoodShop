@@ -24,4 +24,26 @@ aspect-ratio: 1/1;
   font-size: 14px;
   font-weight: 600;
   color: var(--color-foreground-default);
+  display: flex; /* Changed to center the arrow vertically */
+  gap: 4px; /* adds gap between the text and the arrow - like in the Figma file */
+}
+
+@media (min-width: 600px) {
+.icon-button {
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+  }
+
+  .arrow-img { 
+    align-items: center;
+  }
+
+  .button-row { 
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+  align-items: flex-start;
+  gap: 32px;
+  }
 }

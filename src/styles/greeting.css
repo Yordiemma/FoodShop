@@ -143,3 +143,13 @@
         font-size: var(--font-size-paragraph-medium);
     }
 }
+
+@media (min-width: 1200px) { 
+    .search-box-hidden {
+        display: none;
+    }
+
+.order-box-hidden {
+        display: none;
+    }
+}
