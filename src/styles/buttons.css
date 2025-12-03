@@ -10,14 +10,14 @@
     color: var(--color-foreground-inverted);
     transition: opacity 0.3 ease-in;
 
-    &.full-width {
-        width: 100%;
-    }
-
     &:hover {
         background-color: var(--color-surface-brand-hover);
         transition: 0.2s;
     }
+}
+
+.horizontal .compact-button {
+    width: 100%;
 }
 
 .stepper {

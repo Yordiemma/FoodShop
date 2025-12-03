@@ -22,60 +22,105 @@ document.addEventListener("DOMContentLoaded", () => {
         const currentPrice = product.salePrice || product.price || 0;
         const originalPrice = product.price || 0;
         const hasSalePrice = product.salePrice && product.price;
-
+        saleItemsList.classList.add("horizontal");
         const productCard = document.createElement("div");
-        productCard.className = "product-item large";
-
-        productCard.innerHTML = `
-          <div class="product-image-container">
-            <span class="sale-tag">${product.sale.saleMessage}</span>
-            <img class="product-image" src="${product.photoUrl}" alt="${
-          product.name
-        }" />
-          </div>
-          <div class="product-info">
-            <div class="product-heading">
-              <h3>${product.name}</h3>
+        productCard.className = "product-item";
+        let productCount = 0;
+        productCard.innerHTML+= `
+        <div class="product-image-container">
+          <span class="sale-tag">${
+            product.sale ? product.sale.saleMessage : ""
+          }</span>
+          <img class="product-image"
+            src="${product.photoUrl}"
+            alt="" />
+        </div>
+        <div class="product-info">
+          <div class="product-heading">
+            <h3>${product.name}</h3>
+            <div class="description">
+              ${
+                product.localProduced
+                  ? `<span class="meta-tag">Local</span>`
+                  : ""
+              }
               <p class="description">${product.description}</p>
             </div>
-            <div class="product-footer">
-              <div class="product-price-container">
-                <p class="price active sale-price">${currentPrice.toFixed(
-                  2
-                )} kr</p>
-                ${
-                  hasSalePrice
-                    ? `<p class="price old-price">${originalPrice.toFixed(
-                        2
-                      )} kr</p>`
-                    : ""
-                }
-              </div>
-              <button class="compact-button full-width">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </div>
+          <div class="product-footer">
+            <div class="product-price-container">
+              <p class="price active">${
+                product.salePrice ? product.salePrice : product.price
+              } kr/st</p>
+              ${
+                product.salePrice
+                  ? `<p class="price old-price">${product.price} kr/st</p>`
+                  : ""
+              }
+            </div>
+            <button class="compact-button add-product">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="stepper">
+              <button class="stepper-button-minus remove-product">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
+                  aria-hidden="true">
+                  <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
                 </svg>
               </button>
-              <div class="stepper" style="display: none;">
-                <button class="stepper-button-minus">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </button>
-                <div class="stepper-value">1</div>
-                <button class="stepper-button-plus">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                </button>
-              </div>
+              <div class="stepper-value">1</div>
+              <button class="stepper-button-plus add-product">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M5 12H19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+              </button>
             </div>
           </div>
-        `;
+        </div>
+      `;
 
         saleItemsList.appendChild(productCard);
+
+            // Attach event listeners to the add buttons for this specific product
+    const addButtons = productCard.querySelectorAll(".add-product");
+    addButtons.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        productCount += 1;
+
+        // Update the displayed stepper value
+        const stepperValue = productCard.querySelector(".stepper-value");
+        if (stepperValue) {
+          stepperValue.textContent = productCount;
+        }
+        addToCart(product.id, event)
+      });
+    });
+    
+    const removeButtons = productCard.querySelectorAll(".remove-product");
+    removeButtons.forEach((button) => {
+      button.addEventListener("click", (event) => {
+        productCount -= 1;
+
+        // Update the displayed stepper value
+        const stepperValue = productCard.querySelector(".stepper-value");
+        if (stepperValue) {
+          stepperValue.textContent = productCount;
+        }
+        removeFromCart(product.id, event)
+      }
+
+      );
+    });
+
       }
     }
 
