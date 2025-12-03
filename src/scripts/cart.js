@@ -1,6 +1,4 @@
 import { productData } from "./product-data"
-import { totalItemsEl } from "./render-cart";
-
 
 export let cartItems = []
 
@@ -16,6 +14,7 @@ function containsObject(cartItem) {
 
 export const totalInCart = () => {
     const amountContainer = document.getElementById("total-in-cart")
+    const totalItemsEl = document.querySelectorAll('.total-items')
 
     const totalInCart = cartItems.reduce((total, product) => total + product.amount, 0)
     if (totalInCart > 0) {
