@@ -103,5 +103,4 @@ export const removeFromCart = (id, event) => {
             totalInCart()
         }
     }
-    console.log(cartItems)
 }
