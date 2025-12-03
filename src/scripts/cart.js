@@ -1,5 +1,5 @@
 import { productData } from "./product-data"
-
+import { totalItemsEl } from "./render-cart";
 
 
 export let cartItems = []
@@ -21,6 +21,9 @@ export const totalInCart = () => {
     if (totalInCart > 0) {
         amountContainer.style.opacity = 1;
         amountContainer.textContent = totalInCart;
+        totalItemsEl.forEach((span) => {
+            span.textContent = totalInCart;
+        })
     } else if (totalInCart === 0) {
         amountContainer.style.opacity = 0;
     }
@@ -28,8 +31,8 @@ export const totalInCart = () => {
 
 export const addToCart = (id, event) => {
     for (const product of productData) {
-        if(id === product.id) {
-            if(containsObject(product)) {
+        if (id === product.id) {
+            if (containsObject(product)) {
                 const cartItem = cartItems.find(item => item.id === product.id);
                 if (cartItem) {
                     cartItem.amount += 1;
@@ -58,13 +61,13 @@ export const addToCart = (id, event) => {
             const compactButton = productItem.querySelector(".compact-button")
 
             if (totalInCart)
-            if (stepper){
-                stepper.style.display = "flex"
-                stepper.style.opacity = 1
+                if (stepper) {
+                    stepper.style.display = "flex"
+                    stepper.style.opacity = 1
 
-                compactButton.style.opacity = "0"
-                compactButton.style.display = "none"
-            }
+                    compactButton.style.opacity = "0"
+                    compactButton.style.display = "none"
+                }
             totalInCart()
         }
     }
@@ -81,12 +84,12 @@ export const removeFromCart = (id, event) => {
     let productCount = 1;
 
     for (const product of productData) {
-        if(id === product.id) {
-            if(containsObject(product)) {
+        if (id === product.id) {
+            if (containsObject(product)) {
                 const cartItem = cartItems.find(item => item.id === product.id);
                 if (cartItem.amount === 1) {
                     cartItem.amount -= 1;
-                    if (stepper){
+                    if (stepper) {
                         stepper.style.opacity = 0
                         stepper.style.display = "none"
 
