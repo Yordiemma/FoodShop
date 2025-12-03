@@ -28,8 +28,8 @@ export const totalInCart = () => {
 
 export const addToCart = (id, event) => {
     for (const product of productData) {
-        if(id === product.id) {
-            if(containsObject(product)) {
+        if (id === product.id) {
+            if (containsObject(product)) {
                 const cartItem = cartItems.find(item => item.id === product.id);
                 if (cartItem) {
                     cartItem.amount += 1;
@@ -58,13 +58,13 @@ export const addToCart = (id, event) => {
             const compactButton = productItem.querySelector(".compact-button")
 
             if (totalInCart)
-            if (stepper){
-                stepper.style.display = "flex"
-                stepper.style.opacity = 1
+                if (stepper) {
+                    stepper.style.display = "flex"
+                    stepper.style.opacity = 1
 
-                compactButton.style.opacity = "0"
-                compactButton.style.display = "none"
-            }
+                    compactButton.style.opacity = "0"
+                    compactButton.style.display = "none"
+                }
             totalInCart()
         }
     }
@@ -81,12 +81,12 @@ export const removeFromCart = (id, event) => {
     let productCount = 1;
 
     for (const product of productData) {
-        if(id === product.id) {
-            if(containsObject(product)) {
+        if (id === product.id) {
+            if (containsObject(product)) {
                 const cartItem = cartItems.find(item => item.id === product.id);
                 if (cartItem.amount === 1) {
                     cartItem.amount -= 1;
-                    if (stepper){
+                    if (stepper) {
                         stepper.style.opacity = 0
                         stepper.style.display = "none"
 
@@ -103,4 +103,5 @@ export const removeFromCart = (id, event) => {
             totalInCart()
         }
     }
+    console.log(cartItems)
 }

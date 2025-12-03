@@ -1,146 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="" href="#" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
-    <title>foodshop</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
-      rel="stylesheet"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="" href="#" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="src/style.css" />
+  <title>foodshop</title>
 
-  <body>
-    <div class="page">
-      <header>
-        <div class="top-nav">
-          <img src="/src/images/menu.svg" alt="" />
-          <img src="/src/images/logo.svg" alt="logo" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Domine:wght@400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <div class="top-nav">
+        <img src="/src/images/menu.svg" alt="" />
+        <img src="/src/images/logo.svg" alt="logo" />
+      </div>
+      <div class="search-box search-box-header-hidden">
+        <input type="text" placeholder="Search for a product or category" />
+        <img src="/src/images/search.svg" alt="search icon" />
+      </div>
+      <div class="order-box order-box-hidden">
+        <div class="order-icon">
+          <img src="/src/images/truck.svg" alt="delivery truck" />
         </div>
-        <div class="search-box search-box-header-hidden">
-          <input type="text" placeholder="Search for a product or category" />
-          <img src="/src/images/search.svg" alt="search icon" />
+
+        <div class="order-info">
+          <p class="order-number">Upcoming delivery</p>
+          <p class="order-update">
+            Order details
+            <img src="src/images/fi_arrow-right.svg" alt="arrow" class="arrow-img" />
+          </p>
         </div>
+      </div>
+      <div class="top-nav">
+        <img src="/src/images/search.svg" alt="" />
+        <img src="/src/images/profile.svg" alt="" />
+        <div class="cart-wrap">
+          <img src="/src/images/cart.svg" alt="" />
+          <span id="total-in-cart"></span>
+        </div>
+      </div>
+    </header>
+
+    <section class="cart-overlay">
+      <div class="top-wrap">
+        <h3>Your Cart (<span class="total-items">0</span> <span class="one-item">items</span>)</h3>
+        <img src="/src/images/fi_plus.svg" alt="" />
+      </div>
+      <section class="cart-product-container"></section>
+      <div class="total-wrapper">
+        <div class="total-box">
+          <div class="total-text">
+            <h3><b>Total</b> (<span class="total-items">0</span> <span class="one-item">items</span>)</h3>
+            <h3><b><span id="total-price">0</span> kr</b></h3>
+          </div>
+          <div class="detail-box">See details</div>
+        </div>
+        <button class="go-to-button">Continue to delivery</button>
+      </div>
+    </section>
+
+    <main>
+      <section class="greeting">
+        <h1>Welcome back Stig,</h1>
+        <p class="greeting-subtitle">
+          We got some tasty goods in store for you!
+        </p>
+
         <div class="order-box order-box-hidden">
           <div class="order-icon">
             <img src="/src/images/truck.svg" alt="delivery truck" />
           </div>
 
           <div class="order-info">
-            <p class="order-number">Upcoming delivery</p>
+            <p class="order-number">#282389 - Delivery November 29</p>
             <p class="order-update">
-              Order details 
-              <img
-                src="src/images/fi_arrow-right.svg"
-                alt="arrow"
-                class="arrow-img"
-              />
+              Update your order <span>(until 26/11)</span>
             </p>
           </div>
         </div>
-        <div class="top-nav">
-          <img src="/src/images/search.svg" alt="" />
-          <img src="/src/images/profile.svg" alt="" />
-          <div class="cart-wrap">
-            <img src="/src/images/cart.svg" alt="" />
-            <span id="total-in-cart"></span>
-          </div>
-        </div>
-      </header>
 
-      <section class="cart-overlay">
-        <div class="top-wrap">
-          <h3>Your Cart (<span class="total-items">0</span> <span class="one-item">items</span>)</h3>
-          <img src="/src/images/fi_plus.svg" alt="" />
-        </div>
-        <section class="product-list-container vertical"></section>
-        <div class="total-wrapper">
-          <div class="total-box">
-            <div class="total-text">
-              <h3><b>Total</b> (<span class="total-items">0</span> <span class="one-item">items</span>)</h3>
-              <h3><b><span id="total-price">0</span> kr</b></h3>
-            </div>
-            <div class="detail-box">See details</div>
-          </div>
-          <button class="go-to-button">Continue to delivery</button>
+        <div class="search-box search-box-hidden">
+          <input type="text" placeholder="Search for a product or category" />
+          <img src="/src/images/search.svg" alt="search icon" />
         </div>
       </section>
+    </main>
+  </div>
+  <div class="button-row">
+    <button class="icon-button">
+      <img src="src/images/categories.png" alt="Categories" class="icon-img" />
+      <div class="button-text">
+        Categories
+        <img src="src/images/fi_arrow-right.svg" alt="arrow" class="arrow-img" />
+      </div>
+    </button>
 
-      <main>
-        <section class="greeting">
-          <h1>Welcome back Stig,</h1>
-          <p class="greeting-subtitle">
-            We got some tasty goods in store for you!
-          </p>
+    <button class="icon-button">
+      <img src="src/images/recipes.png" alt="Recipes" class="icon-img" />
+      <div class="button-text">
+        Recipes
+        <img src="src/images/fi_arrow-right.svg" alt="arrow" class="arrow-img" />
+      </div>
+    </button>
 
-          <div class="order-box order-box-hidden">
-            <div class="order-icon">
-              <img src="/src/images/truck.svg" alt="delivery truck" />
-            </div>
+    <button class="icon-button">
+      <img src="src/images/orders.png" alt="Your orders" class="icon-img" />
+      <div class="button-text">
+        Your orders
+        <img src="src/images/fi_arrow-right.svg" alt="arrow" class="arrow-img" />
+      </div>
+    </button>
+  </div>
 
-            <div class="order-info">
-              <p class="order-number">#282389 - Delivery November 29</p>
-              <p class="order-update">
-                Update your order <span>(until 26/11)</span>
-              </p>
-            </div>
-          </div>
 
-          <div class="search-box search-box-hidden">
-            <input type="text" placeholder="Search for a product or category" />
-            <img src="/src/images/search.svg" alt="search icon" />
-          </div>
-        </section>
-      </main>
-    </div>
-    <div class="button-row">
-      <button class="icon-button">
-        <img
-          src="src/images/categories.png"
-          alt="Categories"
-          class="icon-img"
-        />
-        <div class="button-text">
-          Categories
-          <img
-            src="src/images/fi_arrow-right.svg"
-            alt="arrow"
-            class="arrow-img"
-          />
-        </div>
-      </button>
-
-      <button class="icon-button">
-        <img src="src/images/recipes.png" alt="Recipes" class="icon-img" />
-        <div class="button-text">
-          Recipes
-          <img
-            src="src/images/fi_arrow-right.svg"
-            alt="arrow"
-            class="arrow-img"
-          />
-        </div>
-      </button>
-
-      <button class="icon-button">
-        <img src="src/images/orders.png" alt="Your orders" class="icon-img" />
-        <div class="button-text">
-          Your orders
-          <img
-            src="src/images/fi_arrow-right.svg"
-            alt="arrow"
-            class="arrow-img"
-          />
-        </div>
-      </button>
-    </div>
-
-  
 
   <section id="often-bought-products" class="product-list-container">
     <h2>Products you often buy</h2>
@@ -152,32 +132,33 @@
     <div class="product-list"></div>
   </section>
 
-    <div id="app"></div>
-    <!-- Yordanos Add real short-expiry data rendering
+  <div id="app"></div>
+  <!-- Yordanos Add real short-expiry data rendering
  -->
-    <section class="expiry-products-section">
-      <h2>Products with short expiration date</h2>
+  <section class="expiry-products-section">
+    <h2>Products with short expiration date</h2>
 
-      <div class="expiry-products-list" id="expiry-products-list"></div>
-    </section>
+    <div class="expiry-products-list" id="expiry-products-list"></div>
+  </section>
 
-    <section class="offers">
-      <div class="offer-card">
-        <p></p>
-        <h2></h2>
-      </div>
-      <div class="offer-card">
-        <p></p>
-        <h2></h2>
-      </div>
-    </section>
+  <section class="offers">
+    <div class="offer-card">
+      <p></p>
+      <h2></h2>
+    </div>
+    <div class="offer-card">
+      <p></p>
+      <h2></h2>
+    </div>
+  </section>
 
-    <footer>
-      <h3>Contact info</h3>
-      <h3>Customer support</h3>
-      <h3>FAQ</h3>
-    </footer>
+  <footer>
+    <h3>Contact info</h3>
+    <h3>Customer support</h3>
+    <h3>FAQ</h3>
+  </footer>
 
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
