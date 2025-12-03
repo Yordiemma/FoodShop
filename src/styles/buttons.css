@@ -32,6 +32,10 @@
     transition: opacity 0.3 ease-in;
 }
 
+.horizontal .stepper {
+    width: 100%;
+}
+
 .stepper-value {
     height: 2.5rem;
     width: 2.5rem;
@@ -41,6 +45,10 @@
     border-top: 1px solid var(--color-border-brand);
     border-bottom: 1px solid var(--color-border-brand);
 
+}
+
+.horizontal .stepper-value {
+    flex-grow: 1;
 }
 
 .stepper-button-minus {
