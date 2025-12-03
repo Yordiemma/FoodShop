@@ -1,5 +1,7 @@
 import { productData } from "/src/scripts/product-data.js";
-
+import { totalInCart } from "/src/scripts/cart.js";
+import { addToCart } from "/src/scripts/cart.js";
+import { removeFromCart } from "/src/scripts/cart.js";
 document.addEventListener("DOMContentLoaded", () => {
   const saleItemsContainer = document.getElementById("sale-items");
   const saleItemsList = saleItemsContainer?.querySelector(".product-list");
