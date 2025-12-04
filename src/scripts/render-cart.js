@@ -1,5 +1,7 @@
 import { cartItems } from "./cart";
 import { totalInCart } from "./cart";
+import { removeFromCart } from "./cart";
+import { updateLandingPage } from "./cart-overlay"
 
 export const renderCart = () => {
   const cartContainerEl = document.querySelector('.cart-product-container')
@@ -79,14 +81,33 @@ export const renderCart = () => {
       const plusButtonEl = productItemEl.querySelector('.add-product')
       const minusButtonEl = productItemEl.querySelector('.remove-product')
 
-      if (plusButtonEl) {
-        plusButtonEl.addEventListener('click', () => {
-          product.amount += 1
-          renderCart();
-          totalInCart();
-          console.log(cartItems)
-        })
-      }
+      plusButtonEl.addEventListener('click', () => {
+        console.log("Clicked + for product:", product.id);
+        let itemInCart = cartItems.find(item => item.id === product.id);
+
+        if (itemInCart) {
+          // If it's already in the cart, increase THAT amount
+          itemInCart.amount += 1;
+        } else {
+          // If it's not in the cart (or was removed), add it fresh
+          product.amount = 1;
+          cartItems.push(product);
+        }
+        renderCart();
+        totalInCart();
+        console.log(cartItems)
+      })
+
+      minusButtonEl.addEventListener('click', () => {
+
+        product.amount -= 1;
+
+        renderCart();
+        totalInCart();
+        console.log(cartItems)
+        // updateLandingPage();
+      })
+
 
       // minusButtonEl.addEventListener('click', () => {
       //   if (product.amount !== 0) {

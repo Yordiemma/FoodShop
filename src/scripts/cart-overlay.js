@@ -1,5 +1,5 @@
 import { renderCart } from "./render-cart";
-import { renderProductList } from "./render-product-list";
+import { cartItems } from "./cart";
 
 const cartEl = document.querySelector('.cart-overlay')
 const cartButtonEl = document.querySelector('.cart-wrap')
@@ -17,19 +17,46 @@ const cartShow = () => {
     }
 }
 
+export function updateLandingPage() {
+  const allSteppers = document.querySelectorAll('.stepper-value');
+
+  allSteppers.forEach(stepperValueEl => {
+    const productId = stepperValueEl.getAttribute('data-id');
+    const cartItem = cartItems.find(item => item.id == productId);
+    const currentAmount = cartItem ? cartItem.amount : 0;
+
+    // 1. Update text
+    stepperValueEl.textContent = currentAmount;
+
+    // 2. Find siblings
+    const productFooterEl = stepperValueEl.closest('.product-footer');
+    const compactBtnEl = productFooterEl.querySelector('.compact-button');
+    const stepperContainerEl = productFooterEl.querySelector('.stepper');
+
+if (compactBtnEl && stepperContainerEl) {
+      if (currentAmount > 0) {
+        compactBtnEl.style.display = 'none';
+        stepperContainerEl.style.display = 'flex';
+      } else {
+        compactBtnEl.style.display = 'flex';
+        compactBtnEl.style.opacity = '1';
+        stepperContainerEl.style.display = 'none';
+      }
+    }
+    console.log(cartItems)
+  });
+}
+
 const cartHide = () => {
     cartEl.style.display = 'none'
     document.body.style.overflow = 'auto'
     cartButtonEl.firstElementChild.src = '/src/images/cart.svg'
     shown = false;
+
+    updateLandingPage();
 }
 
-const updateLandingPage = () => {
-    const productCards = document.querySelectorAll('.product-item')
-    productCards.forEach((div) => console.log(div))
-}
 
 cartButtonEl.addEventListener('click', cartShow)
 cartButtonEl.addEventListener('click', renderCart)
 closeButtonEl.addEventListener('click', cartHide)
-closeButtonEl.addEventListener('click', updateLandingPage)
