@@ -1,3 +1,5 @@
+import { renderCart } from "./render-cart";
+
 const cartEl = document.querySelector('.cart-overlay')
 const cartButtonEl = document.querySelector('.cart-wrap')
 const closeButtonEl = document.querySelector('.top-wrap').lastElementChild
@@ -22,4 +24,5 @@ const cartHide = () => {
 }
 
 cartButtonEl.addEventListener('click', cartShow)
+cartButtonEl.addEventListener('click', renderCart)
 closeButtonEl.addEventListener('click', cartHide)
