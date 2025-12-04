@@ -157,3 +157,26 @@
   }
 }
 
+/* Responsive design for desktop */
+
+.product-list.vertical {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .product-list.vertical {
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .product-list.vertical {
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
