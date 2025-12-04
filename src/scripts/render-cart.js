@@ -5,6 +5,7 @@ export const renderCart = () => {
   cartContainerEl.classList.add('product-list', 'vertical')
   const totalItemEl = document.querySelectorAll('.total-items')
   const oneItemEl = document.querySelectorAll('.one-item')
+  const totalPriceEl = document.querySelector('#total-price')
 
   cartContainerEl.innerHTML = ''
 
@@ -12,6 +13,7 @@ export const renderCart = () => {
   let totalPrice = 0;
 
   cartItems.forEach((product) => {
+
     const productItemEl = document.createElement('div')
     productItemEl.classList.add('product-item')
     cartContainerEl.appendChild(productItemEl)
@@ -20,6 +22,7 @@ export const renderCart = () => {
     totalCount = totalCount + productCount
 
     let productPrice = product.price;
+    productPrice = productPrice * product.amount
     totalPrice = totalPrice + productPrice
 
     if (product.amount === 0) {
@@ -76,7 +79,9 @@ export const renderCart = () => {
         `;
     }
   })
-
+  const renderTotalPrice = () => {
+      totalPriceEl.textContent = totalPrice;
+  }
   const checkIfOne = () => {
     oneItemEl.forEach((span) => {
       if (totalCount === 1) {
@@ -93,6 +98,7 @@ export const renderCart = () => {
     checkIfOne();
   }
   renderTotalItems();
+  renderTotalPrice();
 }
 
 // const addItem = () => {
