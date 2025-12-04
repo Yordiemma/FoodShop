@@ -18,9 +18,15 @@ export const totalInCart = () => {
     const amountContainer = document.getElementById("total-in-cart")
 
     const totalInCart = cartItems.reduce((total, product) => total + product.amount, 0)
-    if (totalInCart > 0) {
+    amountContainer.textContent = totalInCart;
+    if (totalInCart === 1) {
         amountContainer.style.opacity = 1;
-        amountContainer.textContent = totalInCart;
+        amountContainer.style.scale = 1;
+    } else if (totalInCart > 1) {
+        amountContainer.classList.add("added");
+        setTimeout(() => {
+            amountContainer.classList.remove("added");
+        }, 400)
     } else if (totalInCart === 0) {
         amountContainer.style.opacity = 0;
     }
