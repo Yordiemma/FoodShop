@@ -1,21 +1,27 @@
 import { cartItems } from "./cart";
 
 export const renderCart = () => {
-    const cartContainerEl = document.querySelector('.cart-product-container')
-    cartContainerEl.classList.add('product-list', 'vertical')
-    cartContainerEl.innerHTML = ''
+  const cartContainerEl = document.querySelector('.cart-product-container')
+  cartContainerEl.classList.add('product-list', 'vertical')
+  cartContainerEl.innerHTML = ''
 
-    cartItems.forEach((product) => {
-        const productItemEl = document.createElement('div')
-        productItemEl.classList.add('product-item')
-        cartContainerEl.appendChild(productItemEl)
+  cartItems.forEach((product) => {
+    const productItemEl = document.createElement('div')
+    productItemEl.classList.add('product-item')
+    cartContainerEl.appendChild(productItemEl)
 
-        let productCount = product.amount;
+    let productCount = product.amount;
 
-        productItemEl.innerHTML += `
+    if (product.amount === 0) {
+      productItemEl.innerHTML = ''
+    } else {
+
+
+
+      productItemEl.innerHTML += `
           <div class="product-image-container">
             <span class="sale-tag">${product.sale ? product.sale.saleMessage : ""
-            }</span>
+        }</span>
             <img class="product-image"
               src="${product.photoUrl}"
               alt="" />
@@ -25,20 +31,20 @@ export const renderCart = () => {
               <h3>${product.name}</h3>
               <div class="description">
                 ${product.localProduced
-                ? `<span class="meta-tag">Local</span>`
-                : ""
-            }
+          ? `<span class="meta-tag">Local</span>`
+          : ""
+        }
                 <p class="description">${product.description}</p>
               </div>
             </div>
             <div class="product-footer">
               <div class="product-price-container">
                 <p class="price active">${product.salePrice ? product.salePrice : product.price
-            } kr/st</p>
+        } kr/st</p>
                 ${product.salePrice
-                ? `<p class="price old-price">${product.price} kr/st</p>`
-                : ""
-            }
+          ? `<p class="price old-price">${product.price} kr/st</p>`
+          : ""
+        }
               </div>
               <div class="stepper" style="display: flex; opacity: 1;">
                 <button class="stepper-button-minus remove-product">
@@ -61,7 +67,9 @@ export const renderCart = () => {
             </div>
           </div>
         `;
-    })
+    }
+  })
+
 }
 
 // const addItem = () => {
