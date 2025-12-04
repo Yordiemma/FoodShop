@@ -1,4 +1,7 @@
 import { cartItems } from "./cart";
+import { totalInCart } from "./cart";
+import { addToCart } from "./cart";
+import { removeFromCart } from "./cart"
 
 export const renderCart = () => {
   const cartContainerEl = document.querySelector('.cart-product-container')
@@ -19,11 +22,8 @@ export const renderCart = () => {
     cartContainerEl.appendChild(productItemEl)
 
     let productCount = product.amount;
-    totalCount = totalCount + productCount
-
-    let productPrice = product.price;
-    productPrice = productPrice * product.amount
-    totalPrice = totalPrice + productPrice
+    totalCount += productCount
+    totalPrice += (product.price * product.amount)
 
     if (product.amount === 0) {
       productItemEl.innerHTML = ''
@@ -77,10 +77,44 @@ export const renderCart = () => {
             </div>
           </div>
         `;
+
+      const plusButtonEl = productItemEl.querySelector('.add-product')
+      const minusButtonEl = productItemEl.querySelector('.remove-product')
+
+      // plusButtonEl.addEventListener('click', () => {
+      //   product.amount += 1
+      //   renderCart();
+      //   totalInCart();
+      // })
+
+      // minusButtonEl.addEventListener('click', () => {
+      //   if (product.amount !== 0) {
+      //     product.amount -= 1
+      //     console.log(cartItems)
+      //     renderCart();
+      //     totalInCart();
+      //   } else {
+      //     //remove product from cart item
+      //   }
+
+      // })
+      // const allstepperEl = productItemEl.querySelectorAll('.stepper')
+      // allstepperEl.forEach((stepper) => {
+
+      //   const plusButtonEl = stepper.querySelector('.add-product')
+      //   console.log(plusButtonEl)
+
+      //   plusButtonEl.addEventListener('click', () => {
+      //     let currentAmount = parseInt(stepp)
+      //   })
+      // })
     }
   })
+
+
+
   const renderTotalPrice = () => {
-      totalPriceEl.textContent = totalPrice;
+    totalPriceEl.textContent = totalPrice;
   }
   const checkIfOne = () => {
     oneItemEl.forEach((span) => {
@@ -100,31 +134,3 @@ export const renderCart = () => {
   renderTotalItems();
   renderTotalPrice();
 }
-
-// const addItem = () => {
-
-//     cartItems.forEach((product) => {
-//         const stepperEl = document.querySelector('.stepper')
-//         console.log(stepperEl)
-//     })
-// }
-
-// addItem();
-
-
-
-
-
-// const checkAmount = () => {
-//     console.log(cartItems)
-//     cartItems.forEach((item) => {
-//         if (item.amount > 0) {
-//             console.log(item.name, item.amount)
-//         } else {
-//             console.log('no amounts')
-//         }
-//     })
-// }
-
-// test();
-// checkAmount();
