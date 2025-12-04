@@ -1,7 +1,5 @@
 import { cartItems } from "./cart";
 import { totalInCart } from "./cart";
-import { addToCart } from "./cart";
-import { removeFromCart } from "./cart"
 
 export const renderCart = () => {
   const cartContainerEl = document.querySelector('.cart-product-container')
@@ -21,7 +19,7 @@ export const renderCart = () => {
     productItemEl.classList.add('product-item')
     cartContainerEl.appendChild(productItemEl)
 
-    let productCount = product.amount;
+    let productCount = product.amount ? product.amount : 0;
     totalCount += productCount
     totalPrice += (product.price * product.amount)
 
@@ -81,11 +79,14 @@ export const renderCart = () => {
       const plusButtonEl = productItemEl.querySelector('.add-product')
       const minusButtonEl = productItemEl.querySelector('.remove-product')
 
-      // plusButtonEl.addEventListener('click', () => {
-      //   product.amount += 1
-      //   renderCart();
-      //   totalInCart();
-      // })
+      if (plusButtonEl) {
+        plusButtonEl.addEventListener('click', () => {
+          product.amount += 1
+          renderCart();
+          totalInCart();
+          console.log(cartItems)
+        })
+      }
 
       // minusButtonEl.addEventListener('click', () => {
       //   if (product.amount !== 0) {

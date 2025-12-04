@@ -1,4 +1,5 @@
 import { renderCart } from "./render-cart";
+import { renderProductList } from "./render-product-list";
 
 const cartEl = document.querySelector('.cart-overlay')
 const cartButtonEl = document.querySelector('.cart-wrap')
@@ -23,6 +24,12 @@ const cartHide = () => {
     shown = false;
 }
 
+const updateLandingPage = () => {
+    const productCards = document.querySelectorAll('.product-item')
+    productCards.forEach((div) => console.log(div))
+}
+
 cartButtonEl.addEventListener('click', cartShow)
 cartButtonEl.addEventListener('click', renderCart)
 closeButtonEl.addEventListener('click', cartHide)
+closeButtonEl.addEventListener('click', updateLandingPage)
