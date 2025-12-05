@@ -1,49 +1,22 @@
-
-.expiry-products-section {
+.expiry-section .top-row {
     display: flex;
-    flex-direction: column;
-    gap: 12px;
-    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
 }
-.expiry-products-list {
-    display: flex;
-    flex-direction: row;
-    gap: 16px;
+
+#expiry-products-list {
     overflow-x: auto;
-    padding-bottom: 16px;
-    scroll-snap-type: x mandatory;
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
 }
 
-/* Each product card */
-.expiry-card {
-    flex: 0 0 180px;
-    /* card width */
-    background: white;
-    border-radius: 12px;
-    padding: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    scroll-snap-align: start;
+#expiry-products-list::-webkit-scrollbar {
+    display: none;
 }
 
-/* Image box */
-.expiry-card-image img {
-    width: 100%;
-    height: 130px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-
-/* Text under image */
-.expiry-card-info {
-    margin-top: 8px;
-}
-
-.expiry-card-info h3 {
-    font-size: 16px;
-    margin-bottom: 4px;
-}
-
-.expiry-card-info p {
-    font-size: 14px;
-    color: #444;
+.product-list.horizontal .product-item {
+    min-width: 220px;
+    flex-shrink: 0;
 }
