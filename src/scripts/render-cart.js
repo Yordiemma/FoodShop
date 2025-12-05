@@ -1,6 +1,5 @@
 import { cartItems } from "./cart";
 import { totalInCart } from "./cart";
-import { removeFromCart } from "./cart";
 
 export const renderCart = () => {
   const cartContainerEl = document.querySelector('.cart-product-container')
