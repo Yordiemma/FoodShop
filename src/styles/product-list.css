@@ -24,9 +24,6 @@
     overflow-x: auto;
     padding-block-end: 16px;
   }
-  .example-components {
-    margin-top: 56px;
-  }
 
   .expiry-section .top-row {
     display: flex;
@@ -47,7 +44,6 @@
     .product-list.vertical .product-item {
       border-bottom: 1px solid var(--color-border-default);
     }
-  
   
     .product-list.vertical .product-item:nth-last-child(-n+3) {
       border-bottom: none;

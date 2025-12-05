@@ -2,12 +2,10 @@
 @import "./styles/header.css";
 @import "./styles/greeting.css";
 @import "./styles/offers.css";
-@import "./styles/global-variables.css";
 @import "./styles/product-card.css";
 @import "./styles/buttons.css";
 @import "./styles/cart-overlay.css";
 @import "./styles/icon-buttons.css";
-@import "./styles/short-expiry.css";
 @import "./styles/product-list.css";
 
 * {
