@@ -19,13 +19,9 @@ body {
   flex-direction: column;
   font-family: var(--font-family-sans);
   font-weight: 500;
+  color: var(--color-foreground-default);
   max-width: 1400px;
   padding: 0em 1em;
-  margin: 0 auto;
-  color: var(--color-foreground-default);
-}
-
-.container-full {
   margin: 0 auto;
 }
 
@@ -72,6 +68,11 @@ html {
   height: 100%;
 }
 
+.container-wrapped {
+
+}
+
 #app {
   flex: 1;
 }
+

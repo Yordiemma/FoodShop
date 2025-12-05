@@ -128,7 +128,12 @@
   .horizontal .product-item {
     width: 40vw;
   }
+}
 
+@media (min-width: 650px) {
+  .horizontal .product-item {
+    width: 40vw;
+  }
 }
 
 @media (min-width: 900px) {
