@@ -47,13 +47,20 @@
     .product-list.vertical .product-item:nth-last-child(-n+3) {
       border-bottom: none;
     }
-  }
 
-  @media (min-width: 600px) {
     .horizontal {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       grid-auto-flow: unset;
+      grid-gap: 16px;
+      overflow-x: auto;
+    }
+  }
+
+  @media (min-width: 600px) {
+
+    .horizontal {
+      grid-auto-columns: calc(100% - 23rem);
       grid-gap: 16px;
       overflow-x: auto;
     }
