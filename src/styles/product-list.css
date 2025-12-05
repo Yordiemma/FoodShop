@@ -9,9 +9,7 @@
   }
   .product-list {
     display: flex;
-    gap: 16px;
-    flex-direction: row;
-  
+    gap: 16px;  
     overflow-x: auto;
     padding-bottom: 16px;
     scroll-snap-type: x mandatory;
@@ -47,5 +45,12 @@
   
     .product-list.vertical .product-item:nth-last-child(-n+3) {
       border-bottom: none;
+    }
+  }
+
+  @media (min-width: 900px) {
+    .product-list.horizontal {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     }
   }
