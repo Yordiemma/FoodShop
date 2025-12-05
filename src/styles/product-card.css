@@ -185,23 +185,3 @@
   }
 
 }
-
-
-@media (min-width: 1200px) {
-  .product-list.vertical {
-    display: grid; 
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    padding: 1.5rem 1rem 1rem 1rem;
-    border-radius: 8px;
-  }
-
-  .product-list.vertical .product-item {
-    border-bottom: 1px solid var(--color-border-default);
-  }
-
-
-  .product-list.vertical .product-item:nth-last-child(-n+3) {
-    border-bottom: none;
-  }
-}

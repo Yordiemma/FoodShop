@@ -28,7 +28,13 @@
     margin-top: 56px;
   }
 
-  
+  .expiry-section .top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1rem;
+}
+
   @media (min-width: 1200px) {
     .product-list.vertical {
       display: grid; 
