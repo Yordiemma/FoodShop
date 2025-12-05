@@ -24,7 +24,7 @@ export const renderCart = () => {
     totalPrice += Math.round((product.price * product.amount) * 100) / 100
 
     if (product.amount === 0) {
-      productItemEl.innerHTML = ''
+      productItemEl.innerHTML = productItemEl.remove();
     } else {
       productItemEl.innerHTML += `
           <div class="product-image-container">
@@ -125,7 +125,7 @@ const updateLandingPage = () => {
   })
 
   const renderTotalPrice = () => {
-    totalPriceEl.textContent = totalPrice;
+    totalPriceEl.textContent = Math.round(totalPrice * 100) / 100
   }
   const checkIfOne = () => {
     oneItemEl.forEach((span) => {
