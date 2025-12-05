@@ -1,5 +1,6 @@
 import { addToCart } from "./cart.js";
 import { removeFromCart } from "./cart.js";
+import { cartItems } from "./cart.js";
 
 
 export const renderProductList = (
@@ -12,6 +13,9 @@ export const renderProductList = (
     const productItem = document.createElement("div");
     productItem.classList.add("product-item");
 
+    //Add an ID to make it can be reached from cart
+    productItem.dataset.id = product.id;
+
     //Add class for vertical or horizontal layout
     productList.classList.add(verticalOrHorizontal);
 
@@ -22,7 +26,15 @@ export const renderProductList = (
     //Add product to product list
     productList.appendChild(productItem);
 
-    let productCount = 0; //Count of products in the item (used for stepper)
+    //Check if item is already in cart to set initial value
+    const cartItem = cartItems.find(item => item.id === product.id);
+    let currentAmount = cartItem ? cartItem.amount : 0;
+
+    //Determine initial visibility based on currentAmount
+    const stepperDisplay = currentAmount > 0 ? "flex" : "none";
+    const stepperOpacity = currentAmount > 0 ? "1" : "0";
+    const btnDisplay = currentAmount > 0 ? "none" : "block";
+    const btnOpacity = currentAmount > 0 ? "0" : "1";
 
     //Add HTML for each product
     productItem.innerHTML += `
@@ -51,7 +63,7 @@ export const renderProductList = (
                   product.salePrice ? `<p class="price old-price">${product.price} kr/st</p>` : ""
                 }
               </div>
-              <button class="compact-button add-product">
+              <button class="compact-button add-product" style="display: ${btnDisplay}; opacity: ${btnOpacity};">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" />
@@ -59,7 +71,7 @@ export const renderProductList = (
                     stroke-linejoin="round" />
                 </svg>
               </button>
-              <div class="stepper">
+              <div class="stepper" style="display: ${stepperDisplay}; opacity: ${stepperOpacity};">
                 <button class="stepper-button-minus remove-product">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
                     aria-hidden="true">
@@ -67,7 +79,7 @@ export const renderProductList = (
                       stroke-linejoin="round" />
                   </svg>
                 </button>
-                <div class="stepper-value">${productCount}</div>
+                <div class="stepper-value">${currentAmount}</div>
                 <button class="stepper-button-plus add-product">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M12 5V19" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -85,27 +97,26 @@ export const renderProductList = (
     const addButtons = productItem.querySelectorAll(".add-product");
     addButtons.forEach((button) => {
       button.addEventListener("click", (event) => {
-        productCount += 1;
+        addToCart(product.id, event);
 
-        // Update the displayed stepper value
+        const updatedItem = cartItems.find(item => item.id === product.id);
+        const newAmount = updatedItem ? updatedItem.amount : 0;
+        
         const stepperValue = productItem.querySelector(".stepper-value");
-        if (stepperValue) {
-          stepperValue.textContent = (productCount.toString());
-        }
-        addToCart(product.id, event)
+        if (stepperValue) stepperValue.textContent = newAmount;
       });
     });
+
     const removeButtons = productItem.querySelectorAll(".remove-product");
     removeButtons.forEach((button) => {
       button.addEventListener("click", (event) => {
-        productCount -= 1;
+        removeFromCart(product.id, event);
 
-        // Update the displayed stepper value
+        const updatedItem = cartItems.find(item => item.id === product.id);
+        const newAmount = updatedItem ? updatedItem.amount : 0;
+
         const stepperValue = productItem.querySelector(".stepper-value");
-        if (stepperValue) {
-            stepperValue.textContent = (productCount.toString());
-        }
-        removeFromCart(product.id, event)
+        if (stepperValue) stepperValue.textContent = newAmount;
       }
 
       );

@@ -1,21 +1,35 @@
 import { cartItems } from "./cart";
+import { totalInCart } from "./cart";
 
 export const renderCart = () => {
-    const cartContainerEl = document.querySelector('.cart-product-container')
-    cartContainerEl.classList.add('product-list', 'vertical')
-    cartContainerEl.innerHTML = ''
+  const cartContainerEl = document.querySelector('.cart-product-container')
+  cartContainerEl.classList.add('product-list', 'vertical')
+  const totalItemEl = document.querySelectorAll('.total-items')
+  const oneItemEl = document.querySelectorAll('.one-item')
+  const totalPriceEl = document.querySelector('#total-price')
 
-    cartItems.forEach((product) => {
-        const productItemEl = document.createElement('div')
-        productItemEl.classList.add('product-item')
-        cartContainerEl.appendChild(productItemEl)
+  cartContainerEl.innerHTML = ''
 
-        let productCount = product.amount;
+  let totalCount = 0;
+  let totalPrice = 0;
 
-        productItemEl.innerHTML += `
+  cartItems.forEach((product) => {
+
+    const productItemEl = document.createElement('div')
+    productItemEl.classList.add('product-item')
+    cartContainerEl.appendChild(productItemEl)
+
+    let productCount = product.amount ? product.amount : 0;
+    totalCount += productCount
+    totalPrice += Math.round((product.price * product.amount) * 100) / 100
+
+    if (product.amount === 0) {
+      productItemEl.innerHTML = productItemEl.remove();
+    } else {
+      productItemEl.innerHTML += `
           <div class="product-image-container">
             <span class="sale-tag">${product.sale ? product.sale.saleMessage : ""
-            }</span>
+        }</span>
             <img class="product-image"
               src="${product.photoUrl}"
               alt="" />
@@ -25,20 +39,20 @@ export const renderCart = () => {
               <h3>${product.name}</h3>
               <div class="description">
                 ${product.localProduced
-                ? `<span class="meta-tag">Local</span>`
-                : ""
-            }
+          ? `<span class="meta-tag">Local</span>`
+          : ""
+        }
                 <p class="description">${product.description}</p>
               </div>
             </div>
             <div class="product-footer">
               <div class="product-price-container">
                 <p class="price active">${product.salePrice ? product.salePrice : product.price
-            } kr/st</p>
+        } kr/st</p>
                 ${product.salePrice
-                ? `<p class="price old-price">${product.price} kr/st</p>`
-                : ""
-            }
+          ? `<p class="price old-price">${product.price} kr/st</p>`
+          : ""
+        }
               </div>
               <div class="stepper" style="display: flex; opacity: 1;">
                 <button class="stepper-button-minus remove-product">
@@ -61,33 +75,73 @@ export const renderCart = () => {
             </div>
           </div>
         `;
+
+const updateLandingPage = () => {
+        const landingItem = document.querySelector(`.product-item[data-id="${product.id}"]`);
+
+        if (landingItem) {
+          const stepperValueEl = landingItem.querySelector('.stepper-value');
+          const stepperEl = landingItem.querySelector('.stepper');
+          const compactButtonEl = landingItem.querySelector('.compact-button');
+
+          stepperValueEl.textContent = product.amount;
+
+          if (product.amount > 0) {
+            stepperEl.style.display = 'flex';
+            stepperEl.style.opacity = 1;
+            
+            compactButtonEl.style.display = 'none';
+            compactButtonEl.style.opacity = 0;
+          } else {
+            stepperEl.style.display = 'none';
+            stepperEl.style.opacity = 0;
+
+            compactButtonEl.style.display = 'block';
+            compactButtonEl.style.opacity = 1;
+          }
+        }
+      }
+
+      const plusButtonEl = productItemEl.querySelector('.add-product')
+      const minusButtonEl = productItemEl.querySelector('.remove-product')
+
+      plusButtonEl.addEventListener('click', () => {
+        product.amount += 1;
+        renderCart();
+        totalInCart();
+        updateLandingPage();
+        console.log(cartItems)
+      })
+
+      minusButtonEl.addEventListener('click', () => {
+        product.amount -= 1;
+        renderCart();
+        totalInCart();
+        updateLandingPage();
+        console.log(cartItems)
+      })
+
+    }
+  })
+
+  const renderTotalPrice = () => {
+    totalPriceEl.textContent = Math.round(totalPrice * 100) / 100
+  }
+  const checkIfOne = () => {
+    oneItemEl.forEach((span) => {
+      if (totalCount === 1) {
+        span.textContent = 'item'
+      } else {
+        span.textContent = 'items'
+      }
     })
+  }
+  const renderTotalItems = () => {
+    totalItemEl.forEach((span) =>
+      span.textContent = totalCount)
+
+    checkIfOne();
+  }
+  renderTotalItems();
+  renderTotalPrice();
 }
-
-// const addItem = () => {
-
-//     cartItems.forEach((product) => {
-//         const stepperEl = document.querySelector('.stepper')
-//         console.log(stepperEl)
-//     })
-// }
-
-// addItem();
-
-
-
-
-
-// const checkAmount = () => {
-//     console.log(cartItems)
-//     cartItems.forEach((item) => {
-//         if (item.amount > 0) {
-//             console.log(item.name, item.amount)
-//         } else {
-//             console.log('no amounts')
-//         }
-//     })
-// }
-
-// test();
-// checkAmount();
