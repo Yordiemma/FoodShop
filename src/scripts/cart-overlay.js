@@ -21,13 +21,6 @@ export function updateLandingPage() {
   const allSteppers = document.querySelectorAll('.stepper-value');
 
   allSteppers.forEach(stepperValueEl => {
-    const productId = stepperValueEl.getAttribute('data-id');
-    const cartItem = cartItems.find(item => item.id == productId);
-    const currentAmount = cartItem ? cartItem.amount : 0;
-
-    // 1. Update text
-    stepperValueEl.textContent = currentAmount;
-
     // 2. Find siblings
     const productFooterEl = stepperValueEl.closest('.product-footer');
     const compactBtnEl = productFooterEl.querySelector('.compact-button');
