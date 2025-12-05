@@ -1,7 +1,6 @@
 import { cartItems } from "./cart";
 import { totalInCart } from "./cart";
 import { removeFromCart } from "./cart";
-import { updateLandingPage } from "./cart-overlay"
 
 export const renderCart = () => {
   const cartContainerEl = document.querySelector('.cart-product-container')
@@ -23,7 +22,7 @@ export const renderCart = () => {
 
     let productCount = product.amount ? product.amount : 0;
     totalCount += productCount
-    totalPrice += (product.price * product.amount)
+    totalPrice += Math.round((product.price * product.amount) * 100) / 100
 
     if (product.amount === 0) {
       productItemEl.innerHTML = ''
@@ -78,62 +77,53 @@ export const renderCart = () => {
           </div>
         `;
 
+const updateLandingPage = () => {
+        const landingItem = document.querySelector(`.product-item[data-id="${product.id}"]`);
+
+        if (landingItem) {
+          const stepperValueEl = landingItem.querySelector('.stepper-value');
+          const stepperEl = landingItem.querySelector('.stepper');
+          const compactButtonEl = landingItem.querySelector('.compact-button');
+
+          stepperValueEl.textContent = product.amount;
+
+          if (product.amount > 0) {
+            stepperEl.style.display = 'flex';
+            stepperEl.style.opacity = 1;
+            
+            compactButtonEl.style.display = 'none';
+            compactButtonEl.style.opacity = 0;
+          } else {
+            stepperEl.style.display = 'none';
+            stepperEl.style.opacity = 0;
+
+            compactButtonEl.style.display = 'block';
+            compactButtonEl.style.opacity = 1;
+          }
+        }
+      }
+
       const plusButtonEl = productItemEl.querySelector('.add-product')
       const minusButtonEl = productItemEl.querySelector('.remove-product')
 
       plusButtonEl.addEventListener('click', () => {
-        console.log("Clicked + for product:", product.id);
-        let itemInCart = cartItems.find(item => item.id === product.id);
-
-        if (itemInCart) {
-          // If it's already in the cart, increase THAT amount
-          itemInCart.amount += 1;
-        } else {
-          // If it's not in the cart (or was removed), add it fresh
-          product.amount = 1;
-          cartItems.push(product);
-        }
+        product.amount += 1;
         renderCart();
         totalInCart();
+        updateLandingPage();
         console.log(cartItems)
       })
 
       minusButtonEl.addEventListener('click', () => {
-
         product.amount -= 1;
-
         renderCart();
         totalInCart();
+        updateLandingPage();
         console.log(cartItems)
-        // updateLandingPage();
       })
 
-
-      // minusButtonEl.addEventListener('click', () => {
-      //   if (product.amount !== 0) {
-      //     product.amount -= 1
-      //     console.log(cartItems)
-      //     renderCart();
-      //     totalInCart();
-      //   } else {
-      //     //remove product from cart item
-      //   }
-
-      // })
-      // const allstepperEl = productItemEl.querySelectorAll('.stepper')
-      // allstepperEl.forEach((stepper) => {
-
-      //   const plusButtonEl = stepper.querySelector('.add-product')
-      //   console.log(plusButtonEl)
-
-      //   plusButtonEl.addEventListener('click', () => {
-      //     let currentAmount = parseInt(stepp)
-      //   })
-      // })
     }
   })
-
-
 
   const renderTotalPrice = () => {
     totalPriceEl.textContent = totalPrice;

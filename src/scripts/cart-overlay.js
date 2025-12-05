@@ -17,36 +17,11 @@ const cartShow = () => {
     }
 }
 
-export function updateLandingPage() {
-  const allSteppers = document.querySelectorAll('.stepper-value');
-
-  allSteppers.forEach(stepperValueEl => {
-    // 2. Find siblings
-    const productFooterEl = stepperValueEl.closest('.product-footer');
-    const compactBtnEl = productFooterEl.querySelector('.compact-button');
-    const stepperContainerEl = productFooterEl.querySelector('.stepper');
-
-if (compactBtnEl && stepperContainerEl) {
-      if (currentAmount > 0) {
-        compactBtnEl.style.display = 'none';
-        stepperContainerEl.style.display = 'flex';
-      } else {
-        compactBtnEl.style.display = 'flex';
-        compactBtnEl.style.opacity = '1';
-        stepperContainerEl.style.display = 'none';
-      }
-    }
-    console.log(cartItems)
-  });
-}
-
 const cartHide = () => {
     cartEl.style.display = 'none'
     document.body.style.overflow = 'auto'
     cartButtonEl.firstElementChild.src = '/src/images/cart.svg'
     shown = false;
-
-    updateLandingPage();
 }
 
 
