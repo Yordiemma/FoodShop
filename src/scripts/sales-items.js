@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     saleItemsList.innerHTML = "";
 
     for (const product of productData) {
-      if (product.sale) {
+      if (product.sale && saleItemArray.length < 6) {
         saleItemArray.push(product);
 
         const currentPrice = product.salePrice || product.price || 0;
