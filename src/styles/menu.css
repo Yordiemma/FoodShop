@@ -99,3 +99,9 @@ hr {
   justify-content: space-between;
   align-items: center;
 }
+
+.dynamic-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
