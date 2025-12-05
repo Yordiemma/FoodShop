@@ -1,4 +1,5 @@
 import { renderCart } from "./render-cart";
+import { cartItems } from "./cart";
 
 const cartEl = document.querySelector('.cart-overlay')
 const cartButtonEl = document.querySelector('.cart-wrap')
@@ -22,6 +23,7 @@ const cartHide = () => {
     cartButtonEl.firstElementChild.src = '/src/images/cart.svg'
     shown = false;
 }
+
 
 cartButtonEl.addEventListener('click', cartShow)
 cartButtonEl.addEventListener('click', renderCart)
