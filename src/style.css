@@ -8,6 +8,7 @@
 @import "./styles/cart-overlay.css";
 @import "./styles/icon-buttons.css";
 @import "./styles/short-expiry.css";
+@import "./styles/product-list.css";
 
 * {
   margin: 0;
@@ -75,34 +76,4 @@ html {
 
 #app {
   flex: 1;
-}
-
-.product-list-container {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  margin-block-end: 3.5rem;
-  margin-top: 20px;
-  height: auto;
-  width: 100%;
-}
-.product-list {
-  display: flex;
-  gap: 16px;
-  flex-direction: row;
-
-  overflow-x: auto;
-  padding-bottom: 16px;
-  scroll-snap-type: x mandatory;
-}
-.vertical {
-  flex-direction: column;
-}
-.horizontal {
-  flex-direction: row;
-  overflow-x: auto;
-  padding-block-end: 16px;
-}
-.example-components {
-  margin-top: 56px;
 }
