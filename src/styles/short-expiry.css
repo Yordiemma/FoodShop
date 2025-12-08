@@ -1,9 +1,21 @@
+
 .expiry-section .top-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 1rem;
 }
+
+
+.expiry-section .show-all-button {
+    background: none;
+    border: none;
+    font-family: var(--font-family-sans);
+    font-size: var(--font-size-paragraph-medium);
+color: var(--color-foreground-default);
+    cursor: pointer;
+}
+
 
 #expiry-products-list {
     overflow-x: auto;
@@ -15,6 +27,7 @@
 #expiry-products-list::-webkit-scrollbar {
     display: none;
 }
+
 
 .product-list.horizontal .product-item {
     min-width: 220px;
