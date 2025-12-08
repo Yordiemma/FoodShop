@@ -6,13 +6,12 @@ export function renderShortExpiryProducts(container) {
 
   if (!container) return;
 
-  let showAll = false; 
-
   function render() {
     container.innerHTML = "";
     container.classList.add("product-list", "horizontal");
 
-    const itemsToShow = showAll ? allItems : allItems.slice(0, 3);
+    // ALWAYS show first 3 items
+    const itemsToShow = allItems.slice(0, 3);
 
     itemsToShow.forEach((product) => {
       let count = 0;
@@ -79,10 +78,8 @@ export function renderShortExpiryProducts(container) {
       const stepperValue = card.querySelector(".stepper-value");
       const minusButtons = card.querySelectorAll(".remove-product");
 
-
       stepper.style.opacity = "0";
 
- 
       initialButton.addEventListener("click", (e) => {
         count = 1;
         stepperValue.textContent = count;
@@ -127,21 +124,9 @@ export function renderShortExpiryProducts(container) {
         card.classList.add("sale");
       }
     });
-
-
-    const btn = document.querySelector(".show-all-button");
-    if (btn) btn.textContent = showAll ? "Show less" : "Show all";
   }
-
-
-  const showMoreBtn = document.querySelector(".show-all-button");
-  if (showMoreBtn) {
-    showMoreBtn.addEventListener("click", () => {
-      showAll = !showAll;
-      render();
-    });
-  }
-
 
   render();
 }
+
+
