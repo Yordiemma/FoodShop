@@ -68,10 +68,6 @@ html {
   height: 100%;
 }
 
-.container-wrapped {
-
-}
-
 #app {
   flex: 1;
 }
