@@ -40,7 +40,7 @@
   border: none;
   font-family: var(--font-family-sans);
   font-size: var(--font-size-paragraph-medium);
-color: var(--color-foreground-default);
+  color: var(--color-foreground-default);
   cursor: pointer;
 }
 
@@ -68,7 +68,7 @@ color: var(--color-foreground-default);
 
     .horizontal {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(144px, 1fr));
+      grid-template-columns: repeat(6, minmax(144px, 1fr));
       grid-auto-flow: unset;
       grid-gap: 16px;
       overflow-x: auto;
