@@ -1,5 +1,4 @@
 import { productData } from "/src/scripts/product-data.js";
-import { totalInCart } from "/src/scripts/cart.js";
 import { addToCart } from "/src/scripts/cart.js";
 import { removeFromCart } from "/src/scripts/cart.js";
 document.addEventListener("DOMContentLoaded", () => {
@@ -16,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
     saleItemsList.innerHTML = "";
 
     for (const product of productData) {
-      if (product.sale) {
+      if (product.sale && saleItemArray.length < 6) {
         saleItemArray.push(product);
 
         const currentPrice = product.salePrice || product.price || 0;
@@ -124,7 +123,6 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
 
-    console.log("Total sale items rendered:", saleItemArray.length);
   };
 
   createSaleItemElement();

@@ -28,7 +28,7 @@ const categoriesContainer = document.querySelector(".dynamic-categories");
 
 categoriesContainer.innerHTML = "";
 
-Object.entries(categories).forEach(([catName, count]) => {
+Object.entries(categories).forEach(([catName, count], index, array) => {
   const item = document.createElement("div");
   item.classList.add("menu-item", "title");
 
@@ -37,8 +37,10 @@ Object.entries(categories).forEach(([catName, count]) => {
     <button class="menu-button">${count}</button>
   `;
 
-  const hr = document.createElement("hr");
-
   categoriesContainer.appendChild(item);
-  categoriesContainer.appendChild(hr);
+
+  if (index !== array.length - 1) {
+    const hr = document.createElement("hr");
+    categoriesContainer.appendChild(hr);
+  }
 });
