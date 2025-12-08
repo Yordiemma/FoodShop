@@ -116,23 +116,3 @@
   }
 }
 
-/* Responsive design for desktop */
-
-.product-list.vertical {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-/* @media (min-width: 500px) {
-  .horizontal .product-item {
-    width: 40vw;
-  }
-}
-
-@media (min-width: 650px) {
-  .horizontal .product-item {
-    width: 40vw;
-  }
-} */
-
