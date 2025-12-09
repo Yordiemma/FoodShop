@@ -1,8 +1,13 @@
 import { productData } from "./product-data"
 
 
+const savedCartItems = localStorage.getItem('cartItems');
+export let cartItems = savedCartItems ? JSON.parse(savedCartItems) : [];
 
-export let cartItems = []
+
+const amountContainer = document.getElementById("total-in-cart")
+
+
 
 function containsObject(cartItem) {
     var i;
@@ -19,16 +24,16 @@ export const totalInCart = () => {
 
     const totalInCart = cartItems.reduce((total, product) => total + product.amount, 0)
     amountContainer.textContent = totalInCart;
-    if (totalInCart === 1) {
+    if (totalInCart > 0) {
         amountContainer.style.opacity = 1;
         amountContainer.style.scale = 1;
-    } else if (totalInCart > 1) {
+    } else {
+        amountContainer.style.opacity = 0;
+    } if (totalInCart > 1) {
         amountContainer.classList.add("added");
         setTimeout(() => {
             amountContainer.classList.remove("added");
         }, 400)
-    } else if (totalInCart === 0) {
-        amountContainer.style.opacity = 0;
     }
 }
 
@@ -57,6 +62,7 @@ export const addToCart = (id, event) => {
                 });
             }
 
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
 
             const button = event.target.closest(".add-product")
             const productItem = button.closest('.product-item')
@@ -105,6 +111,7 @@ export const removeFromCart = (id, event) => {
                 } else {
                     cartItem.amount -= 1;
                 }
+                localStorage.setItem('cartItems', JSON.stringify(cartItems));
             }
             totalInCart()
         }
