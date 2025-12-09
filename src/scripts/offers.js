@@ -14,10 +14,6 @@ const offer = [{
     img_url: '/src/images/offer3.png',
     badge: 'Inspiration',
     text: 'Breakfast For Everyone!'
-}, {
-    img_url: '/src/images/offer4.png',
-    badge: 'Recipe',
-    text: 'Bake With Berries!'
 }]
 
 const randomID = (max) => {
