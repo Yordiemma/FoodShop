@@ -25,7 +25,6 @@ export function renderShortExpiryProducts(container) {
       card.className = "product-item";
       card.dataset.id = product.id;
 
-      //Determine initial visibility based on currentAmount
       const stepperDisplay = currentAmount > 0 ? "flex" : "none";
       const stepperOpacity = currentAmount > 0 ? "1" : "0";
       const btnDisplay = currentAmount > 0 ? "none" : "block";
