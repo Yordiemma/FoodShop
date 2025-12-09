@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         saleItemsList.appendChild(productCard);
 
-        //Update function to sync since there are similar products in other list
+        //Update function to sync with the same products in other list.
         const updateAllProducts = () => {
           const updatedItem = cartItems.find(item => item.id === product.id);
           const newAmount = updatedItem ? updatedItem.amount : 0;
@@ -120,7 +120,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 stepperEl.style.display = 'none';
                 stepperEl.style.opacity = '0';
               }
-              if (btnEl) btnEl.style.display = 'block';
+              if (btnEl) {
+                btnEl.style.display = 'block';
+                btnEl.style.opacity = '1';
+              }
             }
           })
         }

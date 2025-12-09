@@ -39,9 +39,8 @@ export const renderProductList = (
     //Add HTML for each product
     productItem.innerHTML += `
           <div class="product-image-container">
-            <span class="sale-tag">${
-              product.sale ? product.sale.saleMessage : ""
-            }</span>
+            <span class="sale-tag">${product.sale ? product.sale.saleMessage : ""
+      }</span>
             <img class="product-image"
               src="${product.photoUrl}"
               alt="" />
@@ -51,17 +50,16 @@ export const renderProductList = (
               <h3>${product.name}</h3>
               <div class="description">
                 ${product.localProduced ? `<span class="meta-tag">Local</span>` : ""
-                }
+      }
                 <p class="description">${product.description}</p>
               </div>
             </div>
             <div class="product-footer">
               <div class="product-price-container">
                 <p class="price active">${product.salePrice ? product.salePrice : product.price
-                } kr/st</p>
-                ${
-                  product.salePrice ? `<p class="price old-price">${product.price} kr/st</p>` : ""
-                }
+      } kr/st</p>
+                ${product.salePrice ? `<p class="price old-price">${product.price} kr/st</p>` : ""
+      }
               </div>
               <button class="compact-button add-product" style="display: ${btnDisplay}; opacity: ${btnOpacity};">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -93,17 +91,45 @@ export const renderProductList = (
           </div>
         `;
 
+
+    //Update function to sync with the same products in other list.
+    const updateAllProducts = () => {
+      const updatedItem = cartItems.find(item => item.id === product.id);
+      const newAmount = updatedItem ? updatedItem.amount : 0;
+
+      const allProducts = document.querySelectorAll(`.product-item[data-id="${product.id}"]`)
+
+      allProducts.forEach(card => {
+        const stepperValueEl = card.querySelector('.stepper-value')
+        const stepperEl = card.querySelector('.stepper')
+        const btnEl = card.querySelector('.compact-button')
+
+        if (stepperValueEl) stepperValueEl.textContent = newAmount;
+
+        if (newAmount > 0) {
+          if (stepperEl) {
+            stepperEl.style.display = 'flex';
+            stepperEl.style.opacity = '1';
+          }
+          if (btnEl) btnEl.style.display = 'none';
+        } else {
+          if (stepperEl) {
+            stepperEl.style.display = 'none';
+            stepperEl.style.opacity = '0';
+          }
+          if (btnEl) {
+            btnEl.style.display = 'block';
+            btnEl.style.opacity = '1';
+          }
+        }
+      })
+    }
     // Attach event listeners to the add buttons for this specific product
     const addButtons = productItem.querySelectorAll(".add-product");
     addButtons.forEach((button) => {
       button.addEventListener("click", (event) => {
         addToCart(product.id, event);
-
-        const updatedItem = cartItems.find(item => item.id === product.id);
-        const newAmount = updatedItem ? updatedItem.amount : 0;
-        
-        const stepperValue = productItem.querySelector(".stepper-value");
-        if (stepperValue) stepperValue.textContent = newAmount;
+        updateAllProducts();
       });
     });
 
@@ -111,12 +137,7 @@ export const renderProductList = (
     removeButtons.forEach((button) => {
       button.addEventListener("click", (event) => {
         removeFromCart(product.id, event);
-
-        const updatedItem = cartItems.find(item => item.id === product.id);
-        const newAmount = updatedItem ? updatedItem.amount : 0;
-
-        const stepperValue = productItem.querySelector(".stepper-value");
-        if (stepperValue) stepperValue.textContent = newAmount;
+        updateAllProducts();
       }
 
       );
