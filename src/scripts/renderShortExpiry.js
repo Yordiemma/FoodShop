@@ -29,7 +29,6 @@ export function renderShortExpiryProducts(container) {
       const stepperDisplay = currentAmount > 0 ? "flex" : "none";
       const stepperOpacity = currentAmount > 0 ? "1" : "0";
       const btnDisplay = currentAmount > 0 ? "none" : "block";
-      const btnOpacity = currentAmount > 0 ? "0" : "1";
 
       card.innerHTML = `
         <div class="product-image-container">
@@ -85,8 +84,6 @@ export function renderShortExpiryProducts(container) {
       const stepper = card.querySelector(".stepper");
       const stepperValue = card.querySelector(".stepper-value");
       const minusButtons = card.querySelectorAll(".remove-product");
-
-      // stepper.style.opacity = "0";
 
       initialButton.addEventListener("click", (e) => {
 
