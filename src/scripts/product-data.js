@@ -1,7 +1,7 @@
 export const productData = [
   {
     category: "Meat, poultry & deli",
-    id: self.crypto.randomUUID(),
+    id: 100,
     name: "Falukorv Ring",
     brand: "Scan",
     description: "800 g",
@@ -16,7 +16,7 @@ export const productData = [
   },
   {
     category: "Meat, poultry & deli",
-    id: self.crypto.randomUUID(),
+    id: 101,
     name: "Pie Cheese & Ham",
     brand: "Felix",
     description: "220 g, fryst",
@@ -29,7 +29,7 @@ export const productData = [
   },
   {
     category: "Frozen",
-    id: self.crypto.randomUUID(),
+    id: 102,
     name: "Pizza X-Tra Allt Capricciosa",
     brand: "Grandiosa",
     description: "350 g, fryst",
@@ -44,7 +44,7 @@ export const productData = [
   },
   {
     category: "Beverages",
-    id: self.crypto.randomUUID(),
+    id: 103,
     name: "7up Sugar Free",
     brand: "7up",
     description: "150 cl",
@@ -58,7 +58,7 @@ export const productData = [
   },
   {
     category: "Beverages",
-    id: self.crypto.randomUUID(),
+    id: 104,
     name: "Pommac Magnum",
     brand: "Pommac",
     description: "10 cl",
@@ -71,7 +71,7 @@ export const productData = [
   },
   {
     category: "Beverages",
-    id: self.crypto.randomUUID(),
+    id: 105,
     name: "Zingo Zero Orange 6-pack",
     brand: "Zingo",
     description: "6x33 cl.",
@@ -84,7 +84,7 @@ export const productData = [
   },
   {
     category: "Beverages",
-    id: self.crypto.randomUUID(),
+    id: 106,
     name: "Pepsi Max",
     brand: "Pepsi",
     description: "1,5 liter",
@@ -98,7 +98,7 @@ export const productData = [
   },
   {
     category: "Dairy & eggs",
-    id: self.crypto.randomUUID(),
+    id: 107,
     name: "Whipping Cream 36%",
     brand: "Arla Köket",
     description: "5 dl",
@@ -113,7 +113,7 @@ export const productData = [
   },
   {
     category: "Dairy & eggs",
-    id: self.crypto.randomUUID(),
+    id: 108,
     name: "Blue Cheese Ädel 30%",
     brand: "Kvibille",
     description: "140 g",
@@ -128,7 +128,7 @@ export const productData = [
   },
   {
     category: "Dairy & eggs",
-    id: self.crypto.randomUUID(),
+    id: 109,
     name: "Porridge Bread",
     brand: "Pågen",
     description: "780 g",
@@ -143,7 +143,7 @@ export const productData = [
   },
   {
     category: "Dairy & eggs",
-    id: self.crypto.randomUUID(),
+    id: 110,
     name: "Semi-skimmed Milk",
     brand: "Arla",
     description: "1,5 lit",
@@ -156,7 +156,7 @@ export const productData = [
   },
   {
     category: "Dairy & eggs",
-    id: self.crypto.randomUUID(),
+    id: 111,
     name: "Semi-skimmed Milk",
     brand: "Arla",
     description: "1,5 lit",
@@ -171,7 +171,7 @@ export const productData = [
   },
   {
     category: "Dairy & eggs",
-    id: self.crypto.randomUUID(),
+    id: 112,
     name: "Whole Milk",
     brand: "Arla",
     description: "1,5 lit",
@@ -184,7 +184,7 @@ export const productData = [
   },
   {
     category: "Pantry",
-    id: self.crypto.randomUUID(),
+    id: 113,
     name: "Granola Hazelnuts & Dates",
     brand: "Paulúns",
     description: "450 g",
@@ -197,7 +197,7 @@ export const productData = [
   },
   {
     category: "Dairy & eggs",
-    id: self.crypto.randomUUID(),
+    id: 114,
     name: "Eggs 12-pack M/L Organic",
     brand: "Änglamark",
     description: "12 st",
@@ -210,7 +210,7 @@ export const productData = [
   },
   {
     category: "Dairy & eggs",
-    id: self.crypto.randomUUID(),
+    id: 115,
     name: "Eggs 12-pack M/L Organic",
     brand: "Änglamark",
     description: "12 st",
@@ -225,7 +225,7 @@ export const productData = [
   },
   {
     category: "Coffee",
-    id: self.crypto.randomUUID(),
+    id: 116,
     name: "Brewed Coffee Medium Roast",
     brand: "Löfbergs",
     description: "450 g",
@@ -238,7 +238,7 @@ export const productData = [
   },
   {
     category: "Coffee",
-    id: self.crypto.randomUUID(),
+    id: 117,
     name: "Brewed Coffee Dark Roast Skånerost",
     brand: "ZOÉGAS",
     description: "450 g",
@@ -251,7 +251,7 @@ export const productData = [
   },
   {
     category: "Pantry",
-    id: self.crypto.randomUUID(),
+    id: 118,
     name: "Dessert Sauce Chocolate",
     brand: "O'hoj",
     description: "350 g",
@@ -266,7 +266,7 @@ export const productData = [
   },
   {
     category: "Cheese",
-    id: self.crypto.randomUUID(),
+    id: 119,
     name: "Philadelphia Original",
     brand: "Philadelphia",
     description: "200 g",
@@ -280,7 +280,7 @@ export const productData = [
   },
   {
     category: "Cheese",
-    id: self.crypto.randomUUID(),
+    id: 120,
     name: "Skogaholmslimpa",
     brand: "Skogaholm",
     description: "775 gram",
@@ -294,7 +294,7 @@ export const productData = [
   },
   {
     category: "Meat, poultry & deli",
-    id: self.crypto.randomUUID(),
+    id: 121,
     name: "Syrliga Isterband Lammhults",
     brand: "Ello i Lammhult",
     description: "300 gram",
@@ -306,7 +306,7 @@ export const productData = [
   },
   {
     category: "Ready-made food & snacks",
-    id: self.crypto.randomUUID(),
+    id: 122,
     name: "Smålandskroppkakor 3-pack",
     brand: "Ölandskroppkakan",
     description: "300 gram",
@@ -318,7 +318,7 @@ export const productData = [
   },
   {
     category: "Beverages",
-    id: self.crypto.randomUUID(),
+    id: 123,
     name: "Råsaft Spenat Äpple Ananas & Citron",
     brand: "Råsaft",
     description: "700 ml",
@@ -330,7 +330,7 @@ export const productData = [
   },
   {
     category: "Beverages",
-    id: self.crypto.randomUUID(),
+    id: 124,
     name: "Läsk Ananas Utan Socker",
     brand: "Hammars Bryggeri",
     description: "100 cl",
@@ -342,7 +342,7 @@ export const productData = [
   },
   {
     category: "Meat, poultry & deli",
-    id: self.crypto.randomUUID(),
+    id: 125,
     name: "Prinskorv",
     brand: "Andersson & Tillman",
     description: "370 gram",
@@ -354,7 +354,7 @@ export const productData = [
   },
   {
     category: "Beverages",
-    id: self.crypto.randomUUID(),
+    id: 126,
     name: "New England Pale Ale 3.5%",
     brand: "Poppels Bryggeri",
     description: "330 ml",
