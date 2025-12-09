@@ -53,7 +53,7 @@ export const productData = [
       "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1694676808/cloud/290598/7up%20Sockerfri.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/dryck/lask/citron-limesmak/7up-sockerfri-7310070004680",
-    salePrice: 50,
+    price: 50,
     shortExpiryDate: false,
   },
   {
