@@ -95,27 +95,56 @@ document.addEventListener("DOMContentLoaded", () => {
 
         saleItemsList.appendChild(productCard);
 
+        //Update function to sync since there are similar products in other list
+        const updateAllProducts = () => {
+          const updatedItem = cartItems.find(item => item.id === product.id);
+          const newAmount = updatedItem ? updatedItem.amount : 0;
+
+          const allProducts = document.querySelectorAll(`.product-item[data-id="${product.id}"]`)
+
+          allProducts.forEach(card => {
+            const stepperValueEl = card.querySelector('.stepper-value')
+            const stepperEl = card.querySelector('.stepper')
+            const btnEl = card.querySelector('.compact-button')
+
+            if (stepperValueEl) stepperValueEl.textContent = newAmount;
+
+            if (newAmount > 0) {
+              if (stepperEl) {
+                stepperEl.style.display = 'flex';
+                stepperEl.style.opacity = '1';
+              }
+              if (btnEl) btnEl.style.display = 'none';
+            } else {
+              if (stepperEl) {
+                stepperEl.style.display = 'none';
+                stepperEl.style.opacity = '0';
+              }
+              if (btnEl) btnEl.style.display = 'block';
+            }
+          })
+        }
+
         // Attach event listeners to the add buttons for this specific product
         const addButtons = productCard.querySelectorAll(".add-product");
         addButtons.forEach((button) => {
           button.addEventListener("click", (event) => {
             addToCart(product.id, event)
+            updateAllProducts();
 
-            const updatedItem = cartItems.find(item => item.id === product.id);
-            currentAmount = updatedItem ? updatedItem.amount : 0;
 
             // Update the displayed stepper value
-            const stepperValue = productCard.querySelector(".stepper-value");
-            if (stepperValue) stepperValue.textContent = currentAmount;
+            // const stepperValue = productCard.querySelector(".stepper-value");
+            // if (stepperValue) stepperValue.textContent = currentAmount;
 
-            const stepperEl = productCard.querySelector('.stepper');
-            const btnEl = productCard.querySelector('.compact-button')
+            // const stepperEl = productCard.querySelector('.stepper');
+            // const btnEl = productCard.querySelector('.compact-button')
 
-            if (currentAmount > 0) {
-              stepperEl.style.display = 'flex'
-              stepperEl.style.opacity = '1'
-              btnEl.style.display = 'none'
-            }
+            // if (currentAmount > 0) {
+            //   stepperEl.style.display = 'flex'
+            //   stepperEl.style.opacity = '1'
+            //   btnEl.style.display = 'none'
+            // }
 
           });
         });
@@ -124,22 +153,23 @@ document.addEventListener("DOMContentLoaded", () => {
         removeButtons.forEach((button) => {
           button.addEventListener("click", (event) => {
             removeFromCart(product.id, event)
+            updateAllProducts();
 
-            const updatedItem = cartItems.find(item => item.id === product.id);
-            currentAmount = updatedItem ? updatedItem.amount : 0;
+            // const updatedItem = cartItems.find(item => item.id === product.id);
+            // currentAmount = updatedItem ? updatedItem.amount : 0;
 
-            // Update the displayed stepper value
-            const stepperValue = productCard.querySelector(".stepper-value");
-            if (stepperValue) stepperValue.textContent = currentAmount;
+            // // Update the displayed stepper value
+            // const stepperValue = productCard.querySelector(".stepper-value");
+            // if (stepperValue) stepperValue.textContent = currentAmount;
 
-            const stepperEl = productCard.querySelector('.stepper');
-            const btnEl = productCard.querySelector('.compact-button')
+            // const stepperEl = productCard.querySelector('.stepper');
+            // const btnEl = productCard.querySelector('.compact-button')
 
-            if (currentAmount === 0) {
-              stepperEl.style.display = 'none'
-              stepperEl.style.opacity = '0'
-              btnEl.style.display = 'block'
-            }
+            // if (currentAmount === 0) {
+            //   stepperEl.style.display = 'none'
+            //   stepperEl.style.opacity = '0'
+            //   btnEl.style.display = 'block'
+            // }
 
 
           }
