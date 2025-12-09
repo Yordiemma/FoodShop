@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         saleItemArray.push(product);
 
         const cartItem = cartItems.find(item => item.id === product.id);
-        let currentAmount = cartItem ? cartItems.amount : 0;
+        let currentAmount = cartItem ? cartItem.amount : 0;
 
         const currentPrice = product.salePrice || product.price || 0;
         const originalPrice = product.price || 0;
@@ -106,8 +106,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Update the displayed stepper value
             const stepperValue = productCard.querySelector(".stepper-value");
-            if (stepperValue) {
-              stepperValue.textContent = currentAmount;
+            if (stepperValue) stepperValue.textContent = currentAmount;
+
+            const stepperEl = productCard.querySelector('.stepper');
+            const btnEl = productCard.querySelector('.compact-button')
+
+            if (currentAmount > 0) {
+              stepperEl.style.display = 'flex'
+              stepperEl.style.opacity = '1'
+              btnEl.style.display = 'none'
             }
 
           });
@@ -123,9 +130,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // Update the displayed stepper value
             const stepperValue = productCard.querySelector(".stepper-value");
-            if (stepperValue) {
-              stepperValue.textContent = currentAmount;
+            if (stepperValue) stepperValue.textContent = currentAmount;
+
+            const stepperEl = productCard.querySelector('.stepper');
+            const btnEl = productCard.querySelector('.compact-button')
+
+            if (currentAmount === 0) {
+              stepperEl.style.display = 'none'
+              stepperEl.style.opacity = '0'
+              btnEl.style.display = 'block'
             }
+
 
           }
 
