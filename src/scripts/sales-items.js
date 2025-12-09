@@ -95,7 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
         saleItemsList.appendChild(productCard);
 
-        //Update function to sync with the same products in other list.
         const updateAllProducts = () => {
           const updatedItem = cartItems.find(item => item.id === product.id);
           const newAmount = updatedItem ? updatedItem.amount : 0;
