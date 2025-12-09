@@ -14,13 +14,20 @@ export const renderCart = () => {
   let totalPrice = 0;
 
   cartItems.forEach((product) => {
+    console.log(product.salePrice)
     const productItemEl = document.createElement('div');
     productItemEl.classList.add('product-item');
     cartContainerEl.appendChild(productItemEl);
 
     let productCount = product.amount ? product.amount : 0;
     totalCount += productCount;
-    totalPrice += Math.round((product.price * product.amount) * 100) / 100;
+
+    if (product.salePrice) {
+      totalPrice += Math.round((product.salePrice * product.amount) * 100) / 100;
+    }
+    else {
+      totalPrice += Math.round((product.price * product.amount) * 100) / 100;
+    }
 
     if (product.amount === 0) {
       productItemEl.innerHTML = productItemEl.remove();
