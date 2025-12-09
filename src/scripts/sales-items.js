@@ -107,6 +107,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const removeButtons = productCard.querySelectorAll(".remove-product");
     removeButtons.forEach((button) => {
       button.addEventListener("click", (event) => {
+
         productCount -= 1;
 
         // Update the displayed stepper value
