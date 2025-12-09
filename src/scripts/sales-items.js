@@ -58,10 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
             <div class="product-price-container">
               <p class="price active">${product.salePrice ? product.salePrice : product.price
           } kr/st</p>
-              ${product.salePrice
-            ? `<p class="price old-price">${product.price} kr/st</p>`
-            : ""
-          }
+          ${product.salePrice ? `<p class="price old-price">${product.price} kr/st</p>` : ""}
             </div>
             <button class="compact-button add-product" style='display: ${btnDisplay}'>
               <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
