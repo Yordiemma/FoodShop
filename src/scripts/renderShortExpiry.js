@@ -1,5 +1,5 @@
 import { productData } from "./product-data.js";
-import { addToCart, removeFromCart } from "./cart.js";
+import { addToCart, cartItems, removeFromCart } from "./cart.js";
 
 export function renderShortExpiryProducts(container) {
   const allItems = productData.filter((p) => p.shortExpiryDate);
@@ -14,7 +14,8 @@ export function renderShortExpiryProducts(container) {
     const itemsToShow = allItems.slice(0, 3);
 
     itemsToShow.forEach((product) => {
-      let count = 0;
+      const cartItem = cartItems.find((item) => item.id === product.id);
+      const currentAmount = cartItem ? cartItem.amount : 0;
 
       const currentPrice = product.salePrice || product.price;
       const originalPrice = product.price;
@@ -22,6 +23,11 @@ export function renderShortExpiryProducts(container) {
 
       const card = document.createElement("div");
       card.className = "product-item";
+      card.dataset.id = product.id;
+
+      const stepperDisplay = currentAmount > 0 ? "flex" : "none";
+      const stepperOpacity = currentAmount > 0 ? "1" : "0";
+      const btnDisplay = currentAmount > 0 ? "none" : "block";
 
       card.innerHTML = `
         <div class="product-image-container">
@@ -44,21 +50,21 @@ export function renderShortExpiryProducts(container) {
               ${hasSale ? `<p class="price old-price">${originalPrice} kr/st</p>` : ""}
             </div>
 
-            <button class="compact-button add-product initial-btn">
+            <button class="compact-button add-product initial-btn" style="display:${btnDisplay}">
               <svg width="24" height="24">
                 <path d="M12 5V19" stroke="currentColor" stroke-width="2"/>
                 <path d="M5 12H19" stroke="currentColor" stroke-width="2"/>
               </svg>
             </button>
 
-            <div class="stepper">
+            <div class="stepper" style="display: ${stepperDisplay}; opacity: ${stepperOpacity}">
               <button class="stepper-button-minus remove-product">
                 <svg width="24" height="24">
                   <path d="M5 12H19" stroke="currentColor" stroke-width="2"/>
                 </svg>
               </button>
 
-              <div class="stepper-value">1</div>
+              <div class="stepper-value">${currentAmount}</div>
 
               <button class="stepper-button-plus add-product">
                 <svg width="24" height="24">
@@ -78,36 +84,36 @@ export function renderShortExpiryProducts(container) {
       const stepperValue = card.querySelector(".stepper-value");
       const minusButtons = card.querySelectorAll(".remove-product");
 
-      stepper.style.opacity = "0";
-
       initialButton.addEventListener("click", (e) => {
-        count = 1;
-        stepperValue.textContent = count;
-
-        initialButton.style.display = "none";
-        stepper.style.opacity = "1";
 
         addToCart(product.id, e);
+
+        stepperValue.textContent = 1;
+        initialButton.style.display = 'none';
+        stepper.style.display = 'flex';
+        stepper.style.opacity = '1';
+
       });
 
       const plusButton = card.querySelector(".stepper-button-plus");
       plusButton.addEventListener("click", (e) => {
-        count++;
-        stepperValue.textContent = count;
         addToCart(product.id, e);
+        const item = cartItems.find(i => i.id === product.id);
+        if (item) stepperValue.textContent = item.amount;
       });
 
       minusButtons.forEach((btn) =>
         btn.addEventListener("click", (e) => {
-          if (count > 1) {
-            count--;
-            stepperValue.textContent = count;
-            removeFromCart(product.id, e);
-          } else {
-            count = 0;
-            stepper.style.opacity = "0";
-            initialButton.style.display = "flex";
-            removeFromCart(product.id, e);
+          removeFromCart(product.id, e);
+          const item = cartItems.find(i => i.id === product.id);
+          const newAmount = item ? item.amount : 0;
+
+          stepperValue.textContent = newAmount;
+
+          if (newAmount === 0) {
+            stepper.style.opacity = '0';
+            stepper.style.display = 'none'; 
+            initialButton.style.display = 'block';
           }
         })
       );
