@@ -6,6 +6,7 @@
 @import "./styles/buttons.css";
 @import "./styles/cart-overlay.css";
 @import "./styles/icon-buttons.css";
+@import "/src/styles/menu.css";
 @import "./styles/product-list.css";
 
 * {
@@ -42,7 +43,10 @@ footer {
   background-color: var(--color-surface-brand-subtle);
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   font-weight: 500;
 }
 
@@ -71,4 +75,3 @@ html {
 #app {
   flex: 1;
 }
-
