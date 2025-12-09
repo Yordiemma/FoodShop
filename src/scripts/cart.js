@@ -7,7 +7,12 @@ export let cartItems = savedCartItems ? JSON.parse(savedCartItems) : [];
 
 const amountContainer = document.getElementById("total-in-cart")
 
-
+const totalItemsInCart = cartItems.reduce((total, product) => total + product.amount, 0)
+amountContainer.textContent = totalItemsInCart;
+if (totalItemsInCart > 0) {
+    amountContainer.style.opacity = 1;
+    amountContainer.style.scale = 1;
+} 
 
 function containsObject(cartItem) {
     var i;
