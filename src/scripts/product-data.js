@@ -102,12 +102,10 @@ export const productData = [
     name: "Whipping Cream 36%",
     brand: "Arla Köket",
     description: "5 dl",
-    sale: { saleMessage: "30 kr/st" },
     photoUrl:
       "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1652099655/cloud/251745/Vispgr%C3%A4dde%2036%25.jpg",
     localProduced: true,
     link: "https://www.coop.se/handla/varor/mejeri-agg/gradde/vispgradde/vispgradde-36-7310865061935",
-    salePrice: 30,
     price: 36.5,
     shortExpiryDate: false,
   },
@@ -117,13 +115,11 @@ export const productData = [
     name: "Blue Cheese Ädel 30%",
     brand: "Kvibille",
     description: "140 g",
-    sale: { saleMessage: "Sale!" },
     photoUrl:
       "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1763117136/cloud/554357/%C3%84delost.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/ost/palaggsost/mjukost/adelost-7311440016364/",
     price: 37,
-    salePrice: 25.95,
     shortExpiryDate: false
   },
   {
@@ -132,12 +128,10 @@ export const productData = [
     name: "Porridge Bread",
     brand: "Pågen",
     description: "780 g",
-    sale: { saleMessage: "30% off" },
     photoUrl:
       "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1661934051/cloud/258029/Gr%C3%B6tbr%C3%B6d.jpg",
     localProduced: true,
     link: "https://www.coop.se/handla/varor/morkt-grovt-brod-matbrod/grotbrod-7311070008708",
-    salePrice: 23.95,
     price: 34,
     shortExpiryDate: false,
   },
