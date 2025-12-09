@@ -14,7 +14,6 @@ export const renderCart = () => {
   let totalPrice = 0;
 
   cartItems.forEach((product) => {
-    console.log(product.salePrice)
     const productItemEl = document.createElement('div');
     productItemEl.classList.add('product-item');
     cartContainerEl.appendChild(productItemEl);
