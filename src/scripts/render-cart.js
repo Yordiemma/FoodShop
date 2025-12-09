@@ -109,6 +109,7 @@ export const renderCart = () => {
           renderCart();
           totalInCart();
           updateLandingPage();
+          localStorage.setItem('cartItems', JSON.stringify(cartItems));
           console.log(cartItems);
         });
       }
@@ -119,6 +120,7 @@ export const renderCart = () => {
           renderCart();
           totalInCart();
           updateLandingPage();
+          localStorage.setItem('cartItems', JSON.stringify(cartItems));
           console.log(cartItems);
         });
       }
