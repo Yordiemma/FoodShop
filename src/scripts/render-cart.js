@@ -21,8 +21,15 @@ export const renderCart = () => {
     let productCount = product.amount ? product.amount : 0;
     totalCount += productCount;
 
+
     if (product.salePrice) {
       totalPrice += Math.round((product.salePrice * product.amount) * 100) / 100;
+      productItemEl.classList.add("sale");
+      let sales = product.sale
+      sales.forEach((sale) => {
+              console.log(sale)
+      })
+
     }
     else {
       totalPrice += Math.round((product.price * product.amount) * 100) / 100;
@@ -124,8 +131,8 @@ export const renderCart = () => {
           console.log(cartItems);
         });
       }
-    } 
-  }); 
+    }
+  });
 
   const renderTotalPrice = () => {
     totalPriceEl.textContent = Math.round(totalPrice * 100) / 100;

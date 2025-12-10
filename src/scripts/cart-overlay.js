@@ -24,7 +24,14 @@ const cartHide = () => {
     shown = false;
 }
 
+const switchView = () => {
+    if (shown) {
+        cartHide();
+    } else {
+        cartShow();
+    }
+}
 
-cartButtonEl.addEventListener('click', cartShow)
+cartButtonEl.addEventListener('click', switchView)
 cartButtonEl.addEventListener('click', renderCart)
 closeButtonEl.addEventListener('click', cartHide)
