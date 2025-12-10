@@ -125,8 +125,6 @@ export function renderShortExpiryProducts(container) {
       const saleTag = card.querySelector(".sale-tag");
 
       if (newPrice && oldPrice && saleTag) {
-        const discount = Math.round(((oldPrice - newPrice) / oldPrice) * 100);
-        saleTag.textContent = `-${discount}%`;
         card.classList.add("sale");
       }
     });
