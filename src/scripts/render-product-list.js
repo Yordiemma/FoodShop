@@ -150,7 +150,7 @@ export const renderProductList = (
           showMoreContainer.classList.add("show-more-button-container");
           showMoreContainer.innerHTML = `
                     <p class="items-in-list">
-                      Showing <span class="number-showing">0</span> of <span class="number-total">0</span>
+                      Showing <span class="number-showing">4</span> of <span class="number-total">12</span>
                     </p>
                     <button class="show-more-button">Show more</button>
                     `;
