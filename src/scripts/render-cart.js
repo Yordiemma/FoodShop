@@ -24,12 +24,6 @@ export const renderCart = () => {
 
     if (product.salePrice) {
       totalPrice += Math.round((product.salePrice * product.amount) * 100) / 100;
-      productItemEl.classList.add("sale");
-      let sales = product.sale
-      sales.forEach((sale) => {
-              console.log(sale)
-      })
-
     }
     else {
       totalPrice += Math.round((product.price * product.amount) * 100) / 100;
@@ -40,7 +34,8 @@ export const renderCart = () => {
     } else {
       productItemEl.innerHTML += `
           <div class="product-image-container">
-            <span class="sale-tag">${product.sale ? product.sale.saleMessage : ""}</span>
+            <span class="sale-tag">${product.sale ? product.sale.saleMessage : ""
+        }</span>
             <img class="product-image" src="${product.photoUrl}" alt="" />
           </div>
           <div class="product-info">
