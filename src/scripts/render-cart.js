@@ -24,6 +24,7 @@ export const renderCart = () => {
 
     if (product.salePrice) {
       totalPrice += Math.round((product.salePrice * product.amount) * 100) / 100;
+      productItemEl.classList.add("sale");
     }
     else {
       totalPrice += Math.round((product.price * product.amount) * 100) / 100;
