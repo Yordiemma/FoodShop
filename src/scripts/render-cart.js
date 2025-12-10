@@ -21,10 +21,10 @@ export const renderCart = () => {
     let productCount = product.amount ? product.amount : 0;
     totalCount += productCount;
 
+    if (product.sale) productItemEl.classList.add("sale");
 
     if (product.salePrice) {
       totalPrice += Math.round((product.salePrice * product.amount) * 100) / 100;
-      productItemEl.classList.add("sale");
     }
     else {
       totalPrice += Math.round((product.price * product.amount) * 100) / 100;
