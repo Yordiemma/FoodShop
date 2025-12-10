@@ -5,7 +5,7 @@ export const productData = [
     name: "Falukorv Ring",
     brand: "Scan",
     description: "800 g",
-    sale: { saleMessage: "sale!" },
+    sale: { saleMessage: "Sale!" },
     photoUrl:
       "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1742310146/cloud/455592/Falukorv%20Ring.jpg",
     localProduced: true,

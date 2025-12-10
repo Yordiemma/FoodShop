@@ -61,6 +61,7 @@ export const addToCart = (id, event) => {
                     photoUrl: product.photoUrl,
                     localProduced: product.localProduced,
                     link: product.link,
+                    sale: { saleMessage: product.sale.saleMessage },
                     ...(product.salePrice && { salePrice: product.salePrice }),
                     price: product.price,
                     shortExpiryDate: false,

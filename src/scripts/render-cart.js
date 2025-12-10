@@ -21,6 +21,8 @@ export const renderCart = () => {
     let productCount = product.amount ? product.amount : 0;
     totalCount += productCount;
 
+    if (product.sale) productItemEl.classList.add("sale");
+
     if (product.salePrice) {
       totalPrice += Math.round((product.salePrice * product.amount) * 100) / 100;
     }
@@ -33,7 +35,8 @@ export const renderCart = () => {
     } else {
       productItemEl.innerHTML += `
           <div class="product-image-container">
-            <span class="sale-tag">${product.sale ? product.sale.saleMessage : ""}</span>
+            <span class="sale-tag">${product.sale ? product.sale.saleMessage : ""
+        }</span>
             <img class="product-image" src="${product.photoUrl}" alt="" />
           </div>
           <div class="product-info">
@@ -124,8 +127,8 @@ export const renderCart = () => {
           console.log(cartItems);
         });
       }
-    } 
-  }); 
+    }
+  });
 
   const renderTotalPrice = () => {
     totalPriceEl.textContent = Math.round(totalPrice * 100) / 100;
