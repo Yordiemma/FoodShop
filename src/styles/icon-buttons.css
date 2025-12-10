@@ -8,7 +8,6 @@
 .icon-button {
   background: none;   
   border: none;       
-  padding: 0 16px;
   cursor: pointer;
   display: flex;
   flex-direction: column;
