@@ -1,5 +1,4 @@
 import { renderCart } from "./render-cart";
-import { cartItems } from "./cart";
 
 const cartEl = document.querySelector('.cart-overlay')
 const cartButtonEl = document.querySelector('.cart-wrap')
