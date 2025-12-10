@@ -12,7 +12,7 @@ amountContainer.textContent = totalItemsInCart;
 if (totalItemsInCart > 0) {
     amountContainer.style.opacity = 1;
     amountContainer.style.scale = 1;
-} 
+}
 
 function containsObject(cartItem) {
     var i;
@@ -61,7 +61,9 @@ export const addToCart = (id, event) => {
                     photoUrl: product.photoUrl,
                     localProduced: product.localProduced,
                     link: product.link,
-                    sale: { saleMessage: product.sale.saleMessage },
+                    ...(product.sale?.saleMessage && {
+                        sale: { saleMessage: product.sale.saleMessage }
+                    }),
                     ...(product.salePrice && { salePrice: product.salePrice }),
                     price: product.price,
                     shortExpiryDate: false,
