@@ -1,20 +1,14 @@
-const offer = [{
-    img_url: '/src/images/offer.png',
-    badge: 'Sale',
-    text: 'Sourdough Super Save!'
-}, {
-    img_url: '/src/images/offer1.png',
-    badge: 'Inspiration',
-    text: 'Today’s Holiday Dessert Pick!'
-}, {
-    img_url: '/src/images/offer2.png',
-    badge: 'Sale',
-    text: 'Christmas Deals!'
-}, {
-    img_url: '/src/images/offer3.png',
-    badge: 'Inspiration',
-    text: 'Breakfast For Everyone!'
-}]
+import offer0 from '../images/offer.png';
+import offer1 from '../images/offer1.png';
+import offer2 from '../images/offer2.png';
+import offer3 from '../images/offer3.png';
+
+const offer = [
+    { img_url: offer0, badge: 'Sale', text: 'Sourdough Super Save!' },
+    { img_url: offer1, badge: 'Inspiration', text: 'Today’s Holiday Dessert Pick!' },
+    { img_url: offer2, badge: 'Sale', text: 'Christmas Deals!' },
+    { img_url: offer3, badge: 'Inspiration', text: 'Breakfast For Everyone!' }
+];
 
 const randomID = (max) => {
     return Math.floor(Math.random() * max)
@@ -53,5 +47,3 @@ const generateOffer = () => {
 }
 
 generateOffer()
-
-
