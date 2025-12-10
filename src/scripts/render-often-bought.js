@@ -13,7 +13,8 @@ document.addEventListener("DOMContentLoaded", () => {
     renderProductList(
       listContainerOftenBought,
       oftenBoughtArray,
-      "vertical"
+      "vertical",
+      true
     );
   }
 });

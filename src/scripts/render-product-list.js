@@ -6,7 +6,8 @@ import { cartItems } from "./cart.js";
 export const renderProductList = (
   listContainer, //Container for the product list
   productArray, //Array of products to render
-  verticalOrHorizontal //Vertical or horizontal layout
+  verticalOrHorizontal, //Vertical or horizontal layout
+  showMore // true or false - show more button after list
 ) => {
   const productList = listContainer.querySelector(".product-list");
   for (const product of productArray) {
@@ -141,7 +142,20 @@ export const renderProductList = (
 
       );
     });
+
   }
+        //Add show more button if showMore is true
+        if (showMore) {
+          const showMoreContainer = document.createElement("div");
+          showMoreContainer.classList.add("show-more-button-container");
+          showMoreContainer.innerHTML = `
+                    <p class="items-in-list">
+                      Showing <span class="number-showing">0</span> of <span class="number-total">0</span>
+                    </p>
+                    <button class="show-more-button">Show more</button>
+                    `;
+          listContainer.appendChild(showMoreContainer);
+        }
 };
 
 
