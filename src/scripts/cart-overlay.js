@@ -12,7 +12,7 @@ const cartShow = () => {
     } else {
         cartEl.style.display = 'block'
         document.body.style.overflow = 'hidden'
-        cartButtonEl.firstElementChild.src = '/src/images/cart-view.svg'
+        //cartButtonEl.firstElementChild.src = '/src/images/cart-view.svg'
         shown = true;
     }
 }
@@ -20,7 +20,7 @@ const cartShow = () => {
 const cartHide = () => {
     cartEl.style.display = 'none'
     document.body.style.overflow = 'auto'
-    cartButtonEl.firstElementChild.src = '/src/images/cart.svg'
+    //cartButtonEl.firstElementChild.src = '/src/images/cart.svg'
     shown = false;
 }
 
