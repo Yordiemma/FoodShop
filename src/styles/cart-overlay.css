@@ -6,6 +6,11 @@
     width: 100%;
     z-index: 9999;
     left: 0;
+
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* IMPORTANT */
 }
 
 .top-wrap {
@@ -18,10 +23,13 @@
 }
 
 .cart-product-container {
-    margin-top: 1em;
     width: 95%;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 1em auto 0;
+
+    /* 🔥 MAIN SCROLL FIX */
+    height: calc(100vh - 250px);
+    overflow-y: auto;
+    padding-bottom: 20px;
 }
 
 .top-wrap img {
@@ -33,6 +41,9 @@
     bottom: 0;
     left: 0;
     width: 100%;
+    background: white;
+    /* Keep your styling */
+    padding-bottom: 1rem;
 }
 
 .total-box {
