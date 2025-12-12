@@ -61,6 +61,20 @@
     border-block-end: 1px solid var(--color-border-default);
 }
 
+.total-text div {
+    display: flex;
+    flex-direction: column;
+}
+
+.total-text div span {
+    padding: .5em 0em;
+}
+
+#total-savings {
+    color: red;
+    text-decoration: line-through;
+}
+
 .detail-box {
     margin: 10px auto 10px;
     text-align: center;
