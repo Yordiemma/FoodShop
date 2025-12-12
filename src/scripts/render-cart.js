@@ -7,11 +7,15 @@ export const renderCart = () => {
   const totalItemEl = document.querySelectorAll('.total-items');
   const oneItemEl = document.querySelectorAll('.one-item');
   const totalPriceEl = document.querySelector('#total-price');
+  const totalSavingsEl = document.querySelector('#total-savings')
+  const discountEl = document.querySelector('#discount')
 
   cartContainerEl.innerHTML = '';
 
   let totalCount = 0;
   let totalPrice = 0;
+  let originalPrice = 0;
+  let reducedPrice = 0;
 
   cartItems.forEach((product) => {
     const productItemEl = document.createElement('div');
@@ -22,6 +26,13 @@ export const renderCart = () => {
     totalCount += productCount;
 
     if (product.sale) productItemEl.classList.add("sale");
+
+    originalPrice += (product.price * product.amount)
+    if (product.sale) {
+      reducedPrice += ((product.price - product.salePrice) * product.amount)
+    } else {
+      reducedPrice += 0
+    }
 
     if (product.salePrice) {
       totalPrice += Math.round((product.salePrice * product.amount) * 100) / 100;
@@ -131,6 +142,15 @@ export const renderCart = () => {
   });
 
   const renderTotalPrice = () => {
+    if (reducedPrice === 0) {
+      totalSavingsEl.style.display = 'none'
+      discountEl.style.display = 'none'
+    } else {
+      totalSavingsEl.textContent = `${(Math.round(reducedPrice) * 100) / 100}kr`
+      totalSavingsEl.style.display = 'block'
+      discountEl.style.display = 'block'
+    }
+
     totalPriceEl.textContent = Math.round(totalPrice * 100) / 100;
   };
 

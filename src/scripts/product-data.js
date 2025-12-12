@@ -93,6 +93,7 @@ export const productData = [
       "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1710775305/cloud/337339/Pepsi%20Max.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/dryck/lask/cola/pepsi-max-7310072000635",
+    salePrice: 25,
     price: 50,
     shortExpiryDate: false,
   },
