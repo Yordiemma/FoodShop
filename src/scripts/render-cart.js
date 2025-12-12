@@ -16,7 +16,6 @@ export const renderCart = () => {
   let totalPrice = 0;
   let originalPrice = 0;
   let reducedPrice = 0;
-  let totalSavings = 0;
 
   cartItems.forEach((product) => {
     const productItemEl = document.createElement('div');
