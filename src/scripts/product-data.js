@@ -88,7 +88,7 @@ export const productData = [
     name: "Pepsi Max",
     brand: "Pepsi",
     description: "1,5 liter",
-    sale: { saleMessage: "3 for 2" },
+    sale: { saleMessage: "50% off" },
     photoUrl:
       "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1710775305/cloud/337339/Pepsi%20Max.jpg",
     localProduced: false,
