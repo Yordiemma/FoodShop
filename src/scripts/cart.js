@@ -67,6 +67,7 @@ export const addToCart = (id, event) => {
                     ...(product.salePrice && { salePrice: product.salePrice }),
                     price: product.price,
                     shortExpiryDate: false,
+                    ...(product.comparePrice && { comparePrice: product.comparePrice }),
                 });
             }
 
