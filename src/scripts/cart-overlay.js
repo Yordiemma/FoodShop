@@ -1,36 +1,36 @@
 import { renderCart } from "./render-cart";
 
-const cartEl = document.querySelector('.cart-overlay')
-const cartButtonEl = document.querySelector('.cart-wrap')
-const closeButtonEl = document.querySelector('.top-wrap').lastElementChild
+const cartEl = document.querySelector('.cart-overlay');
+const cartButtonEl = document.querySelector('.cart-wrap');
+const closeButtonEl = document.querySelector('.top-wrap').lastElementChild;
 
 let shown = false;
 
 const cartShow = () => {
-    if (shown) {
-    } else {
-        cartEl.style.display = 'block'
-        document.body.style.overflow = 'hidden'
-        //cartButtonEl.firstElementChild.src = '/src/images/cart-view.svg'
-        shown = true;
-    }
-}
+    cartEl.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+    shown = true;
+};
 
 const cartHide = () => {
-    cartEl.style.display = 'none'
-    document.body.style.overflow = 'auto'
-    //cartButtonEl.firstElementChild.src = '/src/images/cart.svg'
+    cartEl.style.display = 'none';
+    document.body.style.overflow = 'auto';
     shown = false;
-}
+};
 
 const switchView = () => {
-    if (shown) {
-        cartHide();
-    } else {
-        cartShow();
-    }
-}
+    shown ? cartHide() : cartShow();
+};
 
-cartButtonEl.addEventListener('click', switchView)
-cartButtonEl.addEventListener('click', renderCart)
-closeButtonEl.addEventListener('click', cartHide)
+
+cartButtonEl.addEventListener('click', () => {
+    switchView();
+    renderCart();
+});
+
+closeButtonEl.addEventListener('click', cartHide);
+
+
+window.addEventListener("load", () => {
+    cartHide(); 
+});
