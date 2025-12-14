@@ -87,10 +87,11 @@ export const addToCart = (id, event) => {
                     compactButton.style.display = "none"
                 }
             totalInCart()
+            console.log(cartItems)
         }
     }
 
-    console.log(cartItems)
+    
 }
 
 export const removeFromCart = (id, event) => {
