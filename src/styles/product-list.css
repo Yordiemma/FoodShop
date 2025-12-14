@@ -17,7 +17,7 @@
     flex-direction: column;
   }
 
-  .product-list.vertical .product-item:nth-last-child(-n+2) {
+  #often-bought-products .product-list.vertical .product-item:nth-last-child(-n+2) {
     display:none;
   }
 
