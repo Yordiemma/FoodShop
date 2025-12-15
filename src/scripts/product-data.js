@@ -26,6 +26,7 @@ export const productData = [
     link: "https://www.coop.se/handla/varor/frys/fardigt-att-varma/paj/paj-ost-skinka-7310240079555",
     price: 31.95,
     shortExpiryDate: false,
+    comparePrice: "145,20 kr/kg"
   },
   {
     category: "Frozen",
@@ -61,13 +62,14 @@ export const productData = [
     id: 104,
     name: "Pommac Magnum",
     brand: "Pommac",
-    description: "10 cl",
+    description: "1,5 l",
     photoUrl:
       "https://res.cloudinary.com/coopsverige/images/e_sharpen,f_auto,fl_clip,fl_progressive,q_90,c_lpad,g_center,h_1000,w_1000/v1530117881/309118/Pommac%20Magnum.jpg",
     localProduced: false,
     link: "https://www.coop.se/handla/varor/dryck/lask/ovriga-smaker/pommac-magnum-7391001000285",
     price: 59.95,
     shortExpiryDate: false,
+    comparePrice: "40 kr/l",
   },
   {
     category: "Beverages",
@@ -81,6 +83,7 @@ export const productData = [
     link: "https://www.coop.se/handla/varor/dryck/lask/apelsinsmak/zingo-zero-apelsin-6-pack-7310072000765/",
     price: 46.95,
     shortExpiryDate: false,
+    comparePrice: "23,70 kr/l",
   },
   {
     category: "Beverages",
@@ -109,6 +112,7 @@ export const productData = [
     link: "https://www.coop.se/handla/varor/mejeri-agg/gradde/vispgradde/vispgradde-36-7310865061935",
     price: 36.5,
     shortExpiryDate: false,
+    comparePrice: "73 kr/l",
   },
   {
     category: "Dairy & eggs",
@@ -121,7 +125,8 @@ export const productData = [
     localProduced: false,
     link: "https://www.coop.se/handla/varor/ost/palaggsost/mjukost/adelost-7311440016364/",
     price: 37,
-    shortExpiryDate: false
+    shortExpiryDate: false,
+    comparePrice: "264,30 kr/kg",
   },
   {
     category: "Dairy & eggs",
@@ -135,6 +140,7 @@ export const productData = [
     link: "https://www.coop.se/handla/varor/morkt-grovt-brod-matbrod/grotbrod-7311070008708",
     price: 34,
     shortExpiryDate: false,
+    comparePrice: "44 kr/kg",
   },
   {
     category: "Dairy & eggs",
@@ -148,6 +154,7 @@ export const productData = [
     link: "https://www.coop.se/handla/varor/mejeri-agg/mjolk/mellanmjolk/mellanmjolk-farsk-7310865001825/",
     price: 17,
     shortExpiryDate: false,
+    comparePrice: "11,30 kr/l",
   },
   {
     category: "Dairy & eggs",
@@ -176,6 +183,7 @@ export const productData = [
     link: "https://www.coop.se/handla/varor/mejeri-agg/mjolk/standardmjolk/standardmjolk-farsk-7310865000361/",
     price: 20.95,
     shortExpiryDate: false,
+    comparePrice: "13,97 kr/l",
   },
   {
     category: "Pantry",
@@ -189,6 +197,7 @@ export const productData = [
     link: "https://www.coop.se/handla/varor/skafferi/flingor-musli/granola-crunch/granola-hasselnotter-dadlar-7310240001761/",
     price: 55.95,
     shortExpiryDate: false,
+    comparePrice: "124,30 kr/kg",
   },
   {
     category: "Dairy & eggs",
@@ -202,6 +211,7 @@ export const productData = [
     link: "https://www.coop.se/handla/varor/mejeri-agg/egg/egg-12-pack-m-l-eko-7310865061622/",
     price: 51.95,
     shortExpiryDate: false,
+    comparePrice: "4,30 kr/st",
   },
   {
     category: "Dairy & eggs",
@@ -230,6 +240,7 @@ export const productData = [
     link: "https://www.coop.se/handla/varor/mejeri-agg/egg/egg-12-pack-m-l-eko-7310865061622/",
     price: 69.95,
     shortExpiryDate: false,
+    comparePrice: "155,40 kr/kg",
   },
   {
     category: "Coffee",
@@ -243,6 +254,7 @@ export const productData = [
     link: "https://www.coop.se/handla/varor/dryck/kaffe/bryggkaffe/bryggkaffe-morkrost-skanerost-7310731103011",
     price: 69.95,
     shortExpiryDate: false,
+    comparePrice: "155,40 kr/kg",
   },
   {
     category: "Pantry",
@@ -297,7 +309,8 @@ export const productData = [
     localProduced: true,
     link: "https://www.coop.se/handla/varor/kott-fagel-chark/korv/ovrig-korv/syrliga-isterband-lammhults-7316260001576",
     price: 28.95,
-    shortExpiryDate: false
+    shortExpiryDate: false,
+    comparePrice: "96,50 kr/kg",
   },
   {
     category: "Ready-made food & snacks",
@@ -309,7 +322,8 @@ export const productData = [
     localProduced: true,
     link: "https://www.coop.se/handla/varor/fardigmat-mellanmal/potatisprodukter/ovriga-potatisprodukter/smalandskroppkakor-3-pack-7321650005034",
     price: 21.95,
-    shortExpiryDate: false
+    shortExpiryDate: false,
+    comparePrice: "73,17 kr/kg",
   },
   {
     category: "Beverages",
@@ -321,7 +335,8 @@ export const productData = [
     localProduced: true,
     link: "https://www.coop.se/handla/varor/dryck/juice-fruktdryck/ovrig-juice/rasaft-spenat-apple-ananas-citron-7350068170096",
     price: 47.95,
-    shortExpiryDate: false
+    shortExpiryDate: false,
+    comparePrice: "68,50 kr/l",
   },
   {
     category: "Beverages",
@@ -333,7 +348,8 @@ export const productData = [
     localProduced: true,
     link: "https://www.coop.se/handla/varor/dryck/lask/ovriga-smaker/lask-ananas-utan-socker-7391589006112",
     price: 16.5,
-    shortExpiryDate: false
+    shortExpiryDate: false,
+    comparePrice: "16,50 kr/l",
   },
   {
     category: "Meat, poultry & deli",
@@ -345,7 +361,8 @@ export const productData = [
     localProduced: true,
     link: "https://www.coop.se/handla/varor/kott-fagel-chark/korv/ovrig-korv/prinskorv-7340063015706",
     price: 61.95,
-    shortExpiryDate: false
+    shortExpiryDate: false,
+    comparePrice: "167,43 kr/kg",
   },
   {
     category: "Beverages",
@@ -357,6 +374,7 @@ export const productData = [
     localProduced: true,
     link: "https://www.coop.se/handla/varor/dryck/ol-cider-vin/ol-35/new-england-pale-ale-35-7350068861536",
     price: 24.95,
-    shortExpiryDate: false
+    shortExpiryDate: false,
+    comparePrice: "75,61 kr/l",
   },
 ];

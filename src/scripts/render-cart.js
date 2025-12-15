@@ -62,6 +62,8 @@ export const renderCart = () => {
               <div class="product-price-container">
                 <p class="price active">${product.salePrice ? product.salePrice : product.price} kr/st</p>
                 ${product.salePrice ? `<p class="price old-price">${product.price} kr/st</p>` : ""}
+                ${product.comparePrice ? `<p class="price compare-price">${product.comparePrice}</p>` : ""}
+
               </div>
               <div class="stepper" style="display: flex; opacity: 1;">
                 <button class="stepper-button-minus remove-product">

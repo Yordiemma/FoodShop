@@ -104,6 +104,10 @@
       font-size: var(--font-size-paragraph-small);
       text-decoration: line-through;
     }
+
+    & .compare-price {
+      font-size: var(--font-size-paragraph-small);
+    }
   }
 
   & .product-footer {
