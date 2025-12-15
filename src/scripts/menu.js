@@ -7,6 +7,8 @@ const menuSpan = document.querySelector(".menu-span");
 menuNav.addEventListener("click", (event) => {
   event.preventDefault();
 
+ window.dispatchEvent(new Event('close-cart'));
+
   menuContainer.classList.toggle("active");
   menuNav.classList.toggle("active");
 });

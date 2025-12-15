@@ -13,6 +13,8 @@ const cartShow = () => {
 };
 
 const cartHide = () => {
+
+
     cartEl.style.display = 'none';
     document.body.style.overflow = 'auto';
     shown = false;
@@ -34,3 +36,6 @@ closeButtonEl.addEventListener('click', cartHide);
 window.addEventListener("load", () => {
     cartHide(); 
 });
+
+window.addEventListener('close-cart', cartHide);
+
