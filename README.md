@@ -2,6 +2,10 @@
 
 A modern, responsive e-commerce web application for browsing and purchasing food products. Built with vanilla JavaScript and featuring a clean, user-friendly interface.
 
+## Project Overview
+
+This is a school project for designing FoodShop's landing page from scratch. The goal is to create a mobile-first landing page where users can browse products, add items to their cart, and discover current offers. The challenge focuses on creating a clear, intuitive mobile layout that highlights promotional offers without overwhelming users, while demonstrating good frontend practices with HTML/CSS and JavaScript interactions. A key part of the project involved user testing to validate the design and improve the user experience.
+
 ## Features
 
 - **Shopping Cart** - Add products to cart with persistent storage using localStorage
@@ -66,7 +70,7 @@ npm run dev
 
 ### Navigation
 - Hamburger menu with categories
-- Search functionality
+- Search
 - Profile and order management links
 
 ## Development
